@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Raleway-VariableFont_wght.ttf">
+            <string>RalewayRoman-Bold</string>
+            <string>RalewayRoman-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3O9-Xt-K3R" customClass="OnboardingCollectionViewCell" customModule="MEDCheck" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="520" height="636"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bzV-nN-30K">
+                <rect key="frame" x="0.0" y="0.0" width="520" height="636"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatImage" translatesAutoresizingMaskIntoConstraints="NO" id="UAu-3E-PK2">
+                        <rect key="frame" x="0.0" y="0.0" width="520" height="381.66666666666669"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заголовок 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7P-Y8-uUy">
+                        <rect key="frame" x="16" y="431.66666666666669" width="488" height="37.666666666666686"/>
+                        <fontDescription key="fontDescription" name="RalewayRoman-Bold" family="Raleway" pointSize="32"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myd-sk-6S1">
+                        <rect key="frame" x="16" y="499.33333333333331" width="488" height="56.666666666666686"/>
+                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia libero ut metus convallis tempor. Vestibulum consequat, tortor mattis consequat</string>
+                        <fontDescription key="fontDescription" name="RalewayRoman-Medium" family="Raleway" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="myd-sk-6S1" firstAttribute="leading" secondItem="bzV-nN-30K" secondAttribute="leading" constant="16" id="7b0-Tn-HNS"/>
+                    <constraint firstItem="UAu-3E-PK2" firstAttribute="top" secondItem="bzV-nN-30K" secondAttribute="top" id="DiW-2h-ggf"/>
+                    <constraint firstAttribute="trailing" secondItem="UAu-3E-PK2" secondAttribute="trailing" id="EQg-RK-uJK"/>
+                    <constraint firstItem="myd-sk-6S1" firstAttribute="top" secondItem="B7P-Y8-uUy" secondAttribute="bottom" constant="30" id="Pnd-ug-bWD"/>
+                    <constraint firstItem="UAu-3E-PK2" firstAttribute="leading" secondItem="bzV-nN-30K" secondAttribute="leading" id="Tfp-2q-7XX"/>
+                    <constraint firstAttribute="trailing" secondItem="myd-sk-6S1" secondAttribute="trailing" constant="16" id="Ul8-7k-nfh"/>
+                    <constraint firstItem="B7P-Y8-uUy" firstAttribute="leading" secondItem="bzV-nN-30K" secondAttribute="leading" constant="16" id="oD2-ee-dRG"/>
+                    <constraint firstItem="UAu-3E-PK2" firstAttribute="height" secondItem="bzV-nN-30K" secondAttribute="height" multiplier="0.6" id="pEc-aw-PXV"/>
+                    <constraint firstItem="B7P-Y8-uUy" firstAttribute="top" secondItem="UAu-3E-PK2" secondAttribute="bottom" constant="50" id="t22-Xd-Kwl"/>
+                    <constraint firstAttribute="trailing" secondItem="B7P-Y8-uUy" secondAttribute="trailing" constant="16" id="tJU-pP-8Lm"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="520" height="636"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="myd-sk-6S1" id="zlp-x0-UsP"/>
+                <outlet property="iconImageView" destination="UAu-3E-PK2" id="b1Q-NA-b3V"/>
+                <outlet property="titleLabel" destination="B7P-Y8-uUy" id="Clm-aR-anW"/>
+            </connections>
+            <point key="canvasLocation" x="-178.62595419847327" y="-47.887323943661976"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="chatImage" width="806" height="904"/>
+    </resources>
+</document>
