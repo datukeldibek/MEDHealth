@@ -18,22 +18,21 @@
 		8C5B49D529D0F63800915A6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C5B49D329D0F63800915A6C /* LaunchScreen.storyboard */; };
 		8C5B49E029D1099600915A6C /* Raleway-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C5B49DE29D1099600915A6C /* Raleway-Italic-VariableFont_wght.ttf */; };
 		8C5B49E129D1099600915A6C /* Raleway-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C5B49DF29D1099600915A6C /* Raleway-VariableFont_wght.ttf */; };
-		8C87BBCB29D48534008A742D /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C87BBCA29D48534008A742D /* Extension+UIView.swift */; };
-		8C87BBCD29D485CB008A742D /* Extension+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C87BBCC29D485CB008A742D /* Extension+UIButton.swift */; };
-		8C87BBCF29D49046008A742D /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C87BBCE29D49046008A742D /* Extension+UIViewController.swift */; };
+		8C87BBCB29D48534008A742D /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C87BBCA29D48534008A742D /* UIView+Extensions.swift */; };
+		8C87BBCD29D485CB008A742D /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C87BBCC29D485CB008A742D /* UIButton+Extensions.swift */; };
+		8C87BBCF29D49046008A742D /* UIViewController+InstantiateMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C87BBCE29D49046008A742D /* UIViewController+InstantiateMethod.swift */; };
 		8C87BBD829D4978E008A742D /* NoInternetConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C87BBD729D4978E008A742D /* NoInternetConnectionViewController.swift */; };
 		8C87BBE329D4D01E008A742D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C87BBE229D4D01E008A742D /* NetworkManager.swift */; };
 		8C87BBE729D4D096008A742D /* NetworkStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C87BBE629D4D096008A742D /* NetworkStatusViewModel.swift */; };
 		8C87BBEA29D4DA12008A742D /* NoInternetConnectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C87BBE929D4DA12008A742D /* NoInternetConnectionViewModel.swift */; };
 		8C87BBED29D4EF8B008A742D /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C87BBEC29D4EF8B008A742D /* UserDefaultsManager.swift */; };
-		8C87BBEF29D4F4E4008A742D /* Extension+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C87BBEE29D4F4E4008A742D /* Extension+UITextField.swift */; };
+		8C87BBEF29D4F4E4008A742D /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C87BBEE29D4F4E4008A742D /* UITextField+Extensions.swift */; };
 		8C87BBF129D51AB3008A742D /* UIViewController+NetworkStatusAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C87BBF029D51AB3008A742D /* UIViewController+NetworkStatusAware.swift */; };
 		8C87BBF729D5229A008A742D /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C87BBF629D5229A008A742D /* OnboardingViewController.swift */; };
 		8C87BBFF29D774E4008A742D /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C87BBFE29D774E4008A742D /* OnboardingSlide.swift */; };
 		8C87BC0229D777D9008A742D /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C87BC0129D777D9008A742D /* OnboardingCollectionViewCell.swift */; };
 		8C87BC0429D77BBD008A742D /* OnboardingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C87BC0329D77BBD008A742D /* OnboardingCollectionViewCell.xib */; };
 		8C87BC0729D78EB0008A742D /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C87BC0629D78EB0008A742D /* OnboardingViewModel.swift */; };
-		8CC8D6D629DA154500DD1E1D /* UIViewController+OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC8D6D529DA154500DD1E1D /* UIViewController+OTPTextField.swift */; };
 		8CC8D6D829DA449100DD1E1D /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC8D6D729DA449100DD1E1D /* AuthManager.swift */; };
 		8CC8D6DA29DA4A0C00DD1E1D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CC8D6D929DA4A0C00DD1E1D /* GoogleService-Info.plist */; };
 		8CDC6C4B29DE081C006493F4 /* FeatureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDC6C4929DE081C006493F4 /* FeatureCollectionViewCell.swift */; };
@@ -45,6 +44,11 @@
 		8CDC6C6129DE1F87006493F4 /* MedicalHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDC6C6029DE1F87006493F4 /* MedicalHistoryViewController.swift */; };
 		8CDC6C6329DE1F9E006493F4 /* TestResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDC6C6229DE1F9E006493F4 /* TestResultsViewController.swift */; };
 		8CDC6C6529DE1FB5006493F4 /* PharmacyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDC6C6429DE1FB5006493F4 /* PharmacyListViewController.swift */; };
+		8CDC6C6729DE2958006493F4 /* UIViewController+KeyboardHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDC6C6629DE2958006493F4 /* UIViewController+KeyboardHandling.swift */; };
+		8CDC6C6929DE29DA006493F4 /* UIViewController+OTPTextFieldHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDC6C6829DE29DA006493F4 /* UIViewController+OTPTextFieldHandling.swift */; };
+		8CDC6C6C29DE2A65006493F4 /* UIViewController+showWarningAlertMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDC6C6B29DE2A65006493F4 /* UIViewController+showWarningAlertMethod.swift */; };
+		8CDC6C7129DE2C01006493F4 /* UIViewController+TextFieldsHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDC6C7029DE2C01006493F4 /* UIViewController+TextFieldsHandling.swift */; };
+		8CDC6C7329DE2C7D006493F4 /* UITextField+Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDC6C7229DE2C7D006493F4 /* UITextField+Toolbar.swift */; };
 		8CEE873A29D8A30400275CCE /* SignUpSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE873929D8A30400275CCE /* SignUpSecondViewController.swift */; };
 		8CEE873D29D8A90100275CCE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE873C29D8A90100275CCE /* MainTabBarController.swift */; };
 		8CEE874329D8A93A00275CCE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE874229D8A93A00275CCE /* SettingsViewController.swift */; };
@@ -68,22 +72,21 @@
 		8C5B49D629D0F63800915A6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C5B49DE29D1099600915A6C /* Raleway-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		8C5B49DF29D1099600915A6C /* Raleway-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-VariableFont_wght.ttf"; sourceTree = "<group>"; };
-		8C87BBCA29D48534008A742D /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
-		8C87BBCC29D485CB008A742D /* Extension+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIButton.swift"; sourceTree = "<group>"; };
-		8C87BBCE29D49046008A742D /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
+		8C87BBCA29D48534008A742D /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		8C87BBCC29D485CB008A742D /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		8C87BBCE29D49046008A742D /* UIViewController+InstantiateMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+InstantiateMethod.swift"; sourceTree = "<group>"; };
 		8C87BBD729D4978E008A742D /* NoInternetConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInternetConnectionViewController.swift; sourceTree = "<group>"; };
 		8C87BBE229D4D01E008A742D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		8C87BBE629D4D096008A742D /* NetworkStatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusViewModel.swift; sourceTree = "<group>"; };
 		8C87BBE929D4DA12008A742D /* NoInternetConnectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInternetConnectionViewModel.swift; sourceTree = "<group>"; };
 		8C87BBEC29D4EF8B008A742D /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
-		8C87BBEE29D4F4E4008A742D /* Extension+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITextField.swift"; sourceTree = "<group>"; };
+		8C87BBEE29D4F4E4008A742D /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		8C87BBF029D51AB3008A742D /* UIViewController+NetworkStatusAware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NetworkStatusAware.swift"; sourceTree = "<group>"; };
 		8C87BBF629D5229A008A742D /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		8C87BBFE29D774E4008A742D /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		8C87BC0129D777D9008A742D /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		8C87BC0329D77BBD008A742D /* OnboardingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingCollectionViewCell.xib; sourceTree = "<group>"; };
 		8C87BC0629D78EB0008A742D /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
-		8CC8D6D529DA154500DD1E1D /* UIViewController+OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+OTPTextField.swift"; sourceTree = "<group>"; };
 		8CC8D6D729DA449100DD1E1D /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		8CC8D6D929DA4A0C00DD1E1D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8CDC6C4929DE081C006493F4 /* FeatureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -95,6 +98,11 @@
 		8CDC6C6029DE1F87006493F4 /* MedicalHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalHistoryViewController.swift; sourceTree = "<group>"; };
 		8CDC6C6229DE1F9E006493F4 /* TestResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultsViewController.swift; sourceTree = "<group>"; };
 		8CDC6C6429DE1FB5006493F4 /* PharmacyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PharmacyListViewController.swift; sourceTree = "<group>"; };
+		8CDC6C6629DE2958006493F4 /* UIViewController+KeyboardHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+KeyboardHandling.swift"; sourceTree = "<group>"; };
+		8CDC6C6829DE29DA006493F4 /* UIViewController+OTPTextFieldHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+OTPTextFieldHandling.swift"; sourceTree = "<group>"; };
+		8CDC6C6B29DE2A65006493F4 /* UIViewController+showWarningAlertMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+showWarningAlertMethod.swift"; sourceTree = "<group>"; };
+		8CDC6C7029DE2C01006493F4 /* UIViewController+TextFieldsHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+TextFieldsHandling.swift"; sourceTree = "<group>"; };
+		8CDC6C7229DE2C7D006493F4 /* UITextField+Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Toolbar.swift"; sourceTree = "<group>"; };
 		8CEE873929D8A30400275CCE /* SignUpSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSecondViewController.swift; sourceTree = "<group>"; };
 		8CEE873C29D8A90100275CCE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		8CEE874229D8A93A00275CCE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -266,12 +274,10 @@
 		8C87BBC929D48526008A742D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				8C87BBCC29D485CB008A742D /* Extension+UIButton.swift */,
-				8C87BBEE29D4F4E4008A742D /* Extension+UITextField.swift */,
-				8C87BBCA29D48534008A742D /* Extension+UIView.swift */,
-				8C87BBCE29D49046008A742D /* Extension+UIViewController.swift */,
-				8C87BBF029D51AB3008A742D /* UIViewController+NetworkStatusAware.swift */,
-				8CC8D6D529DA154500DD1E1D /* UIViewController+OTPTextField.swift */,
+				8CDC6C6E29DE2AA4006493F4 /* UIButton */,
+				8CDC6C6D29DE2AA0006493F4 /* UITextField */,
+				8CDC6C6F29DE2AAA006493F4 /* UIView */,
+				8CDC6C6A29DE2A3B006493F4 /* UIViewController */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -461,6 +467,44 @@
 				8CDC6C6429DE1FB5006493F4 /* PharmacyListViewController.swift */,
 			);
 			path = PharmacyList;
+			sourceTree = "<group>";
+		};
+		8CDC6C6A29DE2A3B006493F4 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8C87BBCE29D49046008A742D /* UIViewController+InstantiateMethod.swift */,
+				8CDC6C6629DE2958006493F4 /* UIViewController+KeyboardHandling.swift */,
+				8C87BBF029D51AB3008A742D /* UIViewController+NetworkStatusAware.swift */,
+				8CDC6C6829DE29DA006493F4 /* UIViewController+OTPTextFieldHandling.swift */,
+				8CDC6C6B29DE2A65006493F4 /* UIViewController+showWarningAlertMethod.swift */,
+				8CDC6C7029DE2C01006493F4 /* UIViewController+TextFieldsHandling.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		8CDC6C6D29DE2AA0006493F4 /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				8C87BBEE29D4F4E4008A742D /* UITextField+Extensions.swift */,
+				8CDC6C7229DE2C7D006493F4 /* UITextField+Toolbar.swift */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		8CDC6C6E29DE2AA4006493F4 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				8C87BBCC29D485CB008A742D /* UIButton+Extensions.swift */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		8CDC6C6F29DE2AAA006493F4 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				8C87BBCA29D48534008A742D /* UIView+Extensions.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 		8CEE873129D88C1A00275CCE /* ViewModels */ = {
@@ -682,8 +726,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CDC6C7329DE2C7D006493F4 /* UITextField+Toolbar.swift in Sources */,
+				8CDC6C6729DE2958006493F4 /* UIViewController+KeyboardHandling.swift in Sources */,
 				8CDC6C5729DE0EAD006493F4 /* MainPageViewModel.swift in Sources */,
-				8C87BBEF29D4F4E4008A742D /* Extension+UITextField.swift in Sources */,
+				8C87BBEF29D4F4E4008A742D /* UITextField+Extensions.swift in Sources */,
 				8CDC6C6129DE1F87006493F4 /* MedicalHistoryViewController.swift in Sources */,
 				8CC8D6D829DA449100DD1E1D /* AuthManager.swift in Sources */,
 				8CDC6C4B29DE081C006493F4 /* FeatureCollectionViewCell.swift in Sources */,
@@ -691,6 +737,8 @@
 				8C87BBD829D4978E008A742D /* NoInternetConnectionViewController.swift in Sources */,
 				8C87BC0229D777D9008A742D /* OnboardingCollectionViewCell.swift in Sources */,
 				8CDC6C6529DE1FB5006493F4 /* PharmacyListViewController.swift in Sources */,
+				8CDC6C6C29DE2A65006493F4 /* UIViewController+showWarningAlertMethod.swift in Sources */,
+				8CDC6C7129DE2C01006493F4 /* UIViewController+TextFieldsHandling.swift in Sources */,
 				8C87BBE729D4D096008A742D /* NetworkStatusViewModel.swift in Sources */,
 				8CEE874329D8A93A00275CCE /* SettingsViewController.swift in Sources */,
 				8CDC6C5F29DE1F63006493F4 /* MedicationTakingViewController.swift in Sources */,
@@ -705,17 +753,17 @@
 				8C87BBE329D4D01E008A742D /* NetworkManager.swift in Sources */,
 				8C87BBEA29D4DA12008A742D /* NoInternetConnectionViewModel.swift in Sources */,
 				8CDC6C6329DE1F9E006493F4 /* TestResultsViewController.swift in Sources */,
-				8CC8D6D629DA154500DD1E1D /* UIViewController+OTPTextField.swift in Sources */,
+				8CDC6C6929DE29DA006493F4 /* UIViewController+OTPTextFieldHandling.swift in Sources */,
 				8C5B49C929D0F63600915A6C /* AppDelegate.swift in Sources */,
 				8CEE874729D8A97400275CCE /* ChatViewController.swift in Sources */,
 				8C87BC0729D78EB0008A742D /* OnboardingViewModel.swift in Sources */,
 				8CEE874929D8A98800275CCE /* MainPageViewController.swift in Sources */,
 				8CDC6C5529DE0D43006493F4 /* Feature.swift in Sources */,
-				8C87BBCF29D49046008A742D /* Extension+UIViewController.swift in Sources */,
-				8C87BBCB29D48534008A742D /* Extension+UIView.swift in Sources */,
+				8C87BBCF29D49046008A742D /* UIViewController+InstantiateMethod.swift in Sources */,
+				8C87BBCB29D48534008A742D /* UIView+Extensions.swift in Sources */,
 				8C5B49CB29D0F63600915A6C /* SceneDelegate.swift in Sources */,
 				8CEE874529D8A96100275CCE /* InfoViewController.swift in Sources */,
-				8C87BBCD29D485CB008A742D /* Extension+UIButton.swift in Sources */,
+				8C87BBCD29D485CB008A742D /* UIButton+Extensions.swift in Sources */,
 				8CDC6C5129DE0D18006493F4 /* MedicationFeature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

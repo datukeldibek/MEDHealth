@@ -1,14 +1,17 @@
 //
-//  UIViewController+OTPTextField.swift
+//  UIViewController+OTPTextFieldHandling.swift
 //  MEDCheck
 //
-//  Created by ibaikaa on 3/4/23.
+//  Created by ibaikaa on 6/4/23.
 //
 
 import UIKit
 
 extension UIViewController {
-    func switchOTPTextFieldsState(enabled: Bool, _ otpTextFiels: [UITextField]) {
+    func switchOTPTextFieldsState(
+        enabled: Bool,
+        _ otpTextFiels: [UITextField]
+    ) {
         otpTextFiels.forEach { $0.isEnabled = enabled }
     }
     
@@ -31,7 +34,7 @@ extension UIViewController {
                 .compactMap({ $0 as? UITextField }),
             let currentIndex = otpTextFields.firstIndex(of: textField)
         else { return }
-      
+        
         guard
             let text = textField.text,
             !text.isEmpty
@@ -48,4 +51,5 @@ extension UIViewController {
             otpTextFields[currentIndex + 1].becomeFirstResponder()
         }
     }
+    
 }

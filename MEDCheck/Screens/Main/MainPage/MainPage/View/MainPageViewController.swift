@@ -68,13 +68,8 @@ extension MainPageViewController: UICollectionViewDelegateFlowLayout {
 // MARK: - FeatureCollectionViewCellDelegate
 extension MainPageViewController: FeatureCollectionViewCellDelegate {
     func didSelectCell(at indexPath: IndexPath) {
-        let feature = viewModel.features[indexPath.row]
-        let destinationVC = feature.destinationVC.instantiate()
-        destinationVC.title = feature.destinationVCTitle
-        navigationController?.pushViewController(
-            destinationVC,
-            animated: true
-        )
+        let vc = viewModel.getVCForSelectedCell(at: indexPath)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
