@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -321,14 +322,66 @@
                     <view key="view" contentMode="scaleToFill" id="smy-VR-I04">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0Of-NR-Ygx">
+                                <rect key="frame" x="16" y="123" width="398" height="726"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="20" id="haP-ej-xtH">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="FET-sy-L8N"/>
                         <color key="backgroundColor" red="0.75686274509999996" green="0.91372549020000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FET-sy-L8N" firstAttribute="trailing" secondItem="0Of-NR-Ygx" secondAttribute="trailing" constant="16" id="3vo-Is-RuB"/>
+                            <constraint firstItem="0Of-NR-Ygx" firstAttribute="top" secondItem="FET-sy-L8N" secondAttribute="top" constant="20" id="44Z-Jj-xJJ"/>
+                            <constraint firstItem="0Of-NR-Ygx" firstAttribute="leading" secondItem="FET-sy-L8N" secondAttribute="leading" constant="16" id="Chw-wM-jBq"/>
+                            <constraint firstItem="FET-sy-L8N" firstAttribute="bottom" secondItem="0Of-NR-Ygx" secondAttribute="bottom" id="tgS-Kw-Hxd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="👋🏻 Привет, Ян!" largeTitleDisplayMode="always" id="C7H-Sq-kkl"/>
+                    <connections>
+                        <outlet property="featuresCollectionView" destination="0Of-NR-Ygx" id="j6A-7U-FRy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n24-uh-zlE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4805.5813953488368" y="696.56652360515022"/>
+        </scene>
+        <!--Medication Taking View Controller-->
+        <scene sceneID="Ssj-tw-mze">
+            <objects>
+                <viewController storyboardIdentifier="MedicationTakingViewController" id="wMO-hY-oN8" customClass="MedicationTakingViewController" customModule="MEDCheck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pw2-93-h4P">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kZk-h5-5pu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3WP-4x-c0Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4143" y="1463"/>
+        </scene>
+        <!--Test Results View Controller-->
+        <scene sceneID="IHH-ZA-DK1">
+            <objects>
+                <viewController storyboardIdentifier="TestResultsViewController" id="eW5-WZ-B60" customClass="TestResultsViewController" customModule="MEDCheck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qba-x1-5Yt">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1dn-ss-k2r"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FRV-aZ-Fi5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4143" y="2142"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="b3G-xf-D4X">
@@ -797,8 +850,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aKx-1o-WGp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Главная" image="square.split.2x2.fill" catalog="system" id="O4A-sd-0mS"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="G6e-GX-j0x">
-                        <rect key="frame" x="0.0" y="59" width="430" height="104.33333333333334"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G6e-GX-j0x">
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -817,7 +870,7 @@
                     <tabBarItem key="tabBarItem" title="Настройки" image="gear" catalog="system" id="mAG-LC-IRg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="nMf-WQ-Lxa">
-                        <rect key="frame" x="0.0" y="59" width="430" height="104.33333333333334"/>
+                        <rect key="frame" x="0.0" y="59" width="430" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -838,7 +891,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="LYf-yX-SLo">
-                        <rect key="frame" x="0.0" y="59" width="430" height="104.33333333333334"/>
+                        <rect key="frame" x="0.0" y="59" width="430" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -869,6 +922,36 @@
             </objects>
             <point key="canvasLocation" x="5806" y="-35"/>
         </scene>
+        <!--Medical History View Controller-->
+        <scene sceneID="To9-0J-f19">
+            <objects>
+                <viewController storyboardIdentifier="MedicalHistoryViewController" id="Kp2-q1-HDc" customClass="MedicalHistoryViewController" customModule="MEDCheck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nv6-FT-We2">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3l5-Xu-eZK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6hy-r9-6zs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4962" y="1463"/>
+        </scene>
+        <!--Pharmacy List View Controller-->
+        <scene sceneID="Xg8-Vl-lYp">
+            <objects>
+                <viewController storyboardIdentifier="PharmacyListViewController" id="4me-IW-MBt" customClass="PharmacyListViewController" customModule="MEDCheck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="egO-Ap-V68">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CwC-hu-qCF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s0G-29-89j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4962" y="2142"/>
+        </scene>
     </scenes>
     <resources>
         <image name="chatImage" width="806" height="904"/>
@@ -880,5 +963,8 @@
         <image name="mappin.circle" catalog="system" width="128" height="123"/>
         <image name="noInternetImage" width="860" height="973"/>
         <image name="square.split.2x2.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
