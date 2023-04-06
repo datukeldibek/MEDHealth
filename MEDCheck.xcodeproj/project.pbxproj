@@ -10,6 +10,7 @@
 		00F4A8F31DD61B981BC07AF7 /* Pods_MEDCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7277A9C7F67F6E7587010E /* Pods_MEDCheck.framework */; };
 		8C3118D029D866AF00C53B46 /* SignUpFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3118CF29D866AF00C53B46 /* SignUpFirstViewController.swift */; };
 		8C3118D329D87E1D00C53B46 /* SignInWithPhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3118D229D87E1D00C53B46 /* SignInWithPhoneNumber.swift */; };
+		8C32E37229DF57C20047A6BB /* TestResultDetailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E37129DF57C20047A6BB /* TestResultDetailedVC.swift */; };
 		8C5B49C929D0F63600915A6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5B49C829D0F63600915A6C /* AppDelegate.swift */; };
 		8C5B49CB29D0F63600915A6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5B49CA29D0F63600915A6C /* SceneDelegate.swift */; };
 		8C5B49CD29D0F63600915A6C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5B49CC29D0F63600915A6C /* SignInViewController.swift */; };
@@ -54,6 +55,8 @@
 		8CDC6C8729DE3325006493F4 /* MedicationTakingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDC6C8629DE3325006493F4 /* MedicationTakingViewModel.swift */; };
 		8CDC6C8B29DE3A10006493F4 /* TestResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDC6C8A29DE3A10006493F4 /* TestResultModel.swift */; };
 		8CDC6C8D29DE3A19006493F4 /* TestResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDC6C8C29DE3A19006493F4 /* TestResultsViewModel.swift */; };
+		8CDC6CB729DF50DC006493F4 /* TestResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDC6CB529DF50DC006493F4 /* TestResultCollectionViewCell.swift */; };
+		8CDC6CB829DF50DC006493F4 /* TestResultCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CDC6CB629DF50DC006493F4 /* TestResultCollectionViewCell.xib */; };
 		8CEE873A29D8A30400275CCE /* SignUpSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE873929D8A30400275CCE /* SignUpSecondViewController.swift */; };
 		8CEE873D29D8A90100275CCE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE873C29D8A90100275CCE /* MainTabBarController.swift */; };
 		8CEE874329D8A93A00275CCE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE874229D8A93A00275CCE /* SettingsViewController.swift */; };
@@ -67,6 +70,7 @@
 		5D7277A9C7F67F6E7587010E /* Pods_MEDCheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MEDCheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C3118CF29D866AF00C53B46 /* SignUpFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFirstViewController.swift; sourceTree = "<group>"; };
 		8C3118D229D87E1D00C53B46 /* SignInWithPhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithPhoneNumber.swift; sourceTree = "<group>"; };
+		8C32E37129DF57C20047A6BB /* TestResultDetailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultDetailedVC.swift; sourceTree = "<group>"; };
 		8C5B49C529D0F63600915A6C /* MEDCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEDCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5B49C829D0F63600915A6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C5B49CA29D0F63600915A6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +117,8 @@
 		8CDC6C8629DE3325006493F4 /* MedicationTakingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationTakingViewModel.swift; sourceTree = "<group>"; };
 		8CDC6C8A29DE3A10006493F4 /* TestResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultModel.swift; sourceTree = "<group>"; };
 		8CDC6C8C29DE3A19006493F4 /* TestResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultsViewModel.swift; sourceTree = "<group>"; };
+		8CDC6CB529DF50DC006493F4 /* TestResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultCollectionViewCell.swift; sourceTree = "<group>"; };
+		8CDC6CB629DF50DC006493F4 /* TestResultCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestResultCollectionViewCell.xib; sourceTree = "<group>"; };
 		8CEE873929D8A30400275CCE /* SignUpSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSecondViewController.swift; sourceTree = "<group>"; };
 		8CEE873C29D8A90100275CCE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		8CEE874229D8A93A00275CCE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +173,23 @@
 				8C3118CE29D8669900C53B46 /* SignUp */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		8C32E36F29DF57980047A6BB /* TestResultDetailedVC */ = {
+			isa = PBXGroup;
+			children = (
+				8C32E37129DF57C20047A6BB /* TestResultDetailedVC.swift */,
+			);
+			path = TestResultDetailedVC;
+			sourceTree = "<group>";
+		};
+		8C32E37029DF57A00047A6BB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8CDC6CB429DF50B4006493F4 /* TestResultCell */,
+				8C32E36F29DF57980047A6BB /* TestResultDetailedVC */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		8C5B49BC29D0F63600915A6C = {
@@ -386,8 +409,8 @@
 		8CDC6C4429DE0759006493F4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8CEE874829D8A98800275CCE /* MainPageViewController.swift */,
 				8CDC6C4829DE07F5006493F4 /* FeaturesCell */,
+				8CEE874829D8A98800275CCE /* MainPageViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -412,17 +435,9 @@
 		8CDC6C4D29DE0C64006493F4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8CDC6C5229DE0D34006493F4 /* Features */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		8CDC6C5229DE0D34006493F4 /* Features */ = {
-			isa = PBXGroup;
-			children = (
 				8CDC6C5429DE0D43006493F4 /* Feature.swift */,
 			);
-			path = Features;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8CDC6C5829DE1BA5006493F4 /* MainPage */ = {
@@ -471,7 +486,6 @@
 			children = (
 				8CDC6C7929DE3254006493F4 /* Model */,
 				8CDC6C7829DE3251006493F4 /* ViewModel */,
-				8CDC6C7729DE3250006493F4 /* View */,
 			);
 			path = TestResults;
 			sourceTree = "<group>";
@@ -549,6 +563,7 @@
 		8CDC6C7729DE3250006493F4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8C32E37029DF57A00047A6BB /* Components */,
 				8CDC6C6229DE1F9E006493F4 /* TestResultsViewController.swift */,
 			);
 			path = View;
@@ -566,6 +581,7 @@
 			isa = PBXGroup;
 			children = (
 				8CDC6C8A29DE3A10006493F4 /* TestResultModel.swift */,
+				8CDC6C7729DE3250006493F4 /* View */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -616,6 +632,15 @@
 				8CDC6C8429DE3306006493F4 /* MedicationTakingModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8CDC6CB429DF50B4006493F4 /* TestResultCell */ = {
+			isa = PBXGroup;
+			children = (
+				8CDC6CB529DF50DC006493F4 /* TestResultCollectionViewCell.swift */,
+				8CDC6CB629DF50DC006493F4 /* TestResultCollectionViewCell.xib */,
+			);
+			path = TestResultCell;
 			sourceTree = "<group>";
 		};
 		8CEE873129D88C1A00275CCE /* ViewModels */ = {
@@ -777,6 +802,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CDC6CB829DF50DC006493F4 /* TestResultCollectionViewCell.xib in Resources */,
 				8C87BC0429D77BBD008A742D /* OnboardingCollectionViewCell.xib in Resources */,
 				8CDC6C4C29DE081C006493F4 /* FeatureCollectionViewCell.xib in Resources */,
 				8C5B49E129D1099600915A6C /* Raleway-VariableFont_wght.ttf in Resources */,
@@ -860,9 +886,11 @@
 				8CEE873A29D8A30400275CCE /* SignUpSecondViewController.swift in Sources */,
 				8C87BBED29D4EF8B008A742D /* UserDefaultsManager.swift in Sources */,
 				8CDC6C8329DE32EC006493F4 /* MedicalHistoryViewModel.swift in Sources */,
+				8C32E37229DF57C20047A6BB /* TestResultDetailedVC.swift in Sources */,
 				8C3118D029D866AF00C53B46 /* SignUpFirstViewController.swift in Sources */,
 				8C87BBF729D5229A008A742D /* OnboardingViewController.swift in Sources */,
 				8C5B49CD29D0F63600915A6C /* SignInViewController.swift in Sources */,
+				8CDC6CB729DF50DC006493F4 /* TestResultCollectionViewCell.swift in Sources */,
 				8C87BBF129D51AB3008A742D /* UIViewController+NetworkStatusAware.swift in Sources */,
 				8C87BBE329D4D01E008A742D /* NetworkManager.swift in Sources */,
 				8C87BBEA29D4DA12008A742D /* NoInternetConnectionViewModel.swift in Sources */,

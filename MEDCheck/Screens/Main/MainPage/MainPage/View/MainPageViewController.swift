@@ -87,8 +87,10 @@ extension MainPageViewController: FeatureCollectionViewCellDelegate {
     }
 }
 
+// MARK: - UICollectionViewDelegate
 extension MainPageViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        didSelectCell(at: indexPath)
-    }
+    func collectionView(
+        _ collectionView: UICollectionView,
+        didSelectItemAt indexPath: IndexPath
+    ) { didSelectCell(at: indexPath) }
 }

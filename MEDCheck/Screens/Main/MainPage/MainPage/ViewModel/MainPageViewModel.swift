@@ -20,7 +20,6 @@ final class MainPageViewModel {
     ) -> UIViewController {
         let feature = features[indexPath.row]
         let destinationVC = feature.destinationVC.instantiate()
-        destinationVC.title = feature.destinationVCTitle
         return destinationVC
     }
     

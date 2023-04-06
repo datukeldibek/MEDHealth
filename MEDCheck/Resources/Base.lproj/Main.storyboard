@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -353,7 +352,7 @@
             </objects>
             <point key="canvasLocation" x="4805.5813953488368" y="696.56652360515022"/>
         </scene>
-        <!--Medication Taking View Controller-->
+        <!--Прием лекарств 💊-->
         <scene sceneID="Ssj-tw-mze">
             <objects>
                 <viewController storyboardIdentifier="MedicationTakingViewController" id="wMO-hY-oN8" customClass="MedicationTakingViewController" customModule="MEDCheck" customModuleProvider="target" sceneMemberID="viewController">
@@ -361,27 +360,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="kZk-h5-5pu"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.75686274509999996" green="0.91372549020000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Прием лекарств 💊" id="VhX-iw-Dun"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3WP-4x-c0Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4143" y="1463"/>
         </scene>
-        <!--Test Results View Controller-->
+        <!--Результаты анализов 🗒️-->
         <scene sceneID="IHH-ZA-DK1">
             <objects>
                 <viewController storyboardIdentifier="TestResultsViewController" id="eW5-WZ-B60" customClass="TestResultsViewController" customModule="MEDCheck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qba-x1-5Yt">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wBw-aZ-1Gh">
+                                <rect key="frame" x="20" y="133" width="390" height="765"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="0iN-Qt-HM2">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="1dn-ss-k2r"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.75686274509999996" green="0.91372549020000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wBw-aZ-1Gh" firstAttribute="top" secondItem="1dn-ss-k2r" secondAttribute="top" constant="30" id="2La-Qn-8IY"/>
+                            <constraint firstItem="wBw-aZ-1Gh" firstAttribute="leading" secondItem="1dn-ss-k2r" secondAttribute="leading" constant="20" id="9Df-pw-H8a"/>
+                            <constraint firstItem="1dn-ss-k2r" firstAttribute="bottom" secondItem="wBw-aZ-1Gh" secondAttribute="bottom" id="Qh4-rM-K9m"/>
+                            <constraint firstItem="1dn-ss-k2r" firstAttribute="trailing" secondItem="wBw-aZ-1Gh" secondAttribute="trailing" constant="20" id="xDX-r2-MbA"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Результаты анализов 🗒️" id="Q6J-k1-hCs"/>
+                    <connections>
+                        <outlet property="testResultsCollectionVIew" destination="wBw-aZ-1Gh" id="Yes-3f-F77"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FRV-aZ-Fi5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4143" y="2142"/>
+            <point key="canvasLocation" x="4142.7906976744189" y="2140.5579399141634"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="b3G-xf-D4X">
@@ -891,7 +914,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="LYf-yX-SLo">
-                        <rect key="frame" x="0.0" y="59" width="430" height="96"/>
+                        <rect key="frame" x="0.0" y="59" width="430" height="104.33333333333334"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -922,7 +945,7 @@
             </objects>
             <point key="canvasLocation" x="5806" y="-35"/>
         </scene>
-        <!--Medical History View Controller-->
+        <!--История болезни 🩺-->
         <scene sceneID="To9-0J-f19">
             <objects>
                 <viewController storyboardIdentifier="MedicalHistoryViewController" id="Kp2-q1-HDc" customClass="MedicalHistoryViewController" customModule="MEDCheck" customModuleProvider="target" sceneMemberID="viewController">
@@ -930,14 +953,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="3l5-Xu-eZK"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.75686274509999996" green="0.91372549020000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="История болезни 🩺" id="1E8-R6-0VU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6hy-r9-6zs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4962" y="1463"/>
         </scene>
-        <!--Pharmacy List View Controller-->
+        <!--Список аптек-->
         <scene sceneID="Xg8-Vl-lYp">
             <objects>
                 <viewController storyboardIdentifier="PharmacyListViewController" id="4me-IW-MBt" customClass="PharmacyListViewController" customModule="MEDCheck" customModuleProvider="target" sceneMemberID="viewController">
@@ -945,12 +969,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="CwC-hu-qCF"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.75686274509999996" green="0.91372549020000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Список аптек" id="DJ7-GY-Kkm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0G-29-89j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4962" y="2142"/>
+            <point key="canvasLocation" x="4962" y="2141"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eub-Lh-rgJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VC9-tk-pzh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Z6J-eL-Dcf">
+                        <rect key="frame" x="0.0" y="59" width="430" height="104.33333333333334"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eW5-WZ-B60" kind="relationship" relationship="rootViewController" id="cg1-Cy-AWQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="919-s6-9dN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3153" y="2141"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bZg-ro-ZOX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9G2-BW-2kA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="RFE-6u-ALJ">
+                        <rect key="frame" x="0.0" y="59" width="430" height="104.33333333333334"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4me-IW-MBt" kind="relationship" relationship="rootViewController" id="C3S-PS-9Kg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPk-3N-pA6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5805" y="2141"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Erk-ai-26y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lbq-aW-6NU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="u2m-0v-DX6">
+                        <rect key="frame" x="0.0" y="59" width="430" height="104.33333333333334"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Kp2-q1-HDc" kind="relationship" relationship="rootViewController" id="z1t-F4-4fk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kcR-8d-r9i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5805" y="1463"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7aq-xo-fHd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xUE-jM-WbT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="gah-ch-653">
+                        <rect key="frame" x="0.0" y="59" width="430" height="104.33333333333334"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wMO-hY-oN8" kind="relationship" relationship="rootViewController" id="ujt-Je-x3R"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NJx-dn-hhp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3152" y="1463"/>
         </scene>
     </scenes>
     <resources>
@@ -963,8 +1060,5 @@
         <image name="mappin.circle" catalog="system" width="128" height="123"/>
         <image name="noInternetImage" width="860" height="973"/>
         <image name="square.split.2x2.fill" catalog="system" width="128" height="114"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

@@ -11,7 +11,6 @@ struct Feature {
     var name: String
     var image: UIImage?
     var destinationVC: UIViewController.Type
-    var destinationVCTitle: String
 }
 
 extension Feature {
@@ -20,29 +19,25 @@ extension Feature {
             Feature(
                 name: "Прием лекарств",
                 image: UIImage(named: "takingMedicationsImage"),
-                destinationVC: MedicationTakingViewController.self,
-                destinationVCTitle: "Прием лекарств 💊"
+                destinationVC: MedicationTakingViewController.self
             ),
             
             Feature(
                 name: "История болезни",
                 image: UIImage(named: "diseaseHistoryImage"),
-                destinationVC: MedicalHistoryViewController.self,
-                destinationVCTitle: "История болезни 🩺"
+                destinationVC: MedicalHistoryViewController.self
             ),
             
             Feature(
                 name: "Результаты анализов",
                 image: UIImage(named: "analysisResultsImage"),
-                destinationVC: TestResultsViewController.self,
-                destinationVCTitle: "Результаты анализов 📄"
+                destinationVC: TestResultsViewController.self
             ),
             
             Feature(
                 name: "Список аптек",
                 image: UIImage(named: "pharmaciesListImage"),
-                destinationVC: PharmacyListViewController.self,
-                destinationVCTitle: "Список аптек 🏥"
+                destinationVC: PharmacyListViewController.self
             )
         ]
     }
