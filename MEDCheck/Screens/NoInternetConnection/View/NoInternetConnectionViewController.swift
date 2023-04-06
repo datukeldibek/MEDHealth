@@ -15,7 +15,6 @@ final class NoInternetConnectionViewController: UIViewController {
     // MARK: - Private methods
     private func showLoadingHUD(isConnected: Bool) {
         let hud = JGProgressHUD(style: .dark)
-        print("вызван метод загрузки")
         hud.indicatorView = JGProgressHUDIndeterminateIndicatorView()
         hud.textLabel.text = "Проверяем..."
         hud.show(in: view)

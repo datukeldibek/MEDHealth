@@ -35,7 +35,7 @@ extension Feature {
                 name: "Результаты анализов",
                 image: UIImage(named: "analysisResultsImage"),
                 destinationVC: TestResultsViewController.self,
-                destinationVCTitle: "Результаты анализов 🗒️"
+                destinationVCTitle: "Результаты анализов 📄"
             ),
             
             Feature(

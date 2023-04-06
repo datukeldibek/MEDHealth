@@ -41,7 +41,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private var titleTextAttributes: [NSAttributedString.Key: Any] {
-        guard let font = UIFont(name: "RalewayRoman-Bold", size: 26) else {
+        guard let font = UIFont(
+            name: "RalewayRoman-Bold",
+            size: 26
+        ) else {
             print("Font is nil in SceneDelegate.")
             return [:]
         }

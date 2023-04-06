@@ -24,9 +24,7 @@ final class NetworkManager: NetworkStatusSubject {
     private var observers = NSMutableSet()
     private var isConnected: Bool = true {
         didSet {
-            print("Updated. Connected: \(isConnected). was: \(oldValue)")
             if isConnected != oldValue {
-                print("notified observers")
                 notifyObservers(isConnected: isConnected)
             }
         }

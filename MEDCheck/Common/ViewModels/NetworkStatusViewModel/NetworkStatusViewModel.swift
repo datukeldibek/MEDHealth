@@ -30,13 +30,11 @@ final class NetworkStatusViewModel: NetworkStatusObserver {
 
     // MARK: - Public methods
     public func networkStatusDidChange(isConnected: Bool) {
-        print("Изменился нетворк статус: \(isConnected). был: \(self.isConnected)")
         self.isConnected = isConnected
     }
         
     // MARK: - init() and deinit
     private init () {
-        print("Инит view model")
         networkManager.add(observer: self)
     }
     

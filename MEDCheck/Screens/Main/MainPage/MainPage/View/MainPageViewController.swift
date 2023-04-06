@@ -25,11 +25,25 @@ final class MainPageViewController: UIViewController {
         )
     }
     
+    private func configureNavigationBarTitle() {
+        navigationController?
+            .navigationBar
+            .prefersLargeTitles = true
+        
+        navigationController?
+            .navigationBar
+            .largeTitleTextAttributes = [
+                .font: UIFont.systemFont(ofSize: 30, weight: .bold)
+            ]
+        
+    }
+    
     // MARK: - viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNavigationBarTitle()
         configureFeaturesCollectionView()
-        navigationController?.navigationBar.prefersLargeTitles = true
+        observeNetworkStatusUpdates()
     }
 }
 
