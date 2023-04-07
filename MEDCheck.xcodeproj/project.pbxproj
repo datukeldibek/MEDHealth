@@ -11,6 +11,13 @@
 		8C3118D029D866AF00C53B46 /* SignUpFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3118CF29D866AF00C53B46 /* SignUpFirstViewController.swift */; };
 		8C3118D329D87E1D00C53B46 /* SignInWithPhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3118D229D87E1D00C53B46 /* SignInWithPhoneNumber.swift */; };
 		8C32E37229DF57C20047A6BB /* TestResultDetailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E37129DF57C20047A6BB /* TestResultDetailedVC.swift */; };
+		8C32E37E29DF6F580047A6BB /* SocialMediaLinksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E37C29DF6F580047A6BB /* SocialMediaLinksTableViewCell.swift */; };
+		8C32E37F29DF6F590047A6BB /* SocialMediaLinksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C32E37D29DF6F580047A6BB /* SocialMediaLinksTableViewCell.xib */; };
+		8C32E38229DF73C80047A6BB /* SocialMediaLinksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E38129DF73C80047A6BB /* SocialMediaLinksViewModel.swift */; };
+		8C32E38729DF7A680047A6BB /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E38629DF7A680047A6BB /* InfoViewModel.swift */; };
+		8C32E38D29DF84830047A6BB /* SafariOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E38C29DF84830047A6BB /* SafariOpener.swift */; };
+		8C32E38F29DF85D70047A6BB /* InfoCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E38E29DF85D70047A6BB /* InfoCellModel.swift */; };
+		8C32E39529DF922D0047A6BB /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E39429DF922D0047A6BB /* AboutAppViewController.swift */; };
 		8C5B49C929D0F63600915A6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5B49C829D0F63600915A6C /* AppDelegate.swift */; };
 		8C5B49CB29D0F63600915A6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5B49CA29D0F63600915A6C /* SceneDelegate.swift */; };
 		8C5B49CD29D0F63600915A6C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5B49CC29D0F63600915A6C /* SignInViewController.swift */; };
@@ -71,6 +78,13 @@
 		8C3118CF29D866AF00C53B46 /* SignUpFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFirstViewController.swift; sourceTree = "<group>"; };
 		8C3118D229D87E1D00C53B46 /* SignInWithPhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithPhoneNumber.swift; sourceTree = "<group>"; };
 		8C32E37129DF57C20047A6BB /* TestResultDetailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultDetailedVC.swift; sourceTree = "<group>"; };
+		8C32E37C29DF6F580047A6BB /* SocialMediaLinksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaLinksTableViewCell.swift; sourceTree = "<group>"; };
+		8C32E37D29DF6F580047A6BB /* SocialMediaLinksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocialMediaLinksTableViewCell.xib; sourceTree = "<group>"; };
+		8C32E38129DF73C80047A6BB /* SocialMediaLinksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaLinksViewModel.swift; sourceTree = "<group>"; };
+		8C32E38629DF7A680047A6BB /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
+		8C32E38C29DF84830047A6BB /* SafariOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariOpener.swift; sourceTree = "<group>"; };
+		8C32E38E29DF85D70047A6BB /* InfoCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCellModel.swift; sourceTree = "<group>"; };
+		8C32E39429DF922D0047A6BB /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
 		8C5B49C529D0F63600915A6C /* MEDCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEDCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5B49C829D0F63600915A6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C5B49CA29D0F63600915A6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -192,6 +206,82 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		8C32E37429DF6EE70047A6BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8C32E37729DF6F020047A6BB /* Components */,
+				8CEE874429D8A96100275CCE /* InfoViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8C32E37529DF6EE90047A6BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8C32E38E29DF85D70047A6BB /* InfoCellModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8C32E37629DF6EEC0047A6BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8C32E38629DF7A680047A6BB /* InfoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8C32E37729DF6F020047A6BB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8C32E39329DF921D0047A6BB /* AboutAppViewController */,
+				8C32E37829DF6F130047A6BB /* SocialMediaLinksCell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		8C32E37829DF6F130047A6BB /* SocialMediaLinksCell */ = {
+			isa = PBXGroup;
+			children = (
+				8C32E37B29DF6F3B0047A6BB /* View */,
+				8C32E37929DF6F220047A6BB /* ViewModel */,
+			);
+			path = SocialMediaLinksCell;
+			sourceTree = "<group>";
+		};
+		8C32E37929DF6F220047A6BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8C32E38129DF73C80047A6BB /* SocialMediaLinksViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8C32E37B29DF6F3B0047A6BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8C32E37C29DF6F580047A6BB /* SocialMediaLinksTableViewCell.swift */,
+				8C32E37D29DF6F580047A6BB /* SocialMediaLinksTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8C32E38B29DF847B0047A6BB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8C32E38C29DF84830047A6BB /* SafariOpener.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8C32E39329DF921D0047A6BB /* AboutAppViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8C32E39429DF922D0047A6BB /* AboutAppViewController.swift */,
+			);
+			path = AboutAppViewController;
+			sourceTree = "<group>";
+		};
 		8C5B49BC29D0F63600915A6C = {
 			isa = PBXGroup;
 			children = (
@@ -213,10 +303,11 @@
 		8C5B49C729D0F63600915A6C /* MEDCheck */ = {
 			isa = PBXGroup;
 			children = (
-				8CC8D6D929DA4A0C00DD1E1D /* GoogleService-Info.plist */,
 				8C5B49E229D10AD900915A6C /* App */,
 				8C87BBE429D4D088008A742D /* Common */,
 				8C87BBC929D48526008A742D /* Extensions */,
+				8CC8D6D929DA4A0C00DD1E1D /* GoogleService-Info.plist */,
+				8C32E38B29DF847B0047A6BB /* Helpers */,
 				8C5B49E329D10AE300915A6C /* Resources */,
 				8C5B49E729D1614B00915A6C /* Screens */,
 				8C5B49E429D1611900915A6C /* Services */,
@@ -712,7 +803,9 @@
 		8CEE874029D8A92D00275CCE /* InfoPage */ = {
 			isa = PBXGroup;
 			children = (
-				8CEE874429D8A96100275CCE /* InfoViewController.swift */,
+				8C32E37529DF6EE90047A6BB /* Model */,
+				8C32E37429DF6EE70047A6BB /* View */,
+				8C32E37629DF6EEC0047A6BB /* ViewModel */,
 			);
 			path = InfoPage;
 			sourceTree = "<group>";
@@ -807,6 +900,7 @@
 				8CDC6C4C29DE081C006493F4 /* FeatureCollectionViewCell.xib in Resources */,
 				8C5B49E129D1099600915A6C /* Raleway-VariableFont_wght.ttf in Resources */,
 				8C5B49D529D0F63800915A6C /* LaunchScreen.storyboard in Resources */,
+				8C32E37F29DF6F590047A6BB /* SocialMediaLinksTableViewCell.xib in Resources */,
 				8C5B49D229D0F63800915A6C /* Assets.xcassets in Resources */,
 				8C5B49D029D0F63600915A6C /* Main.storyboard in Resources */,
 				8C5B49E029D1099600915A6C /* Raleway-Italic-VariableFont_wght.ttf in Resources */,
@@ -865,6 +959,7 @@
 			files = (
 				8CDC6C7329DE2C7D006493F4 /* UITextField+Toolbar.swift in Sources */,
 				8CDC6C6729DE2958006493F4 /* UIViewController+KeyboardHandling.swift in Sources */,
+				8C32E38229DF73C80047A6BB /* SocialMediaLinksViewModel.swift in Sources */,
 				8CDC6C5729DE0EAD006493F4 /* MainPageViewModel.swift in Sources */,
 				8C87BBEF29D4F4E4008A742D /* UITextField+Extensions.swift in Sources */,
 				8CDC6C6129DE1F87006493F4 /* MedicalHistoryViewController.swift in Sources */,
@@ -876,6 +971,7 @@
 				8C87BC0229D777D9008A742D /* OnboardingCollectionViewCell.swift in Sources */,
 				8CDC6C8D29DE3A19006493F4 /* TestResultsViewModel.swift in Sources */,
 				8CDC6C6529DE1FB5006493F4 /* PharmacyListViewController.swift in Sources */,
+				8C32E39529DF922D0047A6BB /* AboutAppViewController.swift in Sources */,
 				8CDC6C6C29DE2A65006493F4 /* UIViewController+showWarningAlertMethod.swift in Sources */,
 				8CDC6C7129DE2C01006493F4 /* UIViewController+TextFieldsHandling.swift in Sources */,
 				8C87BBE729D4D096008A742D /* NetworkStatusViewModel.swift in Sources */,
@@ -891,6 +987,9 @@
 				8C87BBF729D5229A008A742D /* OnboardingViewController.swift in Sources */,
 				8C5B49CD29D0F63600915A6C /* SignInViewController.swift in Sources */,
 				8CDC6CB729DF50DC006493F4 /* TestResultCollectionViewCell.swift in Sources */,
+				8C32E38729DF7A680047A6BB /* InfoViewModel.swift in Sources */,
+				8C32E38F29DF85D70047A6BB /* InfoCellModel.swift in Sources */,
+				8C32E38D29DF84830047A6BB /* SafariOpener.swift in Sources */,
 				8C87BBF129D51AB3008A742D /* UIViewController+NetworkStatusAware.swift in Sources */,
 				8C87BBE329D4D01E008A742D /* NetworkManager.swift in Sources */,
 				8C87BBEA29D4DA12008A742D /* NoInternetConnectionViewModel.swift in Sources */,
@@ -900,6 +999,7 @@
 				8CDC6C8529DE3306006493F4 /* MedicationTakingModel.swift in Sources */,
 				8CEE874729D8A97400275CCE /* ChatViewController.swift in Sources */,
 				8C87BC0729D78EB0008A742D /* OnboardingViewModel.swift in Sources */,
+				8C32E37E29DF6F580047A6BB /* SocialMediaLinksTableViewCell.swift in Sources */,
 				8CEE874929D8A98800275CCE /* MainPageViewController.swift in Sources */,
 				8CDC6C5529DE0D43006493F4 /* Feature.swift in Sources */,
 				8C87BBCF29D49046008A742D /* UIViewController+InstantiateMethod.swift in Sources */,

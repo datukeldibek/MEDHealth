@@ -28,7 +28,7 @@
                         <color key="tintColor" systemColor="systemPinkColor"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Результаты анализов" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m20-U8-MAn">
-                        <rect key="frame" x="50" y="10" width="131.33333333333334" height="180"/>
+                        <rect key="frame" x="30" y="10" width="151.33333333333334" height="180"/>
                         <fontDescription key="fontDescription" name="RalewayRoman-Bold" family="Raleway" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -44,7 +44,7 @@
                 <constraint firstItem="jKh-VR-8O0" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.4" id="gga-Zy-sBU"/>
                 <constraint firstAttribute="bottom" secondItem="jKh-VR-8O0" secondAttribute="bottom" constant="20" id="ob6-Zo-9Ec"/>
                 <constraint firstItem="m20-U8-MAn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="p4c-uH-SCD"/>
-                <constraint firstItem="m20-U8-MAn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="50" id="rTF-9F-icn"/>
+                <constraint firstItem="m20-U8-MAn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="30" id="rTF-9F-icn"/>
                 <constraint firstItem="jKh-VR-8O0" firstAttribute="leading" secondItem="m20-U8-MAn" secondAttribute="trailing" constant="50" id="uS9-Gm-c7M"/>
             </constraints>
             <size key="customSize" width="419" height="200"/>

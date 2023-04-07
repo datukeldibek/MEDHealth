@@ -377,7 +377,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wBw-aZ-1Gh">
-                                <rect key="frame" x="20" y="133" width="390" height="765"/>
+                                <rect key="frame" x="20" y="193.33333333333331" width="390" height="704.66666666666674"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="0iN-Qt-HM2">
                                     <size key="itemSize" width="128" height="128"/>
@@ -842,10 +842,65 @@
                     <view key="view" contentMode="scaleToFill" id="mCM-kx-tzP">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="INq-9b-fQh">
+                                <rect key="frame" x="0.0" y="133" width="430" height="466"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InfoCell" focusStyle="custom" id="UfB-55-53U">
+                                        <rect key="frame" x="0.0" y="50" width="430" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UfB-55-53U" id="gK1-zZ-tNK">
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Связаться с поддержкой" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EnC-f4-c4M">
+                                <rect key="frame" x="16" y="619" width="398" height="24"/>
+                                <fontDescription key="fontDescription" name="RalewayRoman-Bold" family="Raleway" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZW-Gt-Sgk">
+                                <rect key="frame" x="80" y="667" width="270" height="35.333333333333371"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="phone" catalog="system" imagePlacement="trailing" title="Позвонить" imagePadding="10">
+                                    <fontDescription key="titleFontDescription" name="RalewayRoman-Medium" family="Raleway" pointSize="18"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="callSupportButtonPressed:" destination="NeW-66-Nmb" eventType="touchUpInside" id="u0U-75-F1L"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="guS-V3-gbW"/>
                         <color key="backgroundColor" red="0.75686274509999996" green="0.91372549020000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="INq-9b-fQh" firstAttribute="top" secondItem="guS-V3-gbW" secondAttribute="top" constant="30" id="5nB-dU-24L"/>
+                            <constraint firstItem="NZW-Gt-Sgk" firstAttribute="top" secondItem="EnC-f4-c4M" secondAttribute="bottom" constant="24" id="NaA-Em-l6c"/>
+                            <constraint firstItem="guS-V3-gbW" firstAttribute="trailing" secondItem="INq-9b-fQh" secondAttribute="trailing" id="Pfz-YG-Fzb"/>
+                            <constraint firstItem="INq-9b-fQh" firstAttribute="height" secondItem="mCM-kx-tzP" secondAttribute="height" multiplier="0.5" id="SHM-Au-QQy"/>
+                            <constraint firstItem="guS-V3-gbW" firstAttribute="trailing" secondItem="NZW-Gt-Sgk" secondAttribute="trailing" constant="80" id="XdK-wc-JIM"/>
+                            <constraint firstItem="EnC-f4-c4M" firstAttribute="top" secondItem="INq-9b-fQh" secondAttribute="bottom" constant="20" id="eyE-C0-0CF"/>
+                            <constraint firstItem="guS-V3-gbW" firstAttribute="trailing" secondItem="EnC-f4-c4M" secondAttribute="trailing" constant="16" id="gfB-lb-QF5"/>
+                            <constraint firstItem="NZW-Gt-Sgk" firstAttribute="leading" secondItem="guS-V3-gbW" secondAttribute="leading" constant="80" id="mm5-k4-cea"/>
+                            <constraint firstItem="EnC-f4-c4M" firstAttribute="leading" secondItem="guS-V3-gbW" secondAttribute="leading" constant="16" id="noc-54-Zlw"/>
+                            <constraint firstItem="INq-9b-fQh" firstAttribute="leading" secondItem="guS-V3-gbW" secondAttribute="leading" id="pv4-Vy-Wc5"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="О нас 📄 " id="qg5-o9-1Kk"/>
+                    <connections>
+                        <outlet property="appInfoTableView" destination="INq-9b-fQh" id="poG-gE-HwK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k9C-GD-eqI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -961,7 +1016,7 @@
             </objects>
             <point key="canvasLocation" x="4962" y="1463"/>
         </scene>
-        <!--Список аптек-->
+        <!--Список аптек 🏥-->
         <scene sceneID="Xg8-Vl-lYp">
             <objects>
                 <viewController storyboardIdentifier="PharmacyListViewController" id="4me-IW-MBt" customClass="PharmacyListViewController" customModule="MEDCheck" customModuleProvider="target" sceneMemberID="viewController">
@@ -971,7 +1026,7 @@
                         <viewLayoutGuide key="safeArea" id="CwC-hu-qCF"/>
                         <color key="backgroundColor" red="0.75686274509999996" green="0.91372549020000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Список аптек" id="DJ7-GY-Kkm"/>
+                    <navigationItem key="navigationItem" title="Список аптек 🏥" id="DJ7-GY-Kkm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0G-29-89j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1031,6 +1086,42 @@
             </objects>
             <point key="canvasLocation" x="5805" y="1463"/>
         </scene>
+        <!--О приложении 🔍-->
+        <scene sceneID="sCC-KY-oNu">
+            <objects>
+                <viewController storyboardIdentifier="AboutAppViewController" id="5hX-Hu-bNk" customClass="AboutAppViewController" customModule="MEDCheck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t63-nP-eGm">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenImage" translatesAutoresizingMaskIntoConstraints="NO" id="osw-Un-44v">
+                                <rect key="frame" x="0.0" y="193.33333333333334" width="430" height="419.33333333333326"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Версия: 1.0.0, сборка 9026" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tm1-kM-Mmf">
+                                <rect key="frame" x="16" y="662.66666666666663" width="398" height="29.666666666666629"/>
+                                <fontDescription key="fontDescription" name="RalewayRoman-Bold" family="Raleway" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E2O-zy-h8h"/>
+                        <color key="backgroundColor" red="0.75686274509999996" green="0.91372549020000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Tm1-kM-Mmf" firstAttribute="leading" secondItem="E2O-zy-h8h" secondAttribute="leading" constant="16" id="9Az-5m-fr8"/>
+                            <constraint firstItem="E2O-zy-h8h" firstAttribute="trailing" secondItem="Tm1-kM-Mmf" secondAttribute="trailing" constant="16" id="Pbo-6y-imP"/>
+                            <constraint firstItem="osw-Un-44v" firstAttribute="height" secondItem="t63-nP-eGm" secondAttribute="height" multiplier="0.45" id="Ql4-oq-xZr"/>
+                            <constraint firstItem="E2O-zy-h8h" firstAttribute="trailing" secondItem="osw-Un-44v" secondAttribute="trailing" id="S8Y-7L-Ztj"/>
+                            <constraint firstItem="Tm1-kM-Mmf" firstAttribute="top" secondItem="osw-Un-44v" secondAttribute="bottom" constant="50" id="VBL-W6-F2F"/>
+                            <constraint firstItem="osw-Un-44v" firstAttribute="leading" secondItem="E2O-zy-h8h" secondAttribute="leading" id="axm-hn-wcw"/>
+                            <constraint firstItem="osw-Un-44v" firstAttribute="top" secondItem="E2O-zy-h8h" secondAttribute="top" constant="30" id="ei9-TF-k8W"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="О приложении 🔍" id="Cpq-GB-Tgt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XEr-gj-d0Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6780" y="2141"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="7aq-xo-fHd">
             <objects>
@@ -1049,6 +1140,24 @@
             </objects>
             <point key="canvasLocation" x="3152" y="1463"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8Ve-Z8-maT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pIX-gw-9rV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="2pK-B0-MK8">
+                        <rect key="frame" x="0.0" y="59" width="430" height="104.33333333333334"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5hX-Hu-bNk" kind="relationship" relationship="rootViewController" id="2up-pF-7Zx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JJk-L2-nwg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6780" y="1463"/>
+        </scene>
     </scenes>
     <resources>
         <image name="chatImage" width="806" height="904"/>
@@ -1057,8 +1166,10 @@
         <image name="eye" catalog="system" width="128" height="79"/>
         <image name="gear" catalog="system" width="128" height="122"/>
         <image name="info.circle" catalog="system" width="128" height="123"/>
+        <image name="launchScreenImage" width="1080" height="2340"/>
         <image name="mappin.circle" catalog="system" width="128" height="123"/>
         <image name="noInternetImage" width="860" height="973"/>
+        <image name="phone" catalog="system" width="128" height="115"/>
         <image name="square.split.2x2.fill" catalog="system" width="128" height="114"/>
     </resources>
 </document>
