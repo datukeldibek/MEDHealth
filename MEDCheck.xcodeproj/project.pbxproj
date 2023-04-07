@@ -18,6 +18,8 @@
 		8C32E38D29DF84830047A6BB /* SafariOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E38C29DF84830047A6BB /* SafariOpener.swift */; };
 		8C32E38F29DF85D70047A6BB /* InfoCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E38E29DF85D70047A6BB /* InfoCellModel.swift */; };
 		8C32E39529DF922D0047A6BB /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E39429DF922D0047A6BB /* AboutAppViewController.swift */; };
+		8C32E3D729E04B1F0047A6BB /* PharmacyListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E3D629E04B1F0047A6BB /* PharmacyListModel.swift */; };
+		8C32E3EC29E053800047A6BB /* PharmacyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E3EB29E053800047A6BB /* PharmacyListViewModel.swift */; };
 		8C5B49C929D0F63600915A6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5B49C829D0F63600915A6C /* AppDelegate.swift */; };
 		8C5B49CB29D0F63600915A6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5B49CA29D0F63600915A6C /* SceneDelegate.swift */; };
 		8C5B49CD29D0F63600915A6C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5B49CC29D0F63600915A6C /* SignInViewController.swift */; };
@@ -85,6 +87,8 @@
 		8C32E38C29DF84830047A6BB /* SafariOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariOpener.swift; sourceTree = "<group>"; };
 		8C32E38E29DF85D70047A6BB /* InfoCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCellModel.swift; sourceTree = "<group>"; };
 		8C32E39429DF922D0047A6BB /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
+		8C32E3D629E04B1F0047A6BB /* PharmacyListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PharmacyListModel.swift; sourceTree = "<group>"; };
+		8C32E3EB29E053800047A6BB /* PharmacyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PharmacyListViewModel.swift; sourceTree = "<group>"; };
 		8C5B49C529D0F63600915A6C /* MEDCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEDCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5B49C829D0F63600915A6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C5B49CA29D0F63600915A6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -640,6 +644,7 @@
 		8CDC6C7529DE3232006493F4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8C32E3EB29E053800047A6BB /* PharmacyListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -647,6 +652,7 @@
 		8CDC6C7629DE3240006493F4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8C32E3D629E04B1F0047A6BB /* PharmacyListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -964,6 +970,7 @@
 				8C87BBEF29D4F4E4008A742D /* UITextField+Extensions.swift in Sources */,
 				8CDC6C6129DE1F87006493F4 /* MedicalHistoryViewController.swift in Sources */,
 				8CC8D6D829DA449100DD1E1D /* AuthManager.swift in Sources */,
+				8C32E3EC29E053800047A6BB /* PharmacyListViewModel.swift in Sources */,
 				8CDC6C4B29DE081C006493F4 /* FeatureCollectionViewCell.swift in Sources */,
 				8CEE873D29D8A90100275CCE /* MainTabBarController.swift in Sources */,
 				8CDC6C8129DE32A0006493F4 /* MedicalHistoryModel.swift in Sources */,
@@ -980,6 +987,7 @@
 				8C3118D329D87E1D00C53B46 /* SignInWithPhoneNumber.swift in Sources */,
 				8C87BBFF29D774E4008A742D /* OnboardingSlide.swift in Sources */,
 				8CEE873A29D8A30400275CCE /* SignUpSecondViewController.swift in Sources */,
+				8C32E3D729E04B1F0047A6BB /* PharmacyListModel.swift in Sources */,
 				8C87BBED29D4EF8B008A742D /* UserDefaultsManager.swift in Sources */,
 				8CDC6C8329DE32EC006493F4 /* MedicalHistoryViewModel.swift in Sources */,
 				8C32E37229DF57C20047A6BB /* TestResultDetailedVC.swift in Sources */,
