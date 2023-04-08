@@ -12,25 +12,37 @@ final class PharmacyListViewController: UIViewController {
     private let viewModel = PharmacyListViewModel()
     
     // MARK: - IBOutlets
+    @IBOutlet weak var searchPharmacySearchBar: UISearchBar!
     @IBOutlet weak var pharmaciesTableView: UITableView!
     
     // MARK: - Private methods
+    private func configureSearchPharmacySearchBar () {
+        searchPharmacySearchBar.delegate = self
+    }
+    
     private func configurePharmaciesTableView() {
         pharmaciesTableView.dataSource = self
         
-        pharmaciesTableView.register(UITableViewCell.self, forCellReuseIdentifier: "pharmacy_cell")
+        pharmaciesTableView.register(
+            UITableViewCell.self,
+            forCellReuseIdentifier: "pharmacy_cell"
+        )
     }
     
     // MARK: - viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureSearchPharmacySearchBar()
         configurePharmaciesTableView()
+        
+        // From extension. FILE: UIViewController+KeyboardHandling.swift
+        configureViewTappedHandling()
     }
+    
 }
 
 // MARK: - UITableViewDataSource
 extension PharmacyListViewController: UITableViewDataSource {
-    
     func numberOfSections(
         in tableView: UITableView
     ) -> Int { viewModel.numberOfSections() }
@@ -38,39 +50,38 @@ extension PharmacyListViewController: UITableViewDataSource {
     func tableView(
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
-    ) -> Int { viewModel.section(at: section).numberOfRows }
+    ) -> Int {  viewModel.numberOfRowsInSection(at: section) }
     
     func tableView(
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
-        // Извлекаем компанию по индексу
-        let company = viewModel.section(at: indexPath.section).company
         
-        // Извлекаем все адреса для компании
-        let addresses = viewModel.pharmacyAddresses(for: company)
-        
-        // Извлекаем определенный адрес по индексу
-        let address = addresses[indexPath.row]
-        
-        // Создаем ячейку
         let cell = pharmaciesTableView
             .dequeueReusableCell(
                 withIdentifier: "pharmacy_cell",
                 for: indexPath
             )
         
-        // Задаем текст для ячейки
-        cell.textLabel?.text = address
-        
+        cell.textLabel?.text = viewModel.cellAddress(at: indexPath)
         return cell
     }
-  
     
     func tableView(
         _ tableView: UITableView,
         titleForHeaderInSection section: Int
-    ) -> String? { viewModel.section(at: section).title }
+    ) -> String? { viewModel.titleForHeader(at: section) }
     
 }
 
+// MARK: - UISearchBarDelegate
+extension PharmacyListViewController: UISearchBarDelegate {
+    func searchBar(
+        _ searchBar: UISearchBar,
+        textDidChange searchText: String
+    ) {
+        viewModel.searchValue(for: searchText)
+        pharmaciesTableView.reloadData()
+    }
+    
+}

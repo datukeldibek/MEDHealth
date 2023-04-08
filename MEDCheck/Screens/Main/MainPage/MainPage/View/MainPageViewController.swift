@@ -44,6 +44,7 @@ final class MainPageViewController: UIViewController {
         configureNavigationBarTitle()
         configureFeaturesCollectionView()
         observeNetworkStatusUpdates()
+        navigationController?.navigationBar.topItem?.backButtonTitle = ""
     }
 }
 
@@ -75,7 +76,7 @@ extension MainPageViewController: UICollectionViewDelegateFlowLayout {
         _ collectionView: UICollectionView,
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath
-    ) -> CGSize { CGSize(width: collectionView.bounds.width, height: 150) }
+    ) -> CGSize { CGSize(width: collectionView.bounds.width, height: 160) }
     
 }
 

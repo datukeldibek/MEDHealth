@@ -1026,7 +1026,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vbo-zh-RdJ">
-                                <rect key="frame" x="0.0" y="133" width="430" height="765"/>
+                                <rect key="frame" x="0.0" y="199" width="430" height="699"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="pharmacy_cell" id="nqc-8k-9CA">
@@ -1039,19 +1039,30 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Поиск по аптеке/адресу" translatesAutoresizingMaskIntoConstraints="NO" id="kHD-tU-tgi">
+                                <rect key="frame" x="50" y="133" width="330" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="4me-IW-MBt" id="Ndb-fb-k67"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CwC-hu-qCF"/>
                         <color key="backgroundColor" red="0.75686274509999996" green="0.91372549020000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="vbo-zh-RdJ" firstAttribute="top" secondItem="CwC-hu-qCF" secondAttribute="top" constant="30" id="1Rm-U4-5Fx"/>
                             <constraint firstItem="vbo-zh-RdJ" firstAttribute="leading" secondItem="CwC-hu-qCF" secondAttribute="leading" id="MHQ-gl-Zhr"/>
+                            <constraint firstItem="kHD-tU-tgi" firstAttribute="leading" secondItem="CwC-hu-qCF" secondAttribute="leading" constant="50" id="MHr-hk-2cR"/>
                             <constraint firstItem="CwC-hu-qCF" firstAttribute="trailing" secondItem="vbo-zh-RdJ" secondAttribute="trailing" id="XVO-Og-QFv"/>
+                            <constraint firstItem="vbo-zh-RdJ" firstAttribute="top" secondItem="kHD-tU-tgi" secondAttribute="bottom" constant="10" id="g1C-o1-TPU"/>
                             <constraint firstItem="CwC-hu-qCF" firstAttribute="bottom" secondItem="vbo-zh-RdJ" secondAttribute="bottom" id="v3l-Sq-eLY"/>
+                            <constraint firstItem="kHD-tU-tgi" firstAttribute="trailing" secondItem="CwC-hu-qCF" secondAttribute="trailing" constant="-50" id="yYQ-EG-wor"/>
+                            <constraint firstItem="kHD-tU-tgi" firstAttribute="top" secondItem="CwC-hu-qCF" secondAttribute="top" constant="30" id="zfo-ic-Gjd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Список аптек 🏥" id="DJ7-GY-Kkm"/>
                     <connections>
                         <outlet property="pharmaciesTableView" destination="vbo-zh-RdJ" id="kvf-pB-Lr9"/>
+                        <outlet property="searchPharmacySearchBar" destination="kHD-tU-tgi" id="q6V-x3-eA6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0G-29-89j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
