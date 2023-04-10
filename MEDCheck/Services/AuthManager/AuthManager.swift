@@ -5,7 +5,7 @@
 //  Created by ibaikaa on 3/4/23.
 //
 
-import FirebaseAuth
+import FirebaseAuth 
 
 final class AuthManager {
     // MARK: - Singleton
@@ -103,9 +103,11 @@ final class AuthManager {
                 changeRequest.commitChanges { error in
                     if let error = error {
                         completion(error)
+                    } else {
+                        completion(nil)
                     }
                 }
-                                
+                
                 db.saveUser(
                     uid: user.uid,
                     name: name,
@@ -115,6 +117,8 @@ final class AuthManager {
                 ) { error in
                     if let error = error {
                         completion(error)
+                    } else {
+                        completion(nil)
                     }
                 }
             }

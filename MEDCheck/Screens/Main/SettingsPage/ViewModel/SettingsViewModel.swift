@@ -10,8 +10,10 @@ import UIKit
 final class SettingsViewModel {
     // MARK: - Private properties
     private let defaults = UserDefaultsManager.shared
-    private let authManager = AuthManager.shared
     private let settingsCells = SettingCell.instantiate()
+    
+    private let authManager = AuthManager.shared
+    private let storage = FirebaseStorageManager.shared
     
     // MARK: - Public properties
     public var showAlert: ((String) -> Void)?
@@ -22,7 +24,6 @@ final class SettingsViewModel {
     // MARK: – Sign out
     public func signOut() {
         authManager.signOut { [weak self] error in
-            print("completion")
             guard let self = self else { return }
             if let error = error {
                 self.showAlert?(error.localizedDescription)
@@ -46,7 +47,23 @@ final class SettingsViewModel {
     }
     
     public func savePic(image: UIImage) {
-//        authManager.currentUser().
+        guard
+            let imageData = image.jpegData(compressionQuality: 0.4),
+            let uid = authManager.currentUser()?.uid
+        else {
+            showAlert?("Не удалось сохранить картинку. Попробуй еще раз.")
+            return
+        }
+        
+        storage.saveProfilePictureImage(
+            userID: uid,
+            imageData: imageData
+        ) { [weak self] error in
+            guard let self = self else { return }
+            if let error = error {
+                self.showAlert?(error.localizedDescription)
+            }
+        }
     }
     
     public func saveProfilePicture(image: UIImage) {
@@ -61,7 +78,6 @@ final class SettingsViewModel {
     public func getUserEmail() -> String? {
         authManager.currentUser()?.email
     }
-    
     
     // MARK: – for UITableView
     public func numberOfRows() -> Int { settingsCells.count }

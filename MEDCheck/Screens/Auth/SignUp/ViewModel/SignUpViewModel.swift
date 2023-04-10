@@ -28,8 +28,8 @@ final class SignUpViewModel {
             email: email,
             password: password
         ) { [weak self] error in
+            print("completion of signing up")
             guard let self = self else { return }
-            print(email)
             if let error = error {
                 self.showAlert?(error.localizedDescription)
             } else {

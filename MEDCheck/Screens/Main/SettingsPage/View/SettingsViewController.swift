@@ -21,7 +21,7 @@ final class SettingsViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func signOutButtonTapped(_ sender: Any) {
-        viewModel.signOut() 
+        viewModel.signOut()
     }
     
     // MARK: - Private methods
@@ -38,6 +38,7 @@ final class SettingsViewController: UIViewController {
                 self?.goToSignInVC()
             }
         }
+        
     }
     
     private func goToSignInVC() {
@@ -65,10 +66,9 @@ final class SettingsViewController: UIViewController {
     }
     
     private func configureImagePicker() {
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        picker.sourceType = .photoLibrary
-        picker.allowsEditing = true
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = true
     }
     
     private func configureSettingsTableView() {
@@ -107,13 +107,12 @@ final class SettingsViewController: UIViewController {
 
 // MARK: - UINavigationControllerDelegate; UIImagePickerControllerDelegate
 extension SettingsViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    
     func imagePickerController(
         _ picker: UIImagePickerController,
         didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]
     ) {
         guard let pickedImage = info[.editedImage] as? UIImage else { return }
-        viewModel.saveProfilePicture(image: pickedImage)
+        viewModel.savePic(image: pickedImage)
         self.userProfilePictureImageView.image = pickedImage
         picker.dismiss(animated: true)
     }

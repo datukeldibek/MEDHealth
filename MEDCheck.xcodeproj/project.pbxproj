@@ -22,7 +22,7 @@
 		8C32E3EC29E053800047A6BB /* PharmacyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E3EB29E053800047A6BB /* PharmacyListViewModel.swift */; };
 		8C32E3F329E1EC600047A6BB /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E3F229E1EC600047A6BB /* SettingsViewModel.swift */; };
 		8C32E3F729E230620047A6BB /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E3F629E230620047A6BB /* SignInViewModel.swift */; };
-		8C32E3FD29E2437B0047A6BB /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E3FC29E2437B0047A6BB /* FirebaseManager.swift */; };
+		8C32E3FD29E2437B0047A6BB /* FirebaseDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E3FC29E2437B0047A6BB /* FirebaseDatabaseManager.swift */; };
 		8C32E40129E2473A0047A6BB /* SignInWithPhoneNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E40029E2473A0047A6BB /* SignInWithPhoneNumberViewModel.swift */; };
 		8C32E40529E24DC90047A6BB /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E40429E24DC90047A6BB /* SignUpViewModel.swift */; };
 		8C32E42A29E482260047A6BB /* UIViewController+GoToMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E42929E482260047A6BB /* UIViewController+GoToMainVC.swift */; };
@@ -50,6 +50,8 @@
 		8C87BC0229D777D9008A742D /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C87BC0129D777D9008A742D /* OnboardingCollectionViewCell.swift */; };
 		8C87BC0429D77BBD008A742D /* OnboardingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C87BC0329D77BBD008A742D /* OnboardingCollectionViewCell.xib */; };
 		8C87BC0729D78EB0008A742D /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C87BC0629D78EB0008A742D /* OnboardingViewModel.swift */; };
+		8C8A16E329E4BD8900ED7FDC /* FirebaseStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8A16E229E4BD8900ED7FDC /* FirebaseStorageManager.swift */; };
+		8C8A16E629E4CA3B00ED7FDC /* UserDataKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8A16E529E4CA3B00ED7FDC /* UserDataKeys.swift */; };
 		8CC8D6D829DA449100DD1E1D /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC8D6D729DA449100DD1E1D /* AuthManager.swift */; };
 		8CC8D6DA29DA4A0C00DD1E1D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CC8D6D929DA4A0C00DD1E1D /* GoogleService-Info.plist */; };
 		8CDC6C4B29DE081C006493F4 /* FeatureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDC6C4929DE081C006493F4 /* FeatureCollectionViewCell.swift */; };
@@ -97,7 +99,7 @@
 		8C32E3EB29E053800047A6BB /* PharmacyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PharmacyListViewModel.swift; sourceTree = "<group>"; };
 		8C32E3F229E1EC600047A6BB /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		8C32E3F629E230620047A6BB /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
-		8C32E3FC29E2437B0047A6BB /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		8C32E3FC29E2437B0047A6BB /* FirebaseDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabaseManager.swift; sourceTree = "<group>"; };
 		8C32E40029E2473A0047A6BB /* SignInWithPhoneNumberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithPhoneNumberViewModel.swift; sourceTree = "<group>"; };
 		8C32E40429E24DC90047A6BB /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		8C32E42929E482260047A6BB /* UIViewController+GoToMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+GoToMainVC.swift"; sourceTree = "<group>"; };
@@ -127,6 +129,8 @@
 		8C87BC0129D777D9008A742D /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		8C87BC0329D77BBD008A742D /* OnboardingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingCollectionViewCell.xib; sourceTree = "<group>"; };
 		8C87BC0629D78EB0008A742D /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		8C8A16E229E4BD8900ED7FDC /* FirebaseStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageManager.swift; sourceTree = "<group>"; };
+		8C8A16E529E4CA3B00ED7FDC /* UserDataKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataKeys.swift; sourceTree = "<group>"; };
 		8CC8D6D729DA449100DD1E1D /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		8CC8D6D929DA4A0C00DD1E1D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8CDC6C4929DE081C006493F4 /* FeatureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -335,7 +339,7 @@
 		8C32E3FB29E243720047A6BB /* DatabaseManager */ = {
 			isa = PBXGroup;
 			children = (
-				8C32E3FC29E2437B0047A6BB /* FirebaseManager.swift */,
+				8C32E3FC29E2437B0047A6BB /* FirebaseDatabaseManager.swift */,
 			);
 			path = DatabaseManager;
 			sourceTree = "<group>";
@@ -438,8 +442,8 @@
 		8C5B49E429D1611900915A6C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8C8A16E029E4BD7100ED7FDC /* Firebase */,
 				8C5B49E629D1614500915A6C /* AuthManager */,
-				8C32E3FB29E243720047A6BB /* DatabaseManager */,
 				8C5B49E529D1612500915A6C /* NetworkManager */,
 				8C87BBEB29D4EF7F008A742D /* UserDefaultsManager */,
 			);
@@ -485,10 +489,10 @@
 		8C5B49EB29D1616500915A6C /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				8CEE874129D8A93100275CCE /* SettingsPage */,
-				8CEE874029D8A92D00275CCE /* InfoPage */,
 				8CEE873F29D8A92200275CCE /* ChatPage */,
+				8CEE874029D8A92D00275CCE /* InfoPage */,
 				8CEE873E29D8A91800275CCE /* MainPage */,
+				8CEE874129D8A93100275CCE /* SettingsPage */,
 				8CEE873B29D8A8F300275CCE /* TabBarController */,
 			);
 			path = Main;
@@ -587,6 +591,32 @@
 				8C87BC0629D78EB0008A742D /* OnboardingViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8C8A16E029E4BD7100ED7FDC /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				8C8A16E429E4CA3400ED7FDC /* Common */,
+				8C8A16E129E4BD7E00ED7FDC /* StorageManager */,
+				8C32E3FB29E243720047A6BB /* DatabaseManager */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		8C8A16E129E4BD7E00ED7FDC /* StorageManager */ = {
+			isa = PBXGroup;
+			children = (
+				8C8A16E229E4BD8900ED7FDC /* FirebaseStorageManager.swift */,
+			);
+			path = StorageManager;
+			sourceTree = "<group>";
+		};
+		8C8A16E429E4CA3400ED7FDC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8C8A16E529E4CA3B00ED7FDC /* UserDataKeys.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		8CDC6C4429DE0759006493F4 /* View */ = {
@@ -1037,7 +1067,7 @@
 				8C87BC0229D777D9008A742D /* OnboardingCollectionViewCell.swift in Sources */,
 				8C32E40529E24DC90047A6BB /* SignUpViewModel.swift in Sources */,
 				8CDC6C8D29DE3A19006493F4 /* TestResultsViewModel.swift in Sources */,
-				8C32E3FD29E2437B0047A6BB /* FirebaseManager.swift in Sources */,
+				8C32E3FD29E2437B0047A6BB /* FirebaseDatabaseManager.swift in Sources */,
 				8CDC6C6529DE1FB5006493F4 /* PharmacyListViewController.swift in Sources */,
 				8C32E39529DF922D0047A6BB /* AboutAppViewController.swift in Sources */,
 				8CDC6C6C29DE2A65006493F4 /* UIViewController+showWarningAlertMethod.swift in Sources */,
@@ -1076,6 +1106,8 @@
 				8CDC6C5529DE0D43006493F4 /* Feature.swift in Sources */,
 				8C87BBCF29D49046008A742D /* UIViewController+InstantiateMethod.swift in Sources */,
 				8CDC6C8729DE3325006493F4 /* MedicationTakingViewModel.swift in Sources */,
+				8C8A16E329E4BD8900ED7FDC /* FirebaseStorageManager.swift in Sources */,
+				8C8A16E629E4CA3B00ED7FDC /* UserDataKeys.swift in Sources */,
 				8C87BBCB29D48534008A742D /* UIView+Extensions.swift in Sources */,
 				8C5B49CB29D0F63600915A6C /* SceneDelegate.swift in Sources */,
 				8CDC6C8B29DE3A10006493F4 /* TestResultModel.swift in Sources */,
