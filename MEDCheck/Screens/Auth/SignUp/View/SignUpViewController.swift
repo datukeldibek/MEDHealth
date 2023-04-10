@@ -1,5 +1,5 @@
 //
-//  SignUpFirstViewController.swift
+//  SignUpViewController.swift
 //  MEDCheck
 //
 //  Created by ibaikaa on 1/4/23.
@@ -7,8 +7,10 @@
 
 import UIKit
 
-final class SignUpFirstViewController: UIViewController {
+final class SignUpViewController: UIViewController {
     // MARK: - Private properties
+    private let viewModel = SignUpViewModel()
+    
     private var textFields: [UITextField] {
         [
             nameTextField,
@@ -16,6 +18,21 @@ final class SignUpFirstViewController: UIViewController {
             mailTextField,
             passwordTextField
         ]
+    }
+    
+    // MARK: - Private methods
+    private func initViewModel() {
+        viewModel.showAlert = { [weak self] error in
+            DispatchQueue.main.async {
+                self?.showWarningAlert(title: "Ошибка", message: error)
+            }
+        }
+        
+        viewModel.goToMainVC = { [weak self] in
+            DispatchQueue.main.async {
+                self?.goToMainVC()
+            }
+        }
     }
     
     // MARK: - IBOutlets
@@ -31,8 +48,12 @@ final class SignUpFirstViewController: UIViewController {
         updateUIForTextFields(textFields)
         
         if textFields.allSatisfy({ $0.hasText }) {
-            let vc = SignUpSecondViewController.instantiate()
-            navigationController?.pushViewController(vc, animated: true)
+            viewModel.signUp(
+                name: nameTextField.text!,
+                surname: surnameTextField.text!,
+                email: mailTextField.text!,
+                password: passwordTextField.text!
+            )
         } else {
             showWarningAlert(
                 title: "Ошибка!",
@@ -44,7 +65,8 @@ final class SignUpFirstViewController: UIViewController {
     // MARK: - viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // From extension. File: Extension+UIViewController.swift
+        initViewModel()
         configureViewTappedHandling()
     }
+    
 }

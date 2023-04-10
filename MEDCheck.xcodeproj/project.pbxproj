@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00F4A8F31DD61B981BC07AF7 /* Pods_MEDCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7277A9C7F67F6E7587010E /* Pods_MEDCheck.framework */; };
-		8C3118D029D866AF00C53B46 /* SignUpFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3118CF29D866AF00C53B46 /* SignUpFirstViewController.swift */; };
+		8C3118D029D866AF00C53B46 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3118CF29D866AF00C53B46 /* SignUpViewController.swift */; };
 		8C3118D329D87E1D00C53B46 /* SignInWithPhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3118D229D87E1D00C53B46 /* SignInWithPhoneNumber.swift */; };
 		8C32E37229DF57C20047A6BB /* TestResultDetailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E37129DF57C20047A6BB /* TestResultDetailedVC.swift */; };
 		8C32E37E29DF6F580047A6BB /* SocialMediaLinksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E37C29DF6F580047A6BB /* SocialMediaLinksTableViewCell.swift */; };
@@ -20,6 +20,12 @@
 		8C32E39529DF922D0047A6BB /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E39429DF922D0047A6BB /* AboutAppViewController.swift */; };
 		8C32E3D729E04B1F0047A6BB /* PharmaciesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E3D629E04B1F0047A6BB /* PharmaciesList.swift */; };
 		8C32E3EC29E053800047A6BB /* PharmacyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E3EB29E053800047A6BB /* PharmacyListViewModel.swift */; };
+		8C32E3F329E1EC600047A6BB /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E3F229E1EC600047A6BB /* SettingsViewModel.swift */; };
+		8C32E3F729E230620047A6BB /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E3F629E230620047A6BB /* SignInViewModel.swift */; };
+		8C32E3FD29E2437B0047A6BB /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E3FC29E2437B0047A6BB /* FirebaseManager.swift */; };
+		8C32E40129E2473A0047A6BB /* SignInWithPhoneNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E40029E2473A0047A6BB /* SignInWithPhoneNumberViewModel.swift */; };
+		8C32E40529E24DC90047A6BB /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E40429E24DC90047A6BB /* SignUpViewModel.swift */; };
+		8C32E42A29E482260047A6BB /* UIViewController+GoToMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E42929E482260047A6BB /* UIViewController+GoToMainVC.swift */; };
 		8C5B49C929D0F63600915A6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5B49C829D0F63600915A6C /* AppDelegate.swift */; };
 		8C5B49CB29D0F63600915A6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5B49CA29D0F63600915A6C /* SceneDelegate.swift */; };
 		8C5B49CD29D0F63600915A6C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5B49CC29D0F63600915A6C /* SignInViewController.swift */; };
@@ -66,7 +72,6 @@
 		8CDC6C8D29DE3A19006493F4 /* TestResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDC6C8C29DE3A19006493F4 /* TestResultsViewModel.swift */; };
 		8CDC6CB729DF50DC006493F4 /* TestResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDC6CB529DF50DC006493F4 /* TestResultCollectionViewCell.swift */; };
 		8CDC6CB829DF50DC006493F4 /* TestResultCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CDC6CB629DF50DC006493F4 /* TestResultCollectionViewCell.xib */; };
-		8CEE873A29D8A30400275CCE /* SignUpSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE873929D8A30400275CCE /* SignUpSecondViewController.swift */; };
 		8CEE873D29D8A90100275CCE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE873C29D8A90100275CCE /* MainTabBarController.swift */; };
 		8CEE874329D8A93A00275CCE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE874229D8A93A00275CCE /* SettingsViewController.swift */; };
 		8CEE874529D8A96100275CCE /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE874429D8A96100275CCE /* InfoViewController.swift */; };
@@ -77,7 +82,7 @@
 /* Begin PBXFileReference section */
 		1803196C357C2224D0A86DBE /* Pods-MEDCheck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MEDCheck.debug.xcconfig"; path = "Target Support Files/Pods-MEDCheck/Pods-MEDCheck.debug.xcconfig"; sourceTree = "<group>"; };
 		5D7277A9C7F67F6E7587010E /* Pods_MEDCheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MEDCheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C3118CF29D866AF00C53B46 /* SignUpFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFirstViewController.swift; sourceTree = "<group>"; };
+		8C3118CF29D866AF00C53B46 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8C3118D229D87E1D00C53B46 /* SignInWithPhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithPhoneNumber.swift; sourceTree = "<group>"; };
 		8C32E37129DF57C20047A6BB /* TestResultDetailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultDetailedVC.swift; sourceTree = "<group>"; };
 		8C32E37C29DF6F580047A6BB /* SocialMediaLinksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaLinksTableViewCell.swift; sourceTree = "<group>"; };
@@ -89,6 +94,12 @@
 		8C32E39429DF922D0047A6BB /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
 		8C32E3D629E04B1F0047A6BB /* PharmaciesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PharmaciesList.swift; sourceTree = "<group>"; };
 		8C32E3EB29E053800047A6BB /* PharmacyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PharmacyListViewModel.swift; sourceTree = "<group>"; };
+		8C32E3F229E1EC600047A6BB /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		8C32E3F629E230620047A6BB /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		8C32E3FC29E2437B0047A6BB /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		8C32E40029E2473A0047A6BB /* SignInWithPhoneNumberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithPhoneNumberViewModel.swift; sourceTree = "<group>"; };
+		8C32E40429E24DC90047A6BB /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		8C32E42929E482260047A6BB /* UIViewController+GoToMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+GoToMainVC.swift"; sourceTree = "<group>"; };
 		8C5B49C529D0F63600915A6C /* MEDCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEDCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5B49C829D0F63600915A6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C5B49CA29D0F63600915A6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,7 +148,6 @@
 		8CDC6C8C29DE3A19006493F4 /* TestResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultsViewModel.swift; sourceTree = "<group>"; };
 		8CDC6CB529DF50DC006493F4 /* TestResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultCollectionViewCell.swift; sourceTree = "<group>"; };
 		8CDC6CB629DF50DC006493F4 /* TestResultCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestResultCollectionViewCell.xib; sourceTree = "<group>"; };
-		8CEE873929D8A30400275CCE /* SignUpSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSecondViewController.swift; sourceTree = "<group>"; };
 		8CEE873C29D8A90100275CCE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		8CEE874229D8A93A00275CCE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8CEE874429D8A96100275CCE /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -161,7 +171,8 @@
 		8C3118CD29D8668F00C53B46 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
-				8C5B49CC29D0F63600915A6C /* SignInViewController.swift */,
+				8C32E3F529E230550047A6BB /* ViewModel */,
+				8C32E3F429E2304C0047A6BB /* View */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -169,8 +180,8 @@
 		8C3118CE29D8669900C53B46 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				8CEE873729D8A2F100275CCE /* Second */,
-				8CEE873629D8A2E900275CCE /* First */,
+				8C32E40229E24DBE0047A6BB /* View */,
+				8C32E40329E24DC20047A6BB /* ViewModel */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -178,7 +189,8 @@
 		8C3118D129D87E1000C53B46 /* SignInWithPhoneNumber */ = {
 			isa = PBXGroup;
 			children = (
-				8C3118D229D87E1D00C53B46 /* SignInWithPhoneNumber.swift */,
+				8C32E3FF29E2472B0047A6BB /* ViewModel */,
+				8C32E3FE29E247280047A6BB /* View */,
 			);
 			path = SignInWithPhoneNumber;
 			sourceTree = "<group>";
@@ -286,6 +298,78 @@
 			path = AboutAppViewController;
 			sourceTree = "<group>";
 		};
+		8C32E3F029E1EC560047A6BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8CEE874229D8A93A00275CCE /* SettingsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8C32E3F129E1EC590047A6BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8C32E3F229E1EC600047A6BB /* SettingsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8C32E3F429E2304C0047A6BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8C5B49CC29D0F63600915A6C /* SignInViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8C32E3F529E230550047A6BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8C32E3F629E230620047A6BB /* SignInViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8C32E3FB29E243720047A6BB /* DatabaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				8C32E3FC29E2437B0047A6BB /* FirebaseManager.swift */,
+			);
+			path = DatabaseManager;
+			sourceTree = "<group>";
+		};
+		8C32E3FE29E247280047A6BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8C3118D229D87E1D00C53B46 /* SignInWithPhoneNumber.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8C32E3FF29E2472B0047A6BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8C32E40029E2473A0047A6BB /* SignInWithPhoneNumberViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8C32E40229E24DBE0047A6BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8C3118CF29D866AF00C53B46 /* SignUpViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8C32E40329E24DC20047A6BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8C32E40429E24DC90047A6BB /* SignUpViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		8C5B49BC29D0F63600915A6C = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +429,7 @@
 			isa = PBXGroup;
 			children = (
 				8C5B49E629D1614500915A6C /* AuthManager */,
+				8C32E3FB29E243720047A6BB /* DatabaseManager */,
 				8C5B49E529D1612500915A6C /* NetworkManager */,
 				8C87BBEB29D4EF7F008A742D /* UserDefaultsManager */,
 			);
@@ -494,13 +579,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		8CC4730029D9EC22005409DF /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		8CDC6C4429DE0759006493F4 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -598,6 +676,7 @@
 		8CDC6C6A29DE2A3B006493F4 /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8C32E42929E482260047A6BB /* UIViewController+GoToMainVC.swift */,
 				8C87BBCE29D49046008A742D /* UIViewController+InstantiateMethod.swift */,
 				8CDC6C6629DE2958006493F4 /* UIViewController+KeyboardHandling.swift */,
 				8C87BBF029D51AB3008A742D /* UIViewController+NetworkStatusAware.swift */,
@@ -748,39 +827,6 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		8CEE873529D8A2E600275CCE /* View */ = {
-			isa = PBXGroup;
-			children = (
-				8C3118CF29D866AF00C53B46 /* SignUpFirstViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		8CEE873629D8A2E900275CCE /* First */ = {
-			isa = PBXGroup;
-			children = (
-				8CEE873529D8A2E600275CCE /* View */,
-			);
-			path = First;
-			sourceTree = "<group>";
-		};
-		8CEE873729D8A2F100275CCE /* Second */ = {
-			isa = PBXGroup;
-			children = (
-				8CC4730029D9EC22005409DF /* ViewModel */,
-				8CEE873829D8A2F500275CCE /* View */,
-			);
-			path = Second;
-			sourceTree = "<group>";
-		};
-		8CEE873829D8A2F500275CCE /* View */ = {
-			isa = PBXGroup;
-			children = (
-				8CEE873929D8A30400275CCE /* SignUpSecondViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		8CEE873B29D8A8F300275CCE /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
@@ -819,7 +865,8 @@
 		8CEE874129D8A93100275CCE /* SettingsPage */ = {
 			isa = PBXGroup;
 			children = (
-				8CEE874229D8A93A00275CCE /* SettingsViewController.swift */,
+				8C32E3F129E1EC590047A6BB /* ViewModel */,
+				8C32E3F029E1EC560047A6BB /* View */,
 			);
 			path = SettingsPage;
 			sourceTree = "<group>";
@@ -973,10 +1020,13 @@
 				8C32E3EC29E053800047A6BB /* PharmacyListViewModel.swift in Sources */,
 				8CDC6C4B29DE081C006493F4 /* FeatureCollectionViewCell.swift in Sources */,
 				8CEE873D29D8A90100275CCE /* MainTabBarController.swift in Sources */,
+				8C32E40129E2473A0047A6BB /* SignInWithPhoneNumberViewModel.swift in Sources */,
 				8CDC6C8129DE32A0006493F4 /* MedicalHistoryModel.swift in Sources */,
 				8C87BBD829D4978E008A742D /* NoInternetConnectionViewController.swift in Sources */,
 				8C87BC0229D777D9008A742D /* OnboardingCollectionViewCell.swift in Sources */,
+				8C32E40529E24DC90047A6BB /* SignUpViewModel.swift in Sources */,
 				8CDC6C8D29DE3A19006493F4 /* TestResultsViewModel.swift in Sources */,
+				8C32E3FD29E2437B0047A6BB /* FirebaseManager.swift in Sources */,
 				8CDC6C6529DE1FB5006493F4 /* PharmacyListViewController.swift in Sources */,
 				8C32E39529DF922D0047A6BB /* AboutAppViewController.swift in Sources */,
 				8CDC6C6C29DE2A65006493F4 /* UIViewController+showWarningAlertMethod.swift in Sources */,
@@ -986,18 +1036,20 @@
 				8CDC6C5F29DE1F63006493F4 /* MedicationTakingViewController.swift in Sources */,
 				8C3118D329D87E1D00C53B46 /* SignInWithPhoneNumber.swift in Sources */,
 				8C87BBFF29D774E4008A742D /* OnboardingSlide.swift in Sources */,
-				8CEE873A29D8A30400275CCE /* SignUpSecondViewController.swift in Sources */,
+				8C32E42A29E482260047A6BB /* UIViewController+GoToMainVC.swift in Sources */,
 				8C32E3D729E04B1F0047A6BB /* PharmaciesList.swift in Sources */,
 				8C87BBED29D4EF8B008A742D /* UserDefaultsManager.swift in Sources */,
 				8CDC6C8329DE32EC006493F4 /* MedicalHistoryViewModel.swift in Sources */,
 				8C32E37229DF57C20047A6BB /* TestResultDetailedVC.swift in Sources */,
-				8C3118D029D866AF00C53B46 /* SignUpFirstViewController.swift in Sources */,
+				8C3118D029D866AF00C53B46 /* SignUpViewController.swift in Sources */,
 				8C87BBF729D5229A008A742D /* OnboardingViewController.swift in Sources */,
+				8C32E3F329E1EC600047A6BB /* SettingsViewModel.swift in Sources */,
 				8C5B49CD29D0F63600915A6C /* SignInViewController.swift in Sources */,
 				8CDC6CB729DF50DC006493F4 /* TestResultCollectionViewCell.swift in Sources */,
 				8C32E38729DF7A680047A6BB /* InfoViewModel.swift in Sources */,
 				8C32E38F29DF85D70047A6BB /* InfoCellModel.swift in Sources */,
 				8C32E38D29DF84830047A6BB /* SafariOpener.swift in Sources */,
+				8C32E3F729E230620047A6BB /* SignInViewModel.swift in Sources */,
 				8C87BBF129D51AB3008A742D /* UIViewController+NetworkStatusAware.swift in Sources */,
 				8C87BBE329D4D01E008A742D /* NetworkManager.swift in Sources */,
 				8C87BBEA29D4DA12008A742D /* NoInternetConnectionViewModel.swift in Sources */,
@@ -1176,6 +1228,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1209,6 +1262,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

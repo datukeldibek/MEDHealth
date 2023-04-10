@@ -43,7 +43,7 @@ final class MainPageViewController: UIViewController {
         super.viewDidLoad()
         configureNavigationBarTitle()
         configureFeaturesCollectionView()
-        observeNetworkStatusUpdates()
+//        observeNetworkStatusUpdates()
         navigationController?.navigationBar.topItem?.backButtonTitle = ""
     }
 }

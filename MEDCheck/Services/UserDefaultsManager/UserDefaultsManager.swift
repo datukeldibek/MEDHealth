@@ -18,6 +18,8 @@ final class UserDefaultsManager {
     // MARK: - Public properties
     enum Keys: String {
         case isOnboarded = "isOnboarded"
+        case chosenImage = "chosenImage"
+        case authVerification = "authVerification"
     }
     
     // MARK: - Public methods

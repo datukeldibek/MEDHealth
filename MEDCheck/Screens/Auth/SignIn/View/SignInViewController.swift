@@ -9,8 +9,24 @@ import UIKit
 
 class SignInViewController: UIViewController {
     // MARK: - Private properties
+    private let viewModel = SignInViewModel()
     private var textFields: [UITextField] {
         [emailTextField, passwordTextField]
+    }
+    
+    // MARK: - Private methods
+    private func initViewModel() {
+        viewModel.showAlert = { [weak self] error in
+            DispatchQueue.main.async {
+                self?.showWarningAlert(title: "Ошибка", message: error)
+            }
+        }
+        
+        viewModel.goToMainVC = { [weak self] in
+            DispatchQueue.main.async {
+                self?.goToMainVC()
+            }
+        }
     }
         
     // MARK: - IBOutlets
@@ -39,6 +55,7 @@ class SignInViewController: UIViewController {
                 for: .normal
             )
         }
+        
         isHidden.toggle()
     }
     
@@ -51,7 +68,10 @@ class SignInViewController: UIViewController {
         updateUIForTextFields(textFields)
         
         if textFields.allSatisfy( {$0.hasText} ) {
-            print("Переходим дальше")
+            viewModel.signIn(
+                withEmail: emailTextField.text!,
+                password: passwordTextField.text!
+            )
         } else {
             showWarningAlert(
                 title: "Ошибка!",
@@ -67,15 +87,13 @@ class SignInViewController: UIViewController {
     // MARK: - viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
+        initViewModel()
+        navigationController?.navigationBar.topItem?.backButtonTitle = "" 
         // From extension. File: Extension+UIViewController.swift
         configureViewTappedHandling()
         configureKeyboardHandling()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        // From extension. File: UIViewController+NetworkStatusAware.swift
         observeNetworkStatusUpdates()
     }
+    
 }
 

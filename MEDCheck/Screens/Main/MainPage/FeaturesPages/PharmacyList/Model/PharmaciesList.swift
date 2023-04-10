@@ -16,11 +16,10 @@ struct PharmaciesList {
         case farmamir = "Фармамир"
         case aibolit = "Айболит"
         case bimedFarm = "Бимед Фарм"
-        case niman = "Ниман"
         case insanFarm = "Инсан Фарм"
     }
     
-    var pharmacies: [PharmacyCompany:[String]]
+    public var pharmacies: [PharmacyCompany:[String]]
     
     private init() {
         pharmacies = [
@@ -69,6 +68,7 @@ struct PharmaciesList {
                     "Московская 41а",
                 ]
         ]
+        
     }
     
 }

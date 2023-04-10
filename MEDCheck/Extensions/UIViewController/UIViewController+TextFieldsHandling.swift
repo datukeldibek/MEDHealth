@@ -23,6 +23,7 @@ extension UIViewController {
         guard
             let text = textField.text,
             text.prefix(4) == "+996",
+            text.count == 13,
             Int(text) != nil
         else { return false }
         return true

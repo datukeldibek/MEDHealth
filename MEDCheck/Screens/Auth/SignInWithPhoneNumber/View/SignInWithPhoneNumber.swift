@@ -1,5 +1,5 @@
 //
-//  SignInWithPhoneNumber.swift
+//  SignInWithPhoneNumberViewController.swift
 //  MEDCheck
 //
 //  Created by ibaikaa on 1/4/23.
@@ -9,7 +9,22 @@ import UIKit
 
 final class SignInWithPhoneNumberViewController: UIViewController {
     // MARK: - Private properties
-    // viewModel
+    private let viewModel = SignInWithPhoneNumberViewModel()
+    
+    // MARK: - Private methods
+    private func initViewModel() {
+        viewModel.showAlert = { [weak self] error in
+            DispatchQueue.main.async {
+                self?.showWarningAlert(title: "Ошибка", message: error)
+            }
+        }
+        
+        viewModel.goToMainVC = { [weak self] in
+            DispatchQueue.main.async {
+                self?.goToMainVC()
+            }
+        }
+    }
     
     // MARK: - IBOutlets
     @IBOutlet private weak var phoneNumberTextField: UITextField!
@@ -26,21 +41,32 @@ final class SignInWithPhoneNumberViewController: UIViewController {
             )
             return
         }
+        
+        viewModel.getSMSCode(forPhoneNumber: phoneNumberTextField.text!)
+
         switchOTPTextFieldsState(enabled: true, otpTextFields)
-        // viewModel.getSmsCode()
         signInButton.isEnabled = true
     }
     
     @IBAction func signInButtonTapped(_ sender: Any) {
         signInButton.setHapticFeedback(feedbackStyle: .medium)
+        let smsCode = otpTextFields.compactMap { $0.text }.joined()
+        guard smsCode.count == otpTextFields.count else {
+            showWarningAlert(
+                title: "Ошибка",
+                message: "Неизвестная ошибка. Попробуй еще раз."
+            )
+            return
+        }
+        
+        viewModel.signIn(withVerificationCode: smsCode)
     }
-    
-    // MARK: - Private methods
     
     
     // MARK: - viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
+        initViewModel()
         // From extension: File: UIViewController+OTPTextField.swift
         configureOTPTextFields(otpTextFields)
         // From extension. File: Extension+UIViewController.swift

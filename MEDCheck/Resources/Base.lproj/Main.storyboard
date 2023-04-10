@@ -427,10 +427,10 @@
             </objects>
             <point key="canvasLocation" x="6349" y="-758"/>
         </scene>
-        <!--Регистрация (1/2)-->
+        <!--Регистрация -->
         <scene sceneID="jMc-6Y-paf">
             <objects>
-                <viewController storyboardIdentifier="SignUpViewController" id="T2p-1j-EMV" customClass="SignUpFirstViewController" customModule="MEDCheck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" id="T2p-1j-EMV" customClass="SignUpViewController" customModule="MEDCheck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0kM-lF-edo">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -521,10 +521,10 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qyo-1v-7a3">
-                                <rect key="frame" x="30" y="515" width="370" height="35.333333333333371"/>
+                                <rect key="frame" x="30" y="515" width="370" height="35"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Далее">
+                                <buttonConfiguration key="configuration" style="plain" title="Зарегистрироваться">
                                     <fontDescription key="titleFontDescription" name="RalewayRoman-Bold" family="Raleway" pointSize="18"/>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
@@ -548,7 +548,7 @@
                             <constraint firstItem="Ecb-XX-2f8" firstAttribute="leading" secondItem="JY3-Lb-Vor" secondAttribute="leading" constant="16" id="tEQ-dz-Rex"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Регистрация (1/2)" id="08x-Rw-aSR"/>
+                    <navigationItem key="navigationItem" title="Регистрация " id="08x-Rw-aSR"/>
                     <connections>
                         <outlet property="mailTextField" destination="xuS-pG-cxS" id="Qea-5R-0Cp"/>
                         <outlet property="nameTextField" destination="GC9-gr-bj3" id="Bsi-8E-Naw"/>
@@ -560,132 +560,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9a0-sV-LfS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1926.9767441860465" y="696.56652360515022"/>
-        </scene>
-        <!--Регистрация (2/2)-->
-        <scene sceneID="fQc-2g-LVo">
-            <objects>
-                <viewController storyboardIdentifier="SignUpSecondViewController" id="tNt-Qj-ffJ" customClass="SignUpSecondViewController" customModule="MEDCheck" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Pog-1f-VRe">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iwK-h8-N8n">
-                                <rect key="frame" x="16" y="79" width="398" height="123"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер телефона:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9A-8f-acn">
-                                        <rect key="frame" x="0.0" y="0.0" width="398" height="34.333333333333336"/>
-                                        <fontDescription key="fontDescription" name="RalewayRoman-Medium" family="Raleway" pointSize="16"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Начинай с +996! " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OjM-Np-gWm">
-                                        <rect key="frame" x="0.0" y="44.333333333333329" width="398" height="34.333333333333329"/>
-                                        <fontDescription key="fontDescription" name="RalewayRoman-Medium" family="Raleway" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="toolBarOn" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yk0-c7-pyQ">
-                                        <rect key="frame" x="0.0" y="88.666666666666657" width="398" height="34.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="checkmark.message" catalog="system" imagePlacement="trailing" title="Получить код подтверждения" imagePadding="5">
-                                            <fontDescription key="titleFontDescription" name="RalewayRoman-Medium" family="Raleway" pointSize="14"/>
-                                        </buttonConfiguration>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="horizontalAlignment">
-                                                <integer key="value" value="0"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="getSMSCodeButtonTapped:" destination="tNt-Qj-ffJ" eventType="touchUpInside" id="GVp-Rm-8Ob"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9D4-fY-aaS">
-                                <rect key="frame" x="50" y="222" width="330" height="34"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="X" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n4Y-NW-lKG">
-                                        <rect key="frame" x="0.0" y="0.0" width="51" height="34"/>
-                                        <fontDescription key="fontDescription" name="RalewayRoman-Black" family="Raleway" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="X" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TYC-6U-3Fb">
-                                        <rect key="frame" x="56" y="0.0" width="50.666666666666657" height="34"/>
-                                        <fontDescription key="fontDescription" name="RalewayRoman-Black" family="Raleway" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="X" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7w6-28-qcv">
-                                        <rect key="frame" x="111.66666666666666" y="0.0" width="51" height="34"/>
-                                        <fontDescription key="fontDescription" name="RalewayRoman-Black" family="Raleway" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="X" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j5C-7Z-OHO">
-                                        <rect key="frame" x="167.66666666666666" y="0.0" width="50.666666666666657" height="34"/>
-                                        <fontDescription key="fontDescription" name="RalewayRoman-Black" family="Raleway" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="X" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lOl-ob-iB9">
-                                        <rect key="frame" x="223.33333333333331" y="0.0" width="51" height="34"/>
-                                        <fontDescription key="fontDescription" name="RalewayRoman-Black" family="Raleway" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="X" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T5b-CI-T4V">
-                                        <rect key="frame" x="279.33333333333331" y="0.0" width="50.666666666666686" height="34"/>
-                                        <fontDescription key="fontDescription" name="RalewayRoman-Black" family="Raleway" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                    </textField>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9P-UG-BZu">
-                                <rect key="frame" x="30" y="296" width="370" height="35.333333333333314"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Зарегистрироваться">
-                                    <fontDescription key="titleFontDescription" name="RalewayRoman-Bold" family="Raleway" pointSize="18"/>
-                                </buttonConfiguration>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="signUpButtonTapped:" destination="tNt-Qj-ffJ" eventType="touchUpInside" id="gKu-p9-Akl"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="IyQ-Ff-48F"/>
-                        <color key="backgroundColor" red="0.75686274509999996" green="0.91372549020000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="IyQ-Ff-48F" firstAttribute="trailing" secondItem="u9P-UG-BZu" secondAttribute="trailing" constant="30" id="0uA-ob-ouL"/>
-                            <constraint firstItem="9D4-fY-aaS" firstAttribute="top" secondItem="iwK-h8-N8n" secondAttribute="bottom" constant="20" id="6DQ-VF-DAe"/>
-                            <constraint firstItem="u9P-UG-BZu" firstAttribute="leading" secondItem="IyQ-Ff-48F" secondAttribute="leading" constant="30" id="85f-lR-Ol3"/>
-                            <constraint firstItem="u9P-UG-BZu" firstAttribute="top" secondItem="9D4-fY-aaS" secondAttribute="bottom" constant="40" id="Hvy-Ej-bD9"/>
-                            <constraint firstItem="iwK-h8-N8n" firstAttribute="leading" secondItem="IyQ-Ff-48F" secondAttribute="leading" constant="16" id="RkJ-rc-SiT"/>
-                            <constraint firstItem="IyQ-Ff-48F" firstAttribute="trailing" secondItem="iwK-h8-N8n" secondAttribute="trailing" constant="16" id="gJT-ZD-XkD"/>
-                            <constraint firstItem="9D4-fY-aaS" firstAttribute="leading" secondItem="IyQ-Ff-48F" secondAttribute="leading" constant="50" id="p5q-NW-1Hb"/>
-                            <constraint firstItem="IyQ-Ff-48F" firstAttribute="trailing" secondItem="9D4-fY-aaS" secondAttribute="trailing" constant="50" id="pdS-XT-6wI"/>
-                            <constraint firstItem="iwK-h8-N8n" firstAttribute="top" secondItem="IyQ-Ff-48F" secondAttribute="top" constant="20" id="rAi-AF-cQo"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Регистрация (2/2)" id="cDi-uH-8eO">
-                        <barButtonItem key="backBarButtonItem" title="Назад" id="gQe-tw-kLr"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="phoneNumberTextField" destination="OjM-Np-gWm" id="MSb-bQ-w9R"/>
-                        <outlet property="signUpButton" destination="u9P-UG-BZu" id="u44-F6-DLx"/>
-                        <outletCollection property="otpTextFields" destination="n4Y-NW-lKG" collectionClass="NSMutableArray" id="cfK-7I-44w"/>
-                        <outletCollection property="otpTextFields" destination="TYC-6U-3Fb" collectionClass="NSMutableArray" id="cCA-04-R3g"/>
-                        <outletCollection property="otpTextFields" destination="7w6-28-qcv" collectionClass="NSMutableArray" id="9mc-P5-cMp"/>
-                        <outletCollection property="otpTextFields" destination="j5C-7Z-OHO" collectionClass="NSMutableArray" id="LRC-xk-mkr"/>
-                        <outletCollection property="otpTextFields" destination="lOl-ob-iB9" collectionClass="NSMutableArray" id="a0H-jE-QQZ"/>
-                        <outletCollection property="otpTextFields" destination="T5b-CI-T4V" collectionClass="NSMutableArray" id="RRo-Gn-key"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PNe-K7-yni" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2714" y="697"/>
         </scene>
         <!--No Internet Connection View Controller-->
         <scene sceneID="Tjz-QT-o8c">
@@ -914,14 +788,37 @@
                     <view key="view" contentMode="scaleToFill" id="v7c-aH-gqF">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KlE-O8-mG3">
+                                <rect key="frame" x="155" y="195" width="120" height="117.33333333333331"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="Fsc-5r-TAY"/>
+                                    <constraint firstAttribute="width" constant="120" id="gxm-p1-elJ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vyZ-Lj-Y9D"/>
                         <color key="backgroundColor" red="0.75686274509999996" green="0.91372549020000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KlE-O8-mG3" firstAttribute="centerX" secondItem="vyZ-Lj-Y9D" secondAttribute="centerX" id="b40-AV-61w"/>
+                            <constraint firstItem="KlE-O8-mG3" firstAttribute="top" secondItem="vyZ-Lj-Y9D" secondAttribute="top" constant="30" id="hPX-nf-n4V"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Настройки ⚙️" id="gUq-Nf-Nnv"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="profilePicImageView" destination="KlE-O8-mG3" id="20w-5u-CBY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tpc-vy-TWq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7767" y="697"/>
+            <point key="canvasLocation" x="7766.5116279069771" y="696.56652360515022"/>
         </scene>
         <!--Главная-->
         <scene sceneID="y9h-L8-1TH">
@@ -1039,7 +936,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Поиск по аптеке/адресу" translatesAutoresizingMaskIntoConstraints="NO" id="kHD-tU-tgi">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Поиск по названию аптеки" translatesAutoresizingMaskIntoConstraints="NO" id="kHD-tU-tgi">
                                 <rect key="frame" x="50" y="133" width="330" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -1206,6 +1103,7 @@
         <image name="launchScreenImage" width="1080" height="2340"/>
         <image name="mappin.circle" catalog="system" width="128" height="123"/>
         <image name="noInternetImage" width="860" height="973"/>
+        <image name="person" catalog="system" width="128" height="121"/>
         <image name="phone" catalog="system" width="128" height="115"/>
         <image name="square.split.2x2.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">

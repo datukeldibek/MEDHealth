@@ -7,12 +7,6 @@
 
 import Foundation
 
-struct Section {
-    let title: String
-    let numberOfRows: Int
-    let company: PharmaciesList.PharmacyCompany
-}
-
 final class PharmacyListViewModel {
     // MARK: - Private properties
     private let pharmacies = PharmaciesList.shared.pharmacies
@@ -21,14 +15,12 @@ final class PharmacyListViewModel {
     private var filteredCompanies:[ PharmaciesList.PharmacyCompany] = []
     private var filteredCompany: PharmaciesList.PharmacyCompany? = nil
     
-    
     // MARK: - Private methods
     private func pharmacyAddresses(
         for key: PharmaciesList.PharmacyCompany
     ) -> [String] { pharmacies[key] ?? [] }
     
     // MARK: - Public methods
-    
     public func numberOfSections() -> Int {
         isFiltering ? filteredCompanies.count : companies.count
     }
