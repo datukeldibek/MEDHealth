@@ -88,8 +88,7 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initViewModel()
-        navigationController?.navigationBar.topItem?.backButtonTitle = "" 
-        // From extension. File: Extension+UIViewController.swift
+        navigationController?.navigationBar.topItem?.backButtonTitle = ""
         configureViewTappedHandling()
         configureKeyboardHandling()
         observeNetworkStatusUpdates()

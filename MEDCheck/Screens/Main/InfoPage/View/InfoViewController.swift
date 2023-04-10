@@ -11,26 +11,27 @@ class InfoViewController: UIViewController {
     // MARK: - Private properties
     private let viewModel = InfoViewModel()
     
-    // MARK: - IBOutlets
-    @IBOutlet weak var appInfoTableView: UITableView!
-    
-    // MARK: - IBActions
-    @IBAction func callSupportButtonPressed(_ sender: Any) {
-        viewModel.callPhoneNumber()
-    }
-    
     // MARK: - Private methods
     private func initViewModel() {
-        viewModel.showAlert = {
-            DispatchQueue.main.async { [weak self] in
+        viewModel.showAlert = { [weak self] title, message in
+            DispatchQueue.main.async {
                 guard let self = self else { return }
                 self.showWarningAlert(
-                    title: "Ошибка!",
-                    message: "Неизвестная ошибка. Попробуй еще раз чуть позже."
+                    title: title,
+                    message: message
                 )
             }
         }
         
+        viewModel.goToDestinationVC = { [weak self] vc in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                self.navigationController?.pushViewController(
+                    vc,
+                    animated: true
+                )
+            }
+        }
     }
     
     private func configureAppInfoTableView() {
@@ -43,7 +44,18 @@ class InfoViewController: UIViewController {
             forCellReuseIdentifier: SocialMediaLinksTableViewCell.identifier
         )
         
-        appInfoTableView.register(UITableViewCell.self, forCellReuseIdentifier: "InfoCell")
+        appInfoTableView.register(
+            UITableViewCell.self,
+            forCellReuseIdentifier: "InfoCell"
+        )
+    }
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var appInfoTableView: UITableView!
+    
+    // MARK: - IBActions
+    @IBAction func callSupportButtonPressed(_ sender: Any) {
+        viewModel.callPhoneNumber()
     }
     
     // MARK: - viewDidLoad()
@@ -51,6 +63,7 @@ class InfoViewController: UIViewController {
         super.viewDidLoad()
         initViewModel()
         configureAppInfoTableView()
+        navigationController?.navigationBar.topItem?.backButtonTitle = ""
     }
 }
 
@@ -59,37 +72,19 @@ extension InfoViewController: UITableViewDataSource {
     func tableView(
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
-    ) -> Int { viewModel.cells.count + 1 }
-    
-    private func configureUIForInfoCell(_ cell: UITableViewCell) {
-        cell.imageView?.image = UIImage(systemName: "arrow.right.square")
-        cell.backgroundColor = .clear
-        
-        // Selected state custom
-        let backgroundView = UIView()
-        backgroundView.backgroundColor = UIColor(
-            red: 193/255,
-            green: 233/255,
-            blue: 255/255,
-            alpha: 1
-        )
-        backgroundView.layer.borderWidth = 1
-        backgroundView.layer.borderColor = UIColor.lightGray.cgColor
-        cell.selectedBackgroundView = backgroundView
-    }
+    ) -> Int { viewModel.numberOfRows() }
     
     func tableView(
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
-        let isCustom = indexPath.row > viewModel.cells.count - 1
+        let isCustom = viewModel.isCustomCell(at: indexPath)
         if !isCustom {
-            let option = viewModel.cells[indexPath.row]
             let cell = tableView.dequeueReusableCell(
                 withIdentifier: "InfoCell",
                 for: indexPath
             )
-            cell.textLabel?.text = option.title
+            cell.textLabel?.text = viewModel.infoCellTitle(at: indexPath)
             configureUIForInfoCell(cell)
             return cell
         } else {
@@ -101,6 +96,14 @@ extension InfoViewController: UITableViewDataSource {
         }
     }
     
+    private func configureUIForInfoCell(_ cell: UITableViewCell) {
+        cell.imageView?.image = UIImage(systemName: "info.square")
+        cell.imageView?.tintColor = .black
+        cell.backgroundColor = .clear
+        cell.accessoryType = .disclosureIndicator
+        cell.selectionStyle = .none
+    }
+    
 }
 
 // MARK: - UITableViewDelegate
@@ -108,9 +111,7 @@ extension InfoViewController: UITableViewDelegate {
     func tableView(
         _ tableView: UITableView,
         didSelectRowAt indexPath: IndexPath
-    ) {
-        guard let vc = viewModel.didSelectRow(at: indexPath) else { return }
-        navigationController?.pushViewController(vc, animated: true)
-    }
+    ) { viewModel.didSelectRow(at: indexPath) }
     
 }
+

@@ -26,6 +26,7 @@
 		8C32E40129E2473A0047A6BB /* SignInWithPhoneNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E40029E2473A0047A6BB /* SignInWithPhoneNumberViewModel.swift */; };
 		8C32E40529E24DC90047A6BB /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E40429E24DC90047A6BB /* SignUpViewModel.swift */; };
 		8C32E42A29E482260047A6BB /* UIViewController+GoToMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E42929E482260047A6BB /* UIViewController+GoToMainVC.swift */; };
+		8C32E43029E49EE50047A6BB /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E42F29E49EE50047A6BB /* SettingsModel.swift */; };
 		8C5B49C929D0F63600915A6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5B49C829D0F63600915A6C /* AppDelegate.swift */; };
 		8C5B49CB29D0F63600915A6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5B49CA29D0F63600915A6C /* SceneDelegate.swift */; };
 		8C5B49CD29D0F63600915A6C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5B49CC29D0F63600915A6C /* SignInViewController.swift */; };
@@ -100,6 +101,7 @@
 		8C32E40029E2473A0047A6BB /* SignInWithPhoneNumberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithPhoneNumberViewModel.swift; sourceTree = "<group>"; };
 		8C32E40429E24DC90047A6BB /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		8C32E42929E482260047A6BB /* UIViewController+GoToMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+GoToMainVC.swift"; sourceTree = "<group>"; };
+		8C32E42F29E49EE50047A6BB /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		8C5B49C529D0F63600915A6C /* MEDCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEDCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5B49C829D0F63600915A6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C5B49CA29D0F63600915A6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -368,6 +370,14 @@
 				8C32E40429E24DC90047A6BB /* SignUpViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8C32E42E29E49EDD0047A6BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8C32E42F29E49EE50047A6BB /* SettingsModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8C5B49BC29D0F63600915A6C = {
@@ -865,6 +875,7 @@
 		8CEE874129D8A93100275CCE /* SettingsPage */ = {
 			isa = PBXGroup;
 			children = (
+				8C32E42E29E49EDD0047A6BB /* Model */,
 				8C32E3F129E1EC590047A6BB /* ViewModel */,
 				8C32E3F029E1EC560047A6BB /* View */,
 			);
@@ -1046,6 +1057,7 @@
 				8C32E3F329E1EC600047A6BB /* SettingsViewModel.swift in Sources */,
 				8C5B49CD29D0F63600915A6C /* SignInViewController.swift in Sources */,
 				8CDC6CB729DF50DC006493F4 /* TestResultCollectionViewCell.swift in Sources */,
+				8C32E43029E49EE50047A6BB /* SettingsModel.swift in Sources */,
 				8C32E38729DF7A680047A6BB /* InfoViewModel.swift in Sources */,
 				8C32E38F29DF85D70047A6BB /* InfoCellModel.swift in Sources */,
 				8C32E38D29DF84830047A6BB /* SafariOpener.swift in Sources */,

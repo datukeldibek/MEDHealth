@@ -16,9 +16,11 @@ final class AuthManager {
     private let auth = FirebaseAuth.Auth.auth()
     private let provider = PhoneAuthProvider.provider()
     private let defaults = UserDefaultsManager.shared
-    private let db = FirebaseManager.shared
+    private let db = FirebaseDatabaseManager.shared
     
     // MARK: - Public methods
+    
+    // MARK: – Sign in methods
     public func signIn(
         withEmail email: String,
         password: String,
@@ -80,6 +82,7 @@ final class AuthManager {
         
     }
     
+    // MARK: – Sign up method
     public func signUp(
         withName name: String,
         surname: String,
@@ -87,8 +90,11 @@ final class AuthManager {
         password: String,
         completion: @escaping (Error?) -> Void
     ) {
-        auth.createUser(withEmail: email, password: password) { [weak self] authResult, error in
-            guard let strongSelf = self else { return }
+        auth.createUser(
+            withEmail: email,
+            password: password
+        ) { [weak self] authResult, error in
+            guard let self = self else { return }
             if let error = error {
                 completion(error)
             } else if let user = authResult?.user {
@@ -97,12 +103,36 @@ final class AuthManager {
                 changeRequest.commitChanges { error in
                     if let error = error {
                         completion(error)
-                    } else {
-                        print("succesfully done commiting changes")
+                    }
+                }
+                                
+                db.saveUser(
+                    uid: user.uid,
+                    name: name,
+                    surname: surname,
+                    email: email,
+                    password: password
+                ) { error in
+                    if let error = error {
+                        completion(error)
                     }
                 }
             }
         }
     }
+    
+    // MARK: – Sign out method
+    public func signOut(completion: @escaping (Error?) -> Void) {
+        do {
+            try auth.signOut()
+            completion(nil)
+        } catch {
+            print(error.localizedDescription)
+            completion(error)
+        }
+    }
+    
+    // MARK: – Other methods
+    public func currentUser() -> FirebaseAuth.User? { auth.currentUser }
     
 }

@@ -18,24 +18,21 @@ final class SignInWithPhoneNumberViewModel {
     // MARK: - Public methods
     public func getSMSCode(forPhoneNumber phoneNumber: String) {
         authManager.getSMSCode(forPhoneNumber: phoneNumber) { [weak self] error in
-            guard let strongSelf = self else { return }
+            guard let self = self else { return }
             if let error = error {
-                strongSelf.showAlert?(error.localizedDescription)
-            } else {
-                print("Успешно отправлена смска по номеру телефона \(phoneNumber).")
+                self.showAlert?(error.localizedDescription)
             }
         }
     }
     
     public func signIn(withVerificationCode verificationCode: String) {
         authManager.signIn(withVerificationCode: verificationCode) { [weak self] error in
-            guard let strongSelf = self else { return }
+            guard let self = self else { return }
             if let error = error {
-                strongSelf.showAlert?(error.localizedDescription)
+                self.showAlert?(error.localizedDescription)
             } else {
-                strongSelf.goToMainVC?()
+                self.goToMainVC?()
             }
-            
         }
     }
 

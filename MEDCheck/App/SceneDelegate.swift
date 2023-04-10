@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
     }
-
+    
     private var isConnected: Bool {
         NetworkManager.shared.getConnectionStatus() == true
     }
@@ -26,15 +26,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         UserDefaultsManager.shared.retrieve(for: .isOnboarded) as? Bool ?? false
     }
     
+    private var isSignedIn: Bool {
+        AuthManager.shared.currentUser() != nil ? true : false
+    }
+    
+    
     private var rootViewController: UIViewController {
         if !isOnboarded {
             return UINavigationController(
                 rootViewController: OnboardingViewController.instantiate()
             )
         } else if isConnected {
-            return UINavigationController(
-                rootViewController: SignInViewController.instantiate()
-            )
+            if isSignedIn {
+                return UINavigationController(
+                    rootViewController: MainTabBarController.instantiate()
+                )
+            } else {
+                return UINavigationController(
+                    rootViewController: SignInViewController.instantiate()
+                )
+            }
+            
         } else {
             return NoInternetConnectionViewController.instantiate()
         }

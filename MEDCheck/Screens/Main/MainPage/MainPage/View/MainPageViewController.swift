@@ -7,7 +7,6 @@
 
 import UIKit
 
-// VIEWMODELS: UserDefaults (name), MainViewModel
 final class MainPageViewController: UIViewController {
     // MARK: - Private properties
     private let viewModel = MainPageViewModel()

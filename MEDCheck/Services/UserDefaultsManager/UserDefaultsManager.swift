@@ -30,4 +30,9 @@ final class UserDefaultsManager {
     public func retrieve(for key: Keys) -> Any? {
         defaults.object(forKey: key.rawValue)
     }
+    
+    public func delete(for key: Keys) {
+        defaults.removeObject(forKey: key.rawValue)
+    }
+    
 }

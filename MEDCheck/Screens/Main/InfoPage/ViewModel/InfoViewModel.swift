@@ -11,11 +11,12 @@ final class InfoViewModel {
     // MARK: - Private properties
     private let app = UIApplication.shared
     private let helper = SafariOpener.shared
-    private let supportPhoneNumber: String = "+996700125170"
-    
+    private let supportPhoneNumber: String = "+996707550051"
+    private let cells = InfoCellModel.instantiate()
+
     // MARK: - Public properties
-    public let cells = InfoCellModel.instantiate()
-    public var showAlert: (() -> Void)?
+    public var showAlert: ((String, String) -> Void)?
+    public var goToDestinationVC: ((UIViewController) -> Void)?
     
     // MARK: - Public methods
     public func callPhoneNumber() {
@@ -24,27 +25,37 @@ final class InfoViewModel {
             app.canOpenURL(url) {
             app.open(url, options: [:], completionHandler: nil)
         } else {
-            showAlert?()
+            showAlert?("Ошибка", "Попробуй чуть позже.")
         }
     }
     
-    public func didSelectRow(at indexPath: IndexPath) -> UIViewController? {
+    public func numberOfRows() -> Int { cells.count + 1 }
+    
+    public func isCustomCell(at indexPath: IndexPath) -> Bool {
+        indexPath.row > cells.count - 1 
+    }
+    
+    public func infoCellTitle(at indexPath: IndexPath) -> String {
+        cells[indexPath.row].title
+    }
+    
+    public func didSelectRow(at indexPath: IndexPath)  {
         let selectedCell = cells[indexPath.row]
         switch selectedCell.attitude {
         case .goToSafari:
             guard let link = selectedCell.websiteLink else {
-                showAlert?()
-                return nil
+                showAlert?("Ошибка", "Попробуй чуть позже.")
+                return
             }
             helper.openSafari(with: link)
-            return nil
+            return
         case .goToVC:
             guard let vc = selectedCell.destinationVC else {
-                showAlert?()
-                return nil
+                showAlert?("Ошибка", "Попробуй чуть позже.")
+                return
             }
-            return vc
+            goToDestinationVC?(vc)
         }
     }
- 
+   
 }

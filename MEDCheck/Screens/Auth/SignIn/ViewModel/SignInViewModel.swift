@@ -18,11 +18,11 @@ final class SignInViewModel {
     // MARK: - Public methods
     public func signIn(withEmail email: String, password: String) {
         authManager.signIn(withEmail: email, password: password) { [weak self] error in
-            guard let strongSelf = self else { return }
+            guard let self = self else { return }
             if let error = error {
-                strongSelf.showAlert?(error.localizedDescription)
+                self.showAlert?(error.localizedDescription)
             } else {
-                strongSelf.goToMainVC?()
+                self.goToMainVC?()
             }
         }
     }

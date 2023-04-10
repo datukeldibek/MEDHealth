@@ -1,78 +1,44 @@
 //
-//  FirebaseManager.swift
+//  FirebaseDatabaseManager.swift
 //  MEDCheck
 //
 //  Created by ibaikaa on 9/4/23.
 //
 
-import FirebaseFirestore
+import FirebaseDatabase
 
-final class FirebaseManager {
-    //MARK: - Properties
-    static let shared = FirebaseManager()
-    private let db = Firestore.firestore()
+final class FirebaseDatabaseManager {
+    static let shared = FirebaseDatabaseManager()
+    private init () { }
     
-    //MARK: - Public Methods
-    func createUser(
-        userID: String,
+    private var ref: DatabaseReference = Database.database().reference()
+    
+    public func saveUser(
+        uid: String,
         name: String,
         surname: String,
         email: String,
         password: String,
-        phoneNumber: String,
-        completion: @escaping (Error?) -> Void
+        completion: @escaping ((Error?) -> Void)
     ) {
-        let userData = [
+        let userData: [String:String] = [
+            "uid": uid,
             "name": name,
             "surname": surname,
             "email": email,
-            "phoneNumber": phoneNumber
+            "password": password
         ]
-        self.db.collection("users").document(userID).setData(userData) { (error) in
-            completion(error)
+        
+        ref.child("users").child(uid).updateChildValues(userData) { error, _ in
+            if error == nil { print("Done") } else { completion(error) }
         }
+        
+        
+        
+        
+        
+
     }
     
     
-    func getUserData(
-        userID: String,
-        completion: @escaping (Result<User, Error>) -> Void
-    ) {
-        self.db
-            .collection("users")
-            .document(userID)
-            .getDocument { snapshot, error in
-                if let error = error {
-                    completion(.failure(error))
-                    return
-                }
-                
-                guard
-                    let userData = snapshot?.data()
-                else {
-                    completion(.failure(FirebaseError.snapshotError))
-                    return
-                }
-                
-                let user = User(
-                    name: userData["name"] as? String,
-                    surname: userData["surname"] as? String,
-                    email: userData["email"] as? String,
-                    phoneNumber: userData["phoneNumber"] as? String
-                )
-                completion(.success(user))
-            }
-    }
-    
-}
-
-struct User {
-    let name: String?
-    let surname: String?
-    let email: String?
-    let phoneNumber: String?
-}
-
-enum FirebaseError: Error {
-    case snapshotError
 }
