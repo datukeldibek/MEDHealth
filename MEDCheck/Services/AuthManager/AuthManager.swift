@@ -51,6 +51,16 @@ final class AuthManager {
     }
     
     public func signIn(
+        email: String,
+        link: String,
+        completion: @escaping (Error?) -> Void
+ ) {
+        auth.signIn(withEmail: email, link: link) { authResult, error in
+            
+        }
+    }
+    
+    public func signIn(
         withVerificationCode verificationCode: String,
         completion: @escaping (Error?) -> Void
     ) {
@@ -72,14 +82,19 @@ final class AuthManager {
             verificationCode: verificationCode
         )
         
-        auth.signIn(with: credential) { authResult, error in
+        auth.signIn(with: credential) { [weak self] authResult, error in
+            guard let self = self else { return }
+            
             if let error = error {
                 completion(error)
-            } else {
-                completion(nil)
+            } else if let user = authResult?.user {
+                print(user.phoneNumber)
+                self.db.saveUser(
+                    uid: user.uid,
+                    phoneNumber: user.phoneNumber ?? ""
+                ) { completion($0) }
             }
         }
-        
     }
     
     // MARK: – Sign up method
@@ -153,5 +168,9 @@ final class AuthManager {
             user.updatePassword(to: password) { completion($0) }
             changeRequest.commitChanges { completion($0) }
         }
+    }
+    
+    public func linkPhoneNumber(phoneNumber: String) {
+        
     }
 }

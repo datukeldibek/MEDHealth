@@ -18,8 +18,32 @@ final class ProfilePageViewModel {
     
     // MARK: - Public properties
     public var showAlert: ((String) -> Void)?
+    private var linkedPhoneNumber: Bool? {
+        authManager.currentUser()?.phoneNumber != nil
+    }
     
     // MARK: - Public methods
+    public func userName() -> String? {
+        authManager.currentUser()?.displayName?.components(separatedBy: " ").first
+    }
+    
+    public func userSurname() -> String? {
+        authManager.currentUser()?.displayName?.components(separatedBy: " ").last
+    }
+    
+    public func userEmail() -> String? {
+        authManager.currentUser()?.email
+    }
+    
+    public func userPhoneNumber() -> String? {
+        authManager.currentUser()?.phoneNumber
+    }
+    
+    public func linkPhoneNumber(phoneNumber: String) {
+        
+    }
+    
+    
     public func getSMSCode(for phoneNumber: String) {
         authManager.getSMSCode(forPhoneNumber: phoneNumber) { [weak self] error in
             guard let self = self else { return }

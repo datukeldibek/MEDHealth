@@ -20,7 +20,6 @@ final class ProfilePageViewController: UIViewController {
             newPasswordTextField,
             confirmPasswordTextField
         ]
-        
     }
     
     // MARK: - IBOutlets
@@ -57,12 +56,23 @@ final class ProfilePageViewController: UIViewController {
         textFields.forEach { $0.setToolbar() }
     }
     
+    private func setDataToTextFields() {
+        nameTextField.text = viewModel.userName()
+        surnameTextField.text = viewModel.userSurname()
+        emailTextField.text = viewModel.userEmail()
+        phoneNumberTextField.text = viewModel.userPhoneNumber()
+    }
     
-    // MARK: - viewDidLoad()
+    
+    // MARK: - viewDidLoad(); viewWillAppear()
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTextFieldsToolbar()
-        
         configureViewTappedHandling()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setDataToTextFields()
     }
 }

@@ -44,6 +44,28 @@ final class FirebaseDatabaseManager {
     // MARK: - Public methods
     public func saveUser(
         uid: String,
+        phoneNumber: String,
+        completion: @escaping ((Error?) -> Void)
+    ) {
+        let userData: [String:Any] = [
+            UserDataKeys.uid.rawValue: uid,
+            UserDataKeys.name.rawValue: "",
+            UserDataKeys.surname.rawValue: "",
+            UserDataKeys.email.rawValue: "",
+            UserDataKeys.password.rawValue: "",
+            UserDataKeys.profilePictureURL.rawValue: "",
+            UserDataKeys.phoneNumber.rawValue: phoneNumber
+        ]
+        
+        let userRef = getUserReference(for: uid)
+        
+        userRef.updateChildValues(userData) { error, _ in
+            completion(error)
+        }
+    }
+    
+    public func saveUser(
+        uid: String,
         name: String,
         surname: String,
         email: String,
