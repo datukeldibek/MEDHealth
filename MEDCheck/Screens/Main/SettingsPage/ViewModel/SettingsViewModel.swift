@@ -24,6 +24,7 @@ final class SettingsViewModel {
     // MARK: - Public properties
     public var showAlert: ((String) -> Void)?
     public var goToSignInVC: (() -> Void)?
+    public var goToDestinationVC: ((UIViewController) -> Void)?
     
     // MARK: - Public methods
     
@@ -56,7 +57,7 @@ final class SettingsViewModel {
         }
     }
     
-    public func savePic(image: UIImage) {
+    public func saveProfilePicture(image: UIImage) {
         guard let imageData = image.jpegData(compressionQuality: 0.4) else {
             showAlert?("Не удалось сохранить картинку. Попробуй еще раз.")
             return
@@ -92,6 +93,7 @@ final class SettingsViewModel {
     }
     
     public func didSelectRow(at indexPath: IndexPath) {
-        print("selected \"\(settingsCells[indexPath.row].title)\" cell.")
+        let destinationVC = settingsCells[indexPath.row].destinationVC
+        goToDestinationVC?(destinationVC)
     }
 }

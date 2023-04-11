@@ -39,6 +39,12 @@ final class SettingsViewController: UIViewController {
             }
         }
         
+        viewModel.goToDestinationVC = { [weak self] vc in
+            DispatchQueue.main.async {
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
+        
     }
     
     private func goToSignInVC() {
@@ -96,6 +102,7 @@ final class SettingsViewController: UIViewController {
         configureProfilePicImageView()
         configureSettingsTableView()
         configureImagePicker()
+        navigationController?.navigationBar.topItem?.backButtonTitle = ""
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -112,7 +119,7 @@ extension SettingsViewController: UINavigationControllerDelegate, UIImagePickerC
         didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]
     ) {
         guard let pickedImage = info[.editedImage] as? UIImage else { return }
-        viewModel.savePic(image: pickedImage)
+        viewModel.saveProfilePicture(image: pickedImage)
         self.userProfilePictureImageView.image = pickedImage
         picker.dismiss(animated: true)
     }

@@ -64,6 +64,4 @@ final class ProfilePageViewModel {
         }
     }
     
-    // LINK PHONE NUMBER
-
 }

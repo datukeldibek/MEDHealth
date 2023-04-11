@@ -10,6 +10,7 @@ import UIKit
 struct SettingCell {
     var title: String
     var icon: UIImage?
+    var destinationVC: UIViewController
 }
 
 extension SettingCell {
@@ -17,12 +18,14 @@ extension SettingCell {
         [
             SettingCell(
                 title: "Аккаунт",
-                icon: UIImage(systemName: "person")
+                icon: UIImage(systemName: "person"),
+                destinationVC: ProfilePageViewController.instantiate()
             ),
             
             SettingCell(
                 title: "Язык",
-                icon: UIImage(systemName: "globe.americas.fill")
+                icon: UIImage(systemName: "globe.americas.fill"),
+                destinationVC: LocalizationSettingViewController.instantiate()
             )
         ]
     }
