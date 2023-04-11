@@ -1254,10 +1254,35 @@
                     <view key="view" contentMode="scaleToFill" id="qga-6I-vfC">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2R2-4T-SyY">
+                                <rect key="frame" x="0.0" y="133" width="430" height="765"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="language_cell" id="5Al-8u-fUJ">
+                                        <rect key="frame" x="0.0" y="50" width="430" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Al-8u-fUJ" id="ek4-lT-qlZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ZyU-Ii-RQa"/>
                         <color key="backgroundColor" red="0.75686274509999996" green="0.91372549020000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZyU-Ii-RQa" firstAttribute="trailing" secondItem="2R2-4T-SyY" secondAttribute="trailing" id="BkO-Vy-8m6"/>
+                            <constraint firstItem="2R2-4T-SyY" firstAttribute="leading" secondItem="ZyU-Ii-RQa" secondAttribute="leading" id="Syj-Ps-Kqd"/>
+                            <constraint firstItem="2R2-4T-SyY" firstAttribute="top" secondItem="ZyU-Ii-RQa" secondAttribute="top" constant="30" id="Yh4-Bd-JPQ"/>
+                            <constraint firstItem="ZyU-Ii-RQa" firstAttribute="bottom" secondItem="2R2-4T-SyY" secondAttribute="bottom" id="nGg-1w-4PP"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Выбрать язык 🌐" id="DtN-Ko-zFe"/>
+                    <connections>
+                        <outlet property="languagesTableView" destination="2R2-4T-SyY" id="W03-NK-gck"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dWb-QC-w0E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
