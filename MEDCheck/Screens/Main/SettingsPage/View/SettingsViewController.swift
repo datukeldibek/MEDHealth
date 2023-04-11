@@ -84,7 +84,7 @@ final class SettingsViewController: UIViewController {
     }
     
     private func setDataToUIElements() {
-        userProfilePictureImageView.image = viewModel.getProfilePicture()
+        viewModel.setProfilePicture(to: userProfilePictureImageView)
         userNameSurnameLabel.text = viewModel.getUserDisplayName()
         userEmailLabel.text = viewModel.getUserEmail()
     }

@@ -131,7 +131,6 @@ final class AuthManager {
             try auth.signOut()
             completion(nil)
         } catch {
-            print(error.localizedDescription)
             completion(error)
         }
     }
@@ -139,4 +138,20 @@ final class AuthManager {
     // MARK: – Other methods
     public func currentUser() -> FirebaseAuth.User? { auth.currentUser }
     
+    public func updateUserData(
+        name: String,
+        surname: String,
+        email: String,
+        password: String,
+        phoneNumber: String,
+        completion: @escaping (Error?) -> Void
+    ) {
+        if let user = auth.currentUser {
+            let changeRequest = user.createProfileChangeRequest()
+            changeRequest.displayName = "\(name) \(surname)"
+            user.updateEmail(to: email) { completion($0) }
+            user.updatePassword(to: password) { completion($0) }
+            changeRequest.commitChanges { completion($0) }
+        }
+    }
 }

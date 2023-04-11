@@ -22,6 +22,8 @@ pod 'FirebaseAuth'
 pod 'FirebaseDatabase'
 pod 'FirebaseStorage'
 
+pod 'Kingfisher'
+
   post_install do |installer|
       installer.generated_projects.each do |project|
           project.targets.each do |target|

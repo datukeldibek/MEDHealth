@@ -26,6 +26,21 @@ final class FirebaseDatabaseManager {
         ref.child(REF_USER).child(uid)
     }
     
+    private func getUserData(
+        uid: String,
+        completion: @escaping (Result<[String:Any], Error>) -> Void
+    ) {
+        let userRef = getUserReference(for: uid)
+        userRef.observeSingleEvent(of: .value) { snapshot in
+            guard let userData = snapshot.value as? [String:Any] else {
+                completion(.failure(FirebaseDatabaseErrors.snapshotError))
+                return
+            }
+            
+            completion(.success(userData))
+        }
+    }
+    
     // MARK: - Public methods
     public func saveUser(
         uid: String,
@@ -54,16 +69,21 @@ final class FirebaseDatabaseManager {
     
     public func getUserData(
         uid: String,
-        completion: @escaping (Result<[String:Any], Error>) -> Void
+        forKey key: UserDataKeys,
+        completion: @escaping (Result<String, Error>) -> Void
     ) {
         let userRef = getUserReference(for: uid)
-        userRef.observeSingleEvent(of: .value) { snapshot in
+        userRef.observeSingleEvent(of: .value) { snapshot, _ in
             guard let userData = snapshot.value as? [String:Any] else {
                 completion(.failure(FirebaseDatabaseErrors.snapshotError))
                 return
             }
             
-            completion(.success(userData))
+            completion(
+                .success(
+                    userData[key.rawValue] as? String ?? ""
+                )
+            )
         }
     }
     
@@ -89,7 +109,17 @@ final class FirebaseDatabaseManager {
                 completion(error)
             }
         }
-        
+    }
+    
+    public func updateUserData(
+        uid: String,
+        newData: [String: Any],
+        completion: @escaping ((Error?) -> Void)
+    ) {
+        let userRef = self.getUserReference(for: uid)
+        userRef.updateChildValues(newData) { error, _ in
+            completion(error)
+        }
     }
     
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class SettingsViewModel {
     // MARK: - Private properties
@@ -14,6 +15,11 @@ final class SettingsViewModel {
     
     private let authManager = AuthManager.shared
     private let storage = FirebaseStorageManager.shared
+    private let db = FirebaseDatabaseManager.shared
+    
+    private var uid: String {
+        authManager.currentUser()?.uid ?? ""
+    }
     
     // MARK: - Public properties
     public var showAlert: ((String) -> Void)?
@@ -34,23 +40,24 @@ final class SettingsViewModel {
         }
     }
     
-    
     // MARK: – UIPreparing
-    public func getProfilePicture() -> UIImage  {
-        guard
-            let imageData = defaults.retrieve(for: .chosenImage) as? Data
-        else {
-            return UIImage(systemName: "person")!
+    public func setProfilePicture(to imageView: UIImageView) {
+        db.getUserData(uid: uid, forKey: .profilePictureURL) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let profilePictureURL):
+                imageView.kf.setImage(
+                    with: URL(string: profilePictureURL),
+                    placeholder: UIImage(systemName: "person")
+                )
+            case .failure(let error):
+                self.showAlert?(error.localizedDescription)
+            }
         }
-        
-        return UIImage(data: imageData) ?? UIImage(systemName: "person")!
     }
     
     public func savePic(image: UIImage) {
-        guard
-            let imageData = image.jpegData(compressionQuality: 0.4),
-            let uid = authManager.currentUser()?.uid
-        else {
+        guard let imageData = image.jpegData(compressionQuality: 0.4) else {
             showAlert?("Не удалось сохранить картинку. Попробуй еще раз.")
             return
         }
@@ -65,12 +72,7 @@ final class SettingsViewModel {
             }
         }
     }
-    
-    public func saveProfilePicture(image: UIImage) {
-        let imageData = image.pngData()
-        defaults.save(value: imageData, for: .chosenImage)
-    }
-    
+ 
     public func getUserDisplayName() -> String? {
         authManager.currentUser()?.displayName
     }
