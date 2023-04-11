@@ -43,10 +43,8 @@ final class SettingsViewModel {
     
     // MARK: – UIPreparing
     public func setProfilePicture(to imageView: UIImageView) {
-        guard let url = authManager.currentUser()?.photoURL else {
-            print("no url :(")
-            return
-        }
+        guard let url = authManager.currentUser()?.photoURL else { return }
+        
         imageView.kf.setImage(
             with: url,
             placeholder: UIImage(systemName: "person")

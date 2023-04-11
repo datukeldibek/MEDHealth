@@ -13,15 +13,9 @@ final class ResetPasswordViewController: UIViewController {
     
     // MARK: - Private methods
     private func initViewModel() {
-        viewModel.showAlert = { [weak self] error in
+        viewModel.showInfoAlert = { [weak self] title, message in
             DispatchQueue.main.async {
-                self?.showInfoAlert(title: "Ошибка", message: error)
-            }
-        }
-        
-        viewModel.goToSignInVC = { [weak self] in
-            DispatchQueue.main.async {
-                self?.goToSignInVC()
+                self?.showInfoAlert(title: title, message: message)
             }
         }
     }

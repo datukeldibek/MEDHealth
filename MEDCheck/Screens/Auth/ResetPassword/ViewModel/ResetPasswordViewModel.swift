@@ -12,17 +12,22 @@ final class ResetPasswordViewModel {
     private let authManager = AuthManager.shared
     
     // MARK: - Public properties
-    public var showAlert: ((String) -> Void)?
-    public var goToSignInVC: (() -> Void)?
+    public var showInfoAlert: ((String, String) -> Void)?
     
     // MARK: - Public methods
     public func reset(forEmail email: String) {
         authManager.sendPasswordReset(toEmail: email) { [weak self] error in
             guard let self = self else { return }
             if let error = error {
-                self.showAlert?(error.localizedDescription)
+                self.showInfoAlert?(
+                    "Ошибка",
+                    error.localizedDescription
+                )
             } else {
-                self.goToSignInVC?()
+                self.showInfoAlert?(
+                    "Успех",
+                    "На почту пришло сообщение для восстановления пароля. Следуйте инструкции, чтоб восстановить пароль."
+                )
             }
         }
     }
