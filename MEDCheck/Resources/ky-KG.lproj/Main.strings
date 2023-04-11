@@ -1,0 +1,213 @@
+
+/* Class = "UINavigationItem"; title = "Регистрация "; ObjectID = "08x-Rw-aSR"; */
+"08x-Rw-aSR.title" = "Регистрация ";
+
+/* Class = "UINavigationItem"; title = "История болезни 🩺"; ObjectID = "1E8-R6-0VU"; */
+"1E8-R6-0VU.title" = "История болезни 🩺";
+
+/* Class = "UIButton"; configuration.title = "Регистрация"; ObjectID = "1aT-sB-lLP"; */
+"1aT-sB-lLP.configuration.title" = "Регистрация";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1aT-sB-lLP"; */
+"1aT-sB-lLP.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "*******"; ObjectID = "2P0-I5-SRY"; */
+"2P0-I5-SRY.placeholder" = "*******";
+
+/* Class = "UILabel"; text = "Электронная почта: "; ObjectID = "5E5-HM-mXn"; */
+"5E5-HM-mXn.text" = "Электронная почта: ";
+
+/* Class = "UIButton"; configuration.title = "Вход"; ObjectID = "5PB-YA-1Ax"; */
+"5PB-YA-1Ax.configuration.title" = "Вход";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "5PB-YA-1Ax"; */
+"5PB-YA-1Ax.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Еще нет аккаунта? "; ObjectID = "61L-Hg-pEj"; */
+"61L-Hg-pEj.text" = "Еще нет аккаунта? ";
+
+/* Class = "UINavigationItem"; title = "Восстановление пароля"; ObjectID = "8xR-bF-091"; */
+"8xR-bF-091.title" = "Восстановление пароля";
+
+/* Class = "UITextField"; placeholder = "mymail@gmail.com"; ObjectID = "BJQ-UG-aum"; */
+"BJQ-UG-aum.placeholder" = "mymail@gmail.com";
+
+/* Class = "UIButton"; configuration.title = "Нажми сюда, чтобы проверить ещё"; ObjectID = "BWn-EB-Puq"; */
+"BWn-EB-Puq.configuration.title" = "Нажми сюда, чтобы проверить ещё";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "BWn-EB-Puq"; */
+"BWn-EB-Puq.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Новый пароль: "; ObjectID = "BZz-cZ-NWU"; */
+"BZz-cZ-NWU.text" = "Новый пароль: ";
+
+/* Class = "UINavigationItem"; title = "👋🏻 Привет, Ян!"; ObjectID = "C7H-Sq-kkl"; */
+"C7H-Sq-kkl.title" = "👋🏻 Привет, Ян!";
+
+/* Class = "UINavigationItem"; title = "О приложении 🔍"; ObjectID = "Cpq-GB-Tgt"; */
+"Cpq-GB-Tgt.title" = "О приложении 🔍";
+
+/* Class = "UINavigationItem"; title = "Список аптек 🏥"; ObjectID = "DJ7-GY-Kkm"; */
+"DJ7-GY-Kkm.title" = "Список аптек 🏥";
+
+/* Class = "UINavigationItem"; title = "Выбрать язык 🌐"; ObjectID = "DtN-Ko-zFe"; */
+"DtN-Ko-zFe.title" = "Выбрать язык 🌐";
+
+/* Class = "UILabel"; text = "Связаться с поддержкой"; ObjectID = "EnC-f4-c4M"; */
+"EnC-f4-c4M.text" = "Связаться с поддержкой";
+
+/* Class = "UITextField"; placeholder = "Пароль"; ObjectID = "ErW-ah-OJd"; */
+"ErW-ah-OJd.placeholder" = "Пароль";
+
+/* Class = "UITextField"; placeholder = "Как тебя зовут?"; ObjectID = "GC9-gr-bj3"; */
+"GC9-gr-bj3.placeholder" = "Как тебя зовут?";
+
+/* Class = "UILabel"; text = "Пароль*"; ObjectID = "IcX-sC-BwP"; */
+"IcX-sC-BwP.text" = "Пароль*";
+
+/* Class = "UILabel"; text = "Фамилия*"; ObjectID = "IjM-gg-2p4"; */
+"IjM-gg-2p4.text" = "Фамилия*";
+
+/* Class = "UILabel"; text = "Почта: "; ObjectID = "Jhc-gU-Ceg"; */
+"Jhc-gU-Ceg.text" = "Почта: ";
+
+/* Class = "UITextField"; text = "Имя"; ObjectID = "KQz-48-WnY"; */
+"KQz-48-WnY.text" = "Имя";
+
+/* Class = "UITextField"; text = "Фамилия"; ObjectID = "LPi-Nc-2fL"; */
+"LPi-Nc-2fL.text" = "Фамилия";
+
+/* Class = "UIButton"; configuration.title = "Позвонить"; ObjectID = "NZW-Gt-Sgk"; */
+"NZW-Gt-Sgk.configuration.title" = "Позвонить";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "NZW-Gt-Sgk"; */
+"NZW-Gt-Sgk.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Главная"; ObjectID = "O4A-sd-0mS"; */
+"O4A-sd-0mS.title" = "Главная";
+
+/* Class = "UINavigationItem"; title = "Результаты анализов 🗒️"; ObjectID = "Q6J-k1-hCs"; */
+"Q6J-k1-hCs.title" = "Результаты анализов 🗒️";
+
+/* Class = "UIButton"; configuration.title = "Зарегистрироваться"; ObjectID = "Qyo-1v-7a3"; */
+"Qyo-1v-7a3.configuration.title" = "Зарегистрироваться";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Qyo-1v-7a3"; */
+"Qyo-1v-7a3.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "RUa-hY-rv6"; */
+"RUa-hY-rv6.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "Восстановить пароль"; ObjectID = "Rhj-lz-yQw"; */
+"Rhj-lz-yQw.configuration.title" = "Восстановить пароль";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Rhj-lz-yQw"; */
+"Rhj-lz-yQw.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Имя*"; ObjectID = "S3R-oQ-dEW"; */
+"S3R-oQ-dEW.text" = "Имя*";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "SML-xE-pa4"; */
+"SML-xE-pa4.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Чат"; ObjectID = "TGG-zw-hNd"; */
+"TGG-zw-hNd.title" = "Чат";
+
+/* Class = "UILabel"; text = "Версия: 1.0.0, сборка 9026"; ObjectID = "Tm1-kM-Mmf"; */
+"Tm1-kM-Mmf.text" = "Версия: 1.0.0, сборка 9026";
+
+/* Class = "UITextField"; placeholder = "***********"; ObjectID = "UtA-N1-CSr"; */
+"UtA-N1-CSr.placeholder" = "***********";
+
+/* Class = "UITextField"; text = "Почта"; ObjectID = "VX9-OJ-ikK"; */
+"VX9-OJ-ikK.text" = "Почта";
+
+/* Class = "UIButton"; configuration.title = "Сохранить изменения"; ObjectID = "Vci-i2-7RO"; */
+"Vci-i2-7RO.configuration.title" = "Сохранить изменения";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Vci-i2-7RO"; */
+"Vci-i2-7RO.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "Прием лекарств 💊"; ObjectID = "VhX-iw-Dun"; */
+"VhX-iw-Dun.title" = "Прием лекарств 💊";
+
+/* Class = "UIButton"; configuration.title = "Пропустить обучение ⏩"; ObjectID = "a10-be-Nwp"; */
+"a10-be-Nwp.configuration.title" = "Пропустить обучение ⏩";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "a10-be-Nwp"; */
+"a10-be-Nwp.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Забыли пароль? "; ObjectID = "auf-vT-Kd5"; */
+"auf-vT-Kd5.configuration.title" = "Забыли пароль? ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "auf-vT-Kd5"; */
+"auf-vT-Kd5.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Выход"; ObjectID = "b9u-7v-suN"; */
+"b9u-7v-suN.configuration.title" = "Выход";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "b9u-7v-suN"; */
+"b9u-7v-suN.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "*******"; ObjectID = "cxl-W6-Rma"; */
+"cxl-W6-Rma.placeholder" = "*******";
+
+/* Class = "UILabel"; text = "Имя: "; ObjectID = "eT3-hT-MpX"; */
+"eT3-hT-MpX.text" = "Имя: ";
+
+/* Class = "UITextField"; placeholder = "Твоя фамилия"; ObjectID = "g6O-rU-HnZ"; */
+"g6O-rU-HnZ.placeholder" = "Твоя фамилия";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "gDn-hZ-qIQ"; */
+"gDn-hZ-qIQ.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "Настройки ⚙️"; ObjectID = "gUq-Nf-Nnv"; */
+"gUq-Nf-Nnv.title" = "Настройки ⚙️";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "iVs-ff-NEC"; */
+"iVs-ff-NEC.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "Электронная почта*"; ObjectID = "itC-4q-4Xi"; */
+"itC-4q-4Xi.text" = "Электронная почта*";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jx4-TA-5gJ"; */
+"jx4-TA-5gJ.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Обучение"; ObjectID = "jyG-5w-3Mf"; */
+"jyG-5w-3Mf.title" = "Обучение";
+
+/* Class = "UISearchBar"; placeholder = "Поиск по названию аптеки"; ObjectID = "kHD-tU-tgi"; */
+"kHD-tU-tgi.placeholder" = "Поиск по названию аптеки";
+
+/* Class = "UILabel"; text = "У-у-упс. Интернета-то нет!"; ObjectID = "kHf-tf-v7H"; */
+"kHf-tf-v7H.text" = "У-у-упс. Интернета-то нет!";
+
+/* Class = "UITabBarItem"; title = "Настройки"; ObjectID = "mAG-LC-IRg"; */
+"mAG-LC-IRg.title" = "Настройки";
+
+/* Class = "UINavigationItem"; title = "Аккаунт  👤"; ObjectID = "mCf-Oi-bBQ"; */
+"mCf-Oi-bBQ.title" = "Аккаунт  👤";
+
+/* Class = "UILabel"; text = "Фамилия: "; ObjectID = "pRh-Ov-Wyr"; */
+"pRh-Ov-Wyr.text" = "Фамилия: ";
+
+/* Class = "UINavigationItem"; title = "Вход"; ObjectID = "qcB-hP-okI"; */
+"qcB-hP-okI.title" = "Вход";
+
+/* Class = "UINavigationItem"; title = "О нас 📄 "; ObjectID = "qg5-o9-1Kk"; */
+"qg5-o9-1Kk.title" = "О нас 📄 ";
+
+/* Class = "UILabel"; text = "Подтвердите: "; ObjectID = "vMt-Z7-vKd"; */
+"vMt-Z7-vKd.text" = "Подтвердите: ";
+
+/* Class = "UITabBarItem"; title = "Контакты"; ObjectID = "vjH-ib-vrO"; */
+"vjH-ib-vrO.title" = "Контакты";
+
+/* Class = "UITextField"; placeholder = "mymail@gmail.com"; ObjectID = "xuS-pG-cxS"; */
+"xuS-pG-cxS.placeholder" = "mymail@gmail.com";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "zQv-df-bkr"; */
+"zQv-df-bkr.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "Чат с ИИ-доктором🤖"; ObjectID = "zyl-ge-vCJ"; */
+"zyl-ge-vCJ.title" = "Чат с ИИ-доктором🤖";

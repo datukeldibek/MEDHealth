@@ -57,6 +57,8 @@
 		8C8A16F529E5CC6600ED7FDC /* LocalizationSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8A16F429E5CC6600ED7FDC /* LocalizationSettingViewController.swift */; };
 		8CB37BC829E61810002DAB59 /* LocalizationPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB37BC729E61810002DAB59 /* LocalizationPageViewModel.swift */; };
 		8CB37BCB29E61898002DAB59 /* LocalizationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB37BCA29E61898002DAB59 /* LocalizationOptions.swift */; };
+		8CB37BD129E628BB002DAB59 /* String + Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB37BD029E628BB002DAB59 /* String + Localized.swift */; };
+		8CB37BD429E6296D002DAB59 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8CB37BD629E6296D002DAB59 /* Localizable.strings */; };
 		8CC8D6D829DA449100DD1E1D /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC8D6D729DA449100DD1E1D /* AuthManager.swift */; };
 		8CC8D6DA29DA4A0C00DD1E1D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CC8D6D929DA4A0C00DD1E1D /* GoogleService-Info.plist */; };
 		8CDC6C4B29DE081C006493F4 /* FeatureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDC6C4929DE081C006493F4 /* FeatureCollectionViewCell.swift */; };
@@ -141,6 +143,13 @@
 		8C8A16F429E5CC6600ED7FDC /* LocalizationSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationSettingViewController.swift; sourceTree = "<group>"; };
 		8CB37BC729E61810002DAB59 /* LocalizationPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationPageViewModel.swift; sourceTree = "<group>"; };
 		8CB37BCA29E61898002DAB59 /* LocalizationOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationOptions.swift; sourceTree = "<group>"; };
+		8CB37BCC29E6239A002DAB59 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		8CB37BCD29E6240A002DAB59 /* ky-KG */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ky-KG"; path = "ky-KG.lproj/Main.strings"; sourceTree = "<group>"; };
+		8CB37BCE29E624D4002DAB59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		8CB37BD029E628BB002DAB59 /* String + Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Localized.swift"; sourceTree = "<group>"; };
+		8CB37BD529E6296D002DAB59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8CB37BD729E62971002DAB59 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8CB37BD829E62972002DAB59 /* ky-KG */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ky-KG"; path = "ky-KG.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		8CC8D6D729DA449100DD1E1D /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		8CC8D6D929DA4A0C00DD1E1D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8CDC6C4929DE081C006493F4 /* FeatureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -445,6 +454,7 @@
 				8C5B49CE29D0F63600915A6C /* Main.storyboard */,
 				8C5B49DE29D1099600915A6C /* Raleway-Italic-VariableFont_wght.ttf */,
 				8C5B49DF29D1099600915A6C /* Raleway-VariableFont_wght.ttf */,
+				8CB37BD629E6296D002DAB59 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -511,6 +521,7 @@
 		8C87BBC929D48526008A742D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8CB37BCF29E628AD002DAB59 /* String */,
 				8CDC6C6E29DE2AA4006493F4 /* UIButton */,
 				8CDC6C6D29DE2AA0006493F4 /* UITextField */,
 				8CDC6C6F29DE2AAA006493F4 /* UIView */,
@@ -695,6 +706,14 @@
 				8CB37BCA29E61898002DAB59 /* LocalizationOptions.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8CB37BCF29E628AD002DAB59 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				8CB37BD029E628BB002DAB59 /* String + Localized.swift */,
+			);
+			path = String;
 			sourceTree = "<group>";
 		};
 		8CDC6C4429DE0759006493F4 /* View */ = {
@@ -1047,11 +1066,13 @@
 			};
 			buildConfigurationList = 8C5B49C029D0F63600915A6C /* Build configuration list for PBXProject "MEDCheck" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ru;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				ru,
+				"ky-KG",
+				en,
 			);
 			mainGroup = 8C5B49BC29D0F63600915A6C;
 			productRefGroup = 8C5B49C629D0F63600915A6C /* Products */;
@@ -1070,6 +1091,7 @@
 			files = (
 				8CDC6CB829DF50DC006493F4 /* TestResultCollectionViewCell.xib in Resources */,
 				8C87BC0429D77BBD008A742D /* OnboardingCollectionViewCell.xib in Resources */,
+				8CB37BD429E6296D002DAB59 /* Localizable.strings in Resources */,
 				8CDC6C4C29DE081C006493F4 /* FeatureCollectionViewCell.xib in Resources */,
 				8C5B49E129D1099600915A6C /* Raleway-VariableFont_wght.ttf in Resources */,
 				8C5B49D529D0F63800915A6C /* LaunchScreen.storyboard in Resources */,
@@ -1190,6 +1212,7 @@
 				8CDC6C5529DE0D43006493F4 /* Feature.swift in Sources */,
 				8C87BBCF29D49046008A742D /* UIViewController+InstantiateMethod.swift in Sources */,
 				8CDC6C8729DE3325006493F4 /* MedicationTakingViewModel.swift in Sources */,
+				8CB37BD129E628BB002DAB59 /* String + Localized.swift in Sources */,
 				8C8A16E329E4BD8900ED7FDC /* FirebaseStorageManager.swift in Sources */,
 				8C8A16E629E4CA3B00ED7FDC /* UserDataKeys.swift in Sources */,
 				8C87BBCB29D48534008A742D /* UIView+Extensions.swift in Sources */,
@@ -1207,6 +1230,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				8C5B49CF29D0F63600915A6C /* Base */,
+				8CB37BCC29E6239A002DAB59 /* ru */,
+				8CB37BCD29E6240A002DAB59 /* ky-KG */,
+				8CB37BCE29E624D4002DAB59 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1219,6 +1245,16 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		8CB37BD629E6296D002DAB59 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8CB37BD529E6296D002DAB59 /* en */,
+				8CB37BD729E62971002DAB59 /* ru */,
+				8CB37BD829E62972002DAB59 /* ky-KG */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -1226,6 +1262,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1288,6 +1325,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
