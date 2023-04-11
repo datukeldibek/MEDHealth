@@ -13,14 +13,13 @@ final class ProfilePageViewModel {
     private let authManager = AuthManager.shared
     
     private var uid: String {
-        authManager.currentUser()?.uid ?? ""
+        authManager.uid ?? ""
     }
     
     // MARK: - Public properties
-    public var showAlert: ((String) -> Void)?
-    private var linkedPhoneNumber: Bool? {
-        authManager.currentUser()?.phoneNumber != nil
-    }
+    public var showError: ((String) -> Void)?
+    public var showSuccess: ((String) -> Void)?
+
     
     // MARK: - Public methods
     public func userName() -> String? {
@@ -35,55 +34,53 @@ final class ProfilePageViewModel {
         authManager.currentUser()?.email
     }
     
-    public func userPhoneNumber() -> String? {
-        authManager.currentUser()?.phoneNumber
-    }
-    
-    public func linkPhoneNumber(phoneNumber: String) {
-        
-    }
-    
-    
-    public func getSMSCode(for phoneNumber: String) {
-        authManager.getSMSCode(forPhoneNumber: phoneNumber) { [weak self] error in
-            guard let self = self else { return }
-            if let error = error {
-                self.showAlert?(error.localizedDescription)
-            }
-        }
-    }
-    
-    public func confirmChanges(
+    public func updateValues(
         name: String,
         surname: String,
-        email: String,
-        password: String,
-        phoneNumber: String
+        email: String
     ) {
-        var updatedData = [String: Any]()
-        updatedData[UserDataKeys.name.rawValue] = name
-        updatedData[UserDataKeys.surname.rawValue] = surname
-        updatedData[UserDataKeys.email.rawValue] = email
-        updatedData[UserDataKeys.password.rawValue] = password
-        updatedData[UserDataKeys.phoneNumber.rawValue] = phoneNumber
-        
-        db.updateUserData(uid: uid, newData: updatedData) { [weak self]  error in
+        authManager.updateUserData(name: name, surname: surname, email: email) { [weak self] error in
             guard let self = self else { return }
-            if let error = error {
-                self.showAlert?(error.localizedDescription)
+            guard error == nil else  {
+                self.showError?(error!.localizedDescription)
+                return
             }
         }
         
-        authManager.updateUserData(
-            name: name,
-            surname: surname,
-            email: email,
-            password: password,
-            phoneNumber: phoneNumber
-        ) { [weak self] error in
+        db.updateUserData(uid: uid, newData: name, key: .name) { [weak self] error in
+            guard let self = self else { return }
+            guard error == nil else  {
+                self.showError?(error!.localizedDescription)
+                return
+            }
+        }
+        
+        db.updateUserData(uid: uid, newData: surname, key: .surname){ [weak self] error in
+            guard let self = self else { return }
+            guard error == nil else  {
+                self.showError?(error!.localizedDescription)
+                return
+            }
+        }
+        
+        db.updateUserData(uid: uid, newData: email, key: .email) { [weak self] error in
+            guard let self = self else { return }
+            guard error == nil else  {
+                self.showError?(error!.localizedDescription)
+                return
+            }
+        }
+        
+        showSuccess?("Данные успешно изменены ✅")
+    }
+    
+    public func updatePassword(newPassword: String) {
+        authManager.updateUserPassword(newPassword: newPassword) {  [weak self] error in
             guard let self = self else { return }
             if let error = error {
-                self.showAlert?(error.localizedDescription)
+                self.showError?(error.localizedDescription)
+            } else {
+                self.showSuccess?("Пароль успешно изменен ✅")
             }
         }
     }

@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIViewController {
-    func showWarningAlert (
+    func showInfoAlert (
         title: String,
         message: String
     ) {

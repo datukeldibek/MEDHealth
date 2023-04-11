@@ -14,5 +14,4 @@ public enum UserDataKeys: String {
     case email = "email"
     case password = "password"
     case profilePictureURL = "profilePictureURL"
-    case phoneNumber = "phoneNumber"
 }

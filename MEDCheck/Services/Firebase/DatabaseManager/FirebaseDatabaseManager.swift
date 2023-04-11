@@ -44,28 +44,6 @@ final class FirebaseDatabaseManager {
     // MARK: - Public methods
     public func saveUser(
         uid: String,
-        phoneNumber: String,
-        completion: @escaping ((Error?) -> Void)
-    ) {
-        let userData: [String:Any] = [
-            UserDataKeys.uid.rawValue: uid,
-            UserDataKeys.name.rawValue: "",
-            UserDataKeys.surname.rawValue: "",
-            UserDataKeys.email.rawValue: "",
-            UserDataKeys.password.rawValue: "",
-            UserDataKeys.profilePictureURL.rawValue: "",
-            UserDataKeys.phoneNumber.rawValue: phoneNumber
-        ]
-        
-        let userRef = getUserReference(for: uid)
-        
-        userRef.updateChildValues(userData) { error, _ in
-            completion(error)
-        }
-    }
-    
-    public func saveUser(
-        uid: String,
         name: String,
         surname: String,
         email: String,
@@ -79,7 +57,6 @@ final class FirebaseDatabaseManager {
             UserDataKeys.email.rawValue: email,
             UserDataKeys.password.rawValue: password,
             UserDataKeys.profilePictureURL.rawValue: "",
-            UserDataKeys.phoneNumber.rawValue: ""
         ]
         
         let userRef = getUserReference(for: uid)
@@ -101,11 +78,12 @@ final class FirebaseDatabaseManager {
                 return
             }
             
-            completion(
-                .success(
-                    userData[key.rawValue] as? String ?? ""
-                )
-            )
+            guard let value = userData[key.rawValue] as? String else {
+                completion(.failure(FirebaseDatabaseErrors.snapshotError))
+                return
+            }
+            
+            completion(.success(value))
         }
     }
     
@@ -115,24 +93,21 @@ final class FirebaseDatabaseManager {
         key: UserDataKeys,
         completion: @escaping ((Error?) -> Void)
     ) {
-        self.getUserData(uid: uid) { [weak self] result in
+        getUserData(uid: uid) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(var userData):
+                let userRef = self.ref.child(REF_USER).child(uid)
                 userData[key.rawValue] = newData
-                
-                let userRef = self.getUserReference(for: uid)
-                userRef.updateChildValues(userData) { error, _ in
+                userRef.updateChildValues(userData) { error, ref in
                     completion(error)
                 }
-                
-                
             case .failure(let error):
                 completion(error)
             }
         }
     }
-    
+
     public func updateUserData(
         uid: String,
         newData: [String: Any],

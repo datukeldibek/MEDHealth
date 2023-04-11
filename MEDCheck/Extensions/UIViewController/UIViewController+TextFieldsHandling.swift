@@ -19,14 +19,14 @@ extension UIViewController {
         }
     }
     
-    func isPhoneNumberInput(from textField: UITextField) -> Bool{
-        guard
-            let text = textField.text,
-            text.prefix(4) == "+996",
-            text.count == 13,
-            Int(text) != nil
-        else { return false }
-        return true
-    }
+//    func isPhoneNumberInput(from textField: UITextField) -> Bool{
+//        guard
+//            let text = textField.text,
+//            text.prefix(4) == "+996",
+//            text.count == 13,
+//            Int(text) != nil
+//        else { return false }
+//        return true
+//    }
     
 }

@@ -43,42 +43,21 @@ final class SettingsViewModel {
     
     // MARK: – UIPreparing
     public func setProfilePicture(to imageView: UIImageView) {
-        db.getUserData(uid: uid, forKey: .profilePictureURL) { [weak self] result in
-            guard let self = self else { return }
-            switch result {
-            case .success(let profilePictureURL):
-                imageView.kf.setImage(
-                    with: URL(string: profilePictureURL),
-                    placeholder: UIImage(systemName: "person")
-                )
-            case .failure(let error):
-                self.showAlert?(error.localizedDescription)
-            }
-        }
-    }
-    
-    public func saveProfilePicture(image: UIImage) {
-        guard let imageData = image.jpegData(compressionQuality: 0.4) else {
-            showAlert?("Не удалось сохранить картинку. Попробуй еще раз.")
+        guard let url = authManager.currentUser()?.photoURL else {
+            print("no url :(")
             return
         }
-        
-        storage.saveProfilePictureImage(
-            userID: uid,
-            imageData: imageData
-        ) { [weak self] error in
-            guard let self = self else { return }
-            if let error = error {
-                self.showAlert?(error.localizedDescription)
-            }
-        }
+        imageView.kf.setImage(
+            with: url,
+            placeholder: UIImage(systemName: "person")
+        )
     }
- 
-    public func getUserDisplayName() -> String? {
+    
+    public func userDisplayName() -> String? {
         authManager.currentUser()?.displayName
     }
     
-    public func getUserEmail() -> String? {
+    public func userEmail() -> String? {
         authManager.currentUser()?.email
     }
     
@@ -96,4 +75,23 @@ final class SettingsViewModel {
         let destinationVC = settingsCells[indexPath.row].destinationVC
         goToDestinationVC?(destinationVC)
     }
+    
+    // MARK: - Saving profile picture
+    public func saveProfilePicture(image: UIImage) {
+        guard let imageData = image.jpegData(compressionQuality: 0.4) else {
+            showAlert?("Не удалось сохранить картинку. Попробуй еще раз.")
+            return
+        }
+        
+        storage.saveProfilePictureImage(
+            userID: uid,
+            imageData: imageData
+        ) { [weak self] error in
+            guard let self = self else { return }
+            if let error = error {
+                self.showAlert?(error.localizedDescription)
+            }
+        }
+    }
+    
 }

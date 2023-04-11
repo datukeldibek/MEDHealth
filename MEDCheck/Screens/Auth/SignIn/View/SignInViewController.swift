@@ -18,7 +18,7 @@ class SignInViewController: UIViewController {
     private func initViewModel() {
         viewModel.showAlert = { [weak self] error in
             DispatchQueue.main.async {
-                self?.showWarningAlert(title: "Ошибка", message: error)
+                self?.showInfoAlert(title: "Ошибка", message: error)
             }
         }
         
@@ -73,7 +73,7 @@ class SignInViewController: UIViewController {
                 password: passwordTextField.text!
             )
         } else {
-            showWarningAlert(
+            showInfoAlert(
                 title: "Ошибка!",
                 message: "Пожалуйста, заполни все поля."
             )

@@ -40,18 +40,21 @@ final class FirebaseStorageManager {
         storageProfileRef.downloadURL { [weak self] url, error in
             guard
                 let self = self,
-                let url = url?.absoluteString
+                let urlString = url?.absoluteString,
+                let url = url
             else { return }
-            
-            print("URL: \(url)")
             
             self.db.updateUserData(
                 uid: uid,
-                newData: url,
+                newData: urlString,
                 key: .profilePictureURL
-            ) { error in
-                completion(error)
-            }
+            ) { completion($0) }
+            
+            self.authManager
+                .updateUserProfilePhotoURL(
+                    photoURL: url
+                ) { completion($0) }
+            
         }
     }
     

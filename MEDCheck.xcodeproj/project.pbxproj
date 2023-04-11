@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		00F4A8F31DD61B981BC07AF7 /* Pods_MEDCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7277A9C7F67F6E7587010E /* Pods_MEDCheck.framework */; };
 		8C3118D029D866AF00C53B46 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3118CF29D866AF00C53B46 /* SignUpViewController.swift */; };
-		8C3118D329D87E1D00C53B46 /* SignInWithPhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3118D229D87E1D00C53B46 /* SignInWithPhoneNumber.swift */; };
+		8C3118D329D87E1D00C53B46 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3118D229D87E1D00C53B46 /* ResetPasswordViewController.swift */; };
 		8C32E37229DF57C20047A6BB /* TestResultDetailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E37129DF57C20047A6BB /* TestResultDetailedVC.swift */; };
 		8C32E37E29DF6F580047A6BB /* SocialMediaLinksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E37C29DF6F580047A6BB /* SocialMediaLinksTableViewCell.swift */; };
 		8C32E37F29DF6F590047A6BB /* SocialMediaLinksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C32E37D29DF6F580047A6BB /* SocialMediaLinksTableViewCell.xib */; };
@@ -23,7 +23,7 @@
 		8C32E3F329E1EC600047A6BB /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E3F229E1EC600047A6BB /* SettingsViewModel.swift */; };
 		8C32E3F729E230620047A6BB /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E3F629E230620047A6BB /* SignInViewModel.swift */; };
 		8C32E3FD29E2437B0047A6BB /* FirebaseDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E3FC29E2437B0047A6BB /* FirebaseDatabaseManager.swift */; };
-		8C32E40129E2473A0047A6BB /* SignInWithPhoneNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E40029E2473A0047A6BB /* SignInWithPhoneNumberViewModel.swift */; };
+		8C32E40129E2473A0047A6BB /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E40029E2473A0047A6BB /* ResetPasswordViewModel.swift */; };
 		8C32E40529E24DC90047A6BB /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E40429E24DC90047A6BB /* SignUpViewModel.swift */; };
 		8C32E42A29E482260047A6BB /* UIViewController+GoToMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E42929E482260047A6BB /* UIViewController+GoToMainVC.swift */; };
 		8C32E43029E49EE50047A6BB /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E42F29E49EE50047A6BB /* SettingsModel.swift */; };
@@ -89,7 +89,7 @@
 		1803196C357C2224D0A86DBE /* Pods-MEDCheck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MEDCheck.debug.xcconfig"; path = "Target Support Files/Pods-MEDCheck/Pods-MEDCheck.debug.xcconfig"; sourceTree = "<group>"; };
 		5D7277A9C7F67F6E7587010E /* Pods_MEDCheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MEDCheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C3118CF29D866AF00C53B46 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		8C3118D229D87E1D00C53B46 /* SignInWithPhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithPhoneNumber.swift; sourceTree = "<group>"; };
+		8C3118D229D87E1D00C53B46 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		8C32E37129DF57C20047A6BB /* TestResultDetailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultDetailedVC.swift; sourceTree = "<group>"; };
 		8C32E37C29DF6F580047A6BB /* SocialMediaLinksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaLinksTableViewCell.swift; sourceTree = "<group>"; };
 		8C32E37D29DF6F580047A6BB /* SocialMediaLinksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocialMediaLinksTableViewCell.xib; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 		8C32E3F229E1EC600047A6BB /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		8C32E3F629E230620047A6BB /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		8C32E3FC29E2437B0047A6BB /* FirebaseDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabaseManager.swift; sourceTree = "<group>"; };
-		8C32E40029E2473A0047A6BB /* SignInWithPhoneNumberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithPhoneNumberViewModel.swift; sourceTree = "<group>"; };
+		8C32E40029E2473A0047A6BB /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
 		8C32E40429E24DC90047A6BB /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		8C32E42929E482260047A6BB /* UIViewController+GoToMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+GoToMainVC.swift"; sourceTree = "<group>"; };
 		8C32E42F29E49EE50047A6BB /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
@@ -198,20 +198,20 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
-		8C3118D129D87E1000C53B46 /* SignInWithPhoneNumber */ = {
+		8C3118D129D87E1000C53B46 /* ResetPassword */ = {
 			isa = PBXGroup;
 			children = (
 				8C32E3FF29E2472B0047A6BB /* ViewModel */,
 				8C32E3FE29E247280047A6BB /* View */,
 			);
-			path = SignInWithPhoneNumber;
+			path = ResetPassword;
 			sourceTree = "<group>";
 		};
 		8C3118D429D87F0700C53B46 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				8C3118D129D87E1000C53B46 /* ResetPassword */,
 				8C3118CD29D8668F00C53B46 /* SignIn */,
-				8C3118D129D87E1000C53B46 /* SignInWithPhoneNumber */,
 				8C3118CE29D8669900C53B46 /* SignUp */,
 			);
 			path = Auth;
@@ -353,7 +353,7 @@
 		8C32E3FE29E247280047A6BB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8C3118D229D87E1D00C53B46 /* SignInWithPhoneNumber.swift */,
+				8C3118D229D87E1D00C53B46 /* ResetPasswordViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -361,7 +361,7 @@
 		8C32E3FF29E2472B0047A6BB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				8C32E40029E2473A0047A6BB /* SignInWithPhoneNumberViewModel.swift */,
+				8C32E40029E2473A0047A6BB /* ResetPasswordViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1126,7 +1126,7 @@
 				8C32E3EC29E053800047A6BB /* PharmacyListViewModel.swift in Sources */,
 				8CDC6C4B29DE081C006493F4 /* FeatureCollectionViewCell.swift in Sources */,
 				8CEE873D29D8A90100275CCE /* MainTabBarController.swift in Sources */,
-				8C32E40129E2473A0047A6BB /* SignInWithPhoneNumberViewModel.swift in Sources */,
+				8C32E40129E2473A0047A6BB /* ResetPasswordViewModel.swift in Sources */,
 				8CDC6C8129DE32A0006493F4 /* MedicalHistoryModel.swift in Sources */,
 				8C87BBD829D4978E008A742D /* NoInternetConnectionViewController.swift in Sources */,
 				8C87BC0229D777D9008A742D /* OnboardingCollectionViewCell.swift in Sources */,
@@ -1141,7 +1141,7 @@
 				8C87BBE729D4D096008A742D /* NetworkStatusViewModel.swift in Sources */,
 				8CEE874329D8A93A00275CCE /* SettingsViewController.swift in Sources */,
 				8CDC6C5F29DE1F63006493F4 /* MedicationTakingViewController.swift in Sources */,
-				8C3118D329D87E1D00C53B46 /* SignInWithPhoneNumber.swift in Sources */,
+				8C3118D329D87E1D00C53B46 /* ResetPasswordViewController.swift in Sources */,
 				8C87BBFF29D774E4008A742D /* OnboardingSlide.swift in Sources */,
 				8C32E42A29E482260047A6BB /* UIViewController+GoToMainVC.swift in Sources */,
 				8C32E3D729E04B1F0047A6BB /* PharmaciesList.swift in Sources */,

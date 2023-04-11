@@ -29,7 +29,7 @@ final class SettingsViewController: UIViewController {
         viewModel.showAlert = { [weak self] error in
             guard let self = self else { return }
             DispatchQueue.main.async {
-                self.showWarningAlert(title: "Ошибка", message: error)
+                self.showInfoAlert(title: "Ошибка", message: error)
             }
         }
         
@@ -91,8 +91,8 @@ final class SettingsViewController: UIViewController {
     
     private func setDataToUIElements() {
         viewModel.setProfilePicture(to: userProfilePictureImageView)
-        userNameSurnameLabel.text = viewModel.getUserDisplayName()
-        userEmailLabel.text = viewModel.getUserEmail()
+        userNameSurnameLabel.text = viewModel.userDisplayName()
+        userEmailLabel.text = viewModel.userEmail()
     }
     
     // MARK: - viewDidLoad(); viewWillAppear()

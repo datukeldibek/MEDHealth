@@ -16,7 +16,7 @@ class InfoViewController: UIViewController {
         viewModel.showAlert = { [weak self] title, message in
             DispatchQueue.main.async {
                 guard let self = self else { return }
-                self.showWarningAlert(
+                self.showInfoAlert(
                     title: title,
                     message: message
                 )
