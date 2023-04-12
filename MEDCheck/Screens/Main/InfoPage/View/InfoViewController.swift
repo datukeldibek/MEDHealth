@@ -63,6 +63,7 @@ class InfoViewController: UIViewController {
         super.viewDidLoad()
         initViewModel()
         configureAppInfoTableView()
+        navigationItem.title = "О нас 📄".localized()
         navigationController?.navigationBar.topItem?.backButtonTitle = ""
     }
 }

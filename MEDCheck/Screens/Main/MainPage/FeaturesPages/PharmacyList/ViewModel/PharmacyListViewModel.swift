@@ -10,14 +10,14 @@ import Foundation
 final class PharmacyListViewModel {
     // MARK: - Private properties
     private let pharmacies = PharmaciesList.shared.pharmacies
-    private let companies = PharmaciesList.PharmacyCompany.allCases
+    private let companies = PharmacyCompany.allCases
     private var isFiltering: Bool = false
-    private var filteredCompanies:[ PharmaciesList.PharmacyCompany] = []
-    private var filteredCompany: PharmaciesList.PharmacyCompany? = nil
+    private var filteredCompanies:[PharmacyCompany] = []
+    private var filteredCompany: PharmacyCompany? = nil
     
     // MARK: - Private methods
     private func pharmacyAddresses(
-        for key: PharmaciesList.PharmacyCompany
+        for key: PharmacyCompany
     ) -> [String] { pharmacies[key] ?? [] }
     
     // MARK: - Public methods

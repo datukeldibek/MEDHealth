@@ -22,7 +22,7 @@ extension InfoCellModel {
     static func instantiate() -> [InfoCellModel] {
         [
             InfoCellModel(
-                title: "Пользовательское соглашение",
+                title: "Пользовательское соглашение".localized(),
                 attitude: .goToSafari,
                 websiteLink: URL(
                     string: "https://www.medcheck.kg/terms-of-use"
@@ -31,7 +31,7 @@ extension InfoCellModel {
             ),
             
             InfoCellModel(
-                title: "О нас",
+                title: "О нас".localized(),
                 attitude: .goToSafari,
                 websiteLink: URL(
                     string: "https://www.medcheck.kg/about"
@@ -40,7 +40,7 @@ extension InfoCellModel {
             ),
             
             InfoCellModel(
-                title: "О приложении",
+                title: "О приложении".localized(),
                 attitude: .goToVC,
                 websiteLink: nil,
                 destinationVC: AboutAppViewController.instantiate()

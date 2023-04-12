@@ -7,17 +7,17 @@
 
 import Foundation
 
+enum PharmacyCompany: String, CaseIterable {
+    case nemanFarm = "Неман Фарм"
+    case farmamir = "Фармамир"
+    case aibolit = "Айболит"
+    case bimedFarm = "Бимед Фарм"
+    case insanFarm = "Инсан Фарм"
+}
+
 struct PharmaciesList {
     // MARK: - Singleton
     static let shared = PharmaciesList()
-    
-    enum PharmacyCompany: String, CaseIterable {
-        case nemanFarm = "Неман Фарм"
-        case farmamir = "Фармамир"
-        case aibolit = "Айболит"
-        case bimedFarm = "Бимед Фарм"
-        case insanFarm = "Инсан Фарм"
-    }
     
     public var pharmacies: [PharmacyCompany:[String]]
     
@@ -72,3 +72,4 @@ struct PharmaciesList {
     }
     
 }
+

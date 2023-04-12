@@ -195,7 +195,7 @@
 "qcB-hP-okI.title" = "Sign in";
 
 /* Class = "UINavigationItem"; title = "О нас 📄 "; ObjectID = "qg5-o9-1Kk"; */
-"qg5-o9-1Kk.title" = "About us 📄 ";
+"qg5-o9-1Kk.title" = "About us 📄";
 
 /* Class = "UILabel"; text = "Подтвердите: "; ObjectID = "vMt-Z7-vKd"; */
 "vMt-Z7-vKd.text" = "Submit: ";

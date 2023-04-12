@@ -25,7 +25,7 @@ final class InfoViewModel {
             app.canOpenURL(url) {
             app.open(url, options: [:], completionHandler: nil)
         } else {
-            showAlert?("Ошибка", "Попробуй чуть позже.")
+            showAlert?("Ошибка ⚠️".localized(), "Попробуй чуть позже.".localized())
         }
     }
     
@@ -44,14 +44,14 @@ final class InfoViewModel {
         switch selectedCell.attitude {
         case .goToSafari:
             guard let link = selectedCell.websiteLink else {
-                showAlert?("Ошибка", "Попробуй чуть позже.")
+                showAlert?("Ошибка ⚠️", "Попробуй чуть позже.")
                 return
             }
             helper.openSafari(with: link)
             return
         case .goToVC:
             guard let vc = selectedCell.destinationVC else {
-                showAlert?("Ошибка", "Попробуй чуть позже.")
+                showAlert?("Ошибка ⚠️", "Попробуй чуть позже.")
                 return
             }
             goToDestinationVC?(vc)
