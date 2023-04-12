@@ -211,3 +211,14 @@
 
 /* Class = "UINavigationItem"; title = "Чат с ИИ-доктором🤖"; ObjectID = "zyl-ge-vCJ"; */
 "zyl-ge-vCJ.title" = "Chat with AI-doctor🤖";
+
+/* Class = "UITextField"; placeholder = "*******"; ObjectID = "KQz-48-WnY"; */
+"KQz-48-WnY.placeholder" = "Name";
+
+/* Class = "UITextField"; placeholder = "*******"; ObjectID = "LPi-Nc-2fL"; */
+"LPi-Nc-2fL.placeholder" = "Last name";
+
+/* Class = "UITextField"; placeholder = "*******"; ObjectID = "VX9-OJ-ikK"; */
+"VX9-OJ-ikK.placeholder" = "Email";
+
+

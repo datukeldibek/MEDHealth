@@ -26,10 +26,10 @@ final class SettingsViewController: UIViewController {
     
     // MARK: - Private methods
     private func initViewModel() {
-        viewModel.showAlert = { [weak self] error in
+        viewModel.showError = { [weak self] error in
             guard let self = self else { return }
             DispatchQueue.main.async {
-                self.showInfoAlert(title: "Ошибка", message: error)
+                self.showInfoAlert(title: "Ошибка ⚠️".localized(), message: error)
             }
         }
         

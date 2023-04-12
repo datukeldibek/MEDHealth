@@ -18,9 +18,7 @@ final class ProfilePageViewModel {
     
     // MARK: - Public properties
     public var showError: ((String) -> Void)?
-    public var showSuccess: ((String) -> Void)?
 
-    
     // MARK: - Public methods
     public func userName() -> String? {
         authManager.currentUser()?.displayName?.components(separatedBy: " ").first
@@ -70,8 +68,6 @@ final class ProfilePageViewModel {
                 return
             }
         }
-        
-        showSuccess?("Данные успешно изменены ✅")
     }
     
     public func updatePassword(newPassword: String) {
@@ -79,8 +75,6 @@ final class ProfilePageViewModel {
             guard let self = self else { return }
             if let error = error {
                 self.showError?(error.localizedDescription)
-            } else {
-                self.showSuccess?("Пароль успешно изменен ✅")
             }
         }
     }

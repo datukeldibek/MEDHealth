@@ -21,7 +21,9 @@ final class ProfilePageViewController: UIViewController {
         ]
     }
     
-    private var passwordTextFieldModified: Bool { newPasswordTextField.hasText && confirmPasswordTextField.hasText }
+    private var passwordTextFieldModified: Bool {
+        newPasswordTextField.hasText && confirmPasswordTextField.hasText
+    }
     
     // MARK: - IBOutlets
     @IBOutlet weak var nameTextField: UITextField!
@@ -29,7 +31,6 @@ final class ProfilePageViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var newPasswordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
-
 
     // MARK: - IBActions
     @IBAction func editButtonTapped(_ sender: Any) {
@@ -44,13 +45,10 @@ final class ProfilePageViewController: UIViewController {
     private func initViewModel() {
         viewModel.showError = { [weak self] error in
             DispatchQueue.main.async {
-                self?.showInfoAlert(title: "Ошибка", message: error)
-            }
-        }
-        
-        viewModel.showSuccess = { [weak self] message in
-            DispatchQueue.main.async {
-                self?.showInfoAlert(title: "Ошибка", message: message)
+                self?.showInfoAlert(
+                    title: "Ошибка ⚠️".localized(),
+                    message: error
+                )
             }
         }
     }
@@ -73,8 +71,8 @@ final class ProfilePageViewController: UIViewController {
         let isValidUserData = nameTextField.hasText && surnameTextField.hasText && emailTextField.hasText
         if !isValidUserData {
             showInfoAlert(
-                title: "Ошибка",
-                message: "Поля не могут быть пустыми!"
+                title: "Ошибка ⚠️",
+                message: "Поля не могут быть пустыми!".localized()
             )
             return
         }
@@ -82,8 +80,8 @@ final class ProfilePageViewController: UIViewController {
         if passwordTextFieldModified {
             if newPasswordTextField.text != confirmPasswordTextField.text {
                 showInfoAlert(
-                    title: "Ошибка",
-                    message: "Пароли должны совпадать!"
+                    title: "Ошибка ⚠️".localized(),
+                    message: "Пароли должны совпадать!".localized()
                 )
                 return
             }
@@ -97,7 +95,10 @@ final class ProfilePageViewController: UIViewController {
             email: emailTextField.text!
         )
         
-        showInfoAlert(title: "Успех", message: "Данные успешно изменены ✅")
+        showInfoAlert(
+            title: "Успех".localized(),
+            message: "Данные успешно изменены ✅".localized()
+        )
     }
 
     private func setDataToTextFields() {

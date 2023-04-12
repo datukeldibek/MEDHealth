@@ -22,7 +22,7 @@ final class SettingsViewModel {
     }
     
     // MARK: - Public properties
-    public var showAlert: ((String) -> Void)?
+    public var showError: ((String) -> Void)?
     public var goToSignInVC: (() -> Void)?
     public var goToDestinationVC: ((UIViewController) -> Void)?
     
@@ -33,7 +33,7 @@ final class SettingsViewModel {
         authManager.signOut { [weak self] error in
             guard let self = self else { return }
             if let error = error {
-                self.showAlert?(error.localizedDescription)
+                self.showError?(error.localizedDescription)
             } else {
                 goToSignInVC?()
                 defaults.delete(for: .chosenImage)
@@ -77,7 +77,9 @@ final class SettingsViewModel {
     // MARK: - Saving profile picture
     public func saveProfilePicture(image: UIImage) {
         guard let imageData = image.jpegData(compressionQuality: 0.4) else {
-            showAlert?("Не удалось сохранить картинку. Попробуй еще раз.")
+            showError?(
+                "Не удалось сохранить картинку. Попробуй еще раз.".localized()
+            )
             return
         }
         
@@ -87,7 +89,7 @@ final class SettingsViewModel {
         ) { [weak self] error in
             guard let self = self else { return }
             if let error = error {
-                self.showAlert?(error.localizedDescription)
+                self.showError?(error.localizedDescription)
             }
         }
     }

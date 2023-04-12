@@ -17,13 +17,13 @@ extension SettingCell {
     static func instantiate() -> [SettingCell] {
         [
             SettingCell(
-                title: "Аккаунт",
+                title: "Аккаунт".localized(),
                 icon: UIImage(systemName: "person"),
                 destinationVC: ProfilePageViewController.instantiate()
             ),
             
             SettingCell(
-                title: "Язык",
+                title: "Язык".localized(),
                 icon: UIImage(systemName: "globe.americas.fill"),
                 destinationVC: LocalizationSettingViewController.instantiate()
             )

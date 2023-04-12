@@ -60,3 +60,16 @@
 "О нас" = "About us";
 "Пользовательское соглашение" = "User Agreement";
 "О приложении" = "About app";
+
+// MARK: - Настройки
+"Аккаунт" = "Account";
+"Не удалось сохранить картинку. Попробуй еще раз." = "Failed to save the image. Please try again.";
+"Язык" = "Language"; 
+
+
+// MARK: - Аккаунт
+"Успех" = "Success";
+"Данные успешно изменены ✅" = "Changes saved successfully ✅";
+"Пароли должны совпадать!" = "Passwords must match!";
+"Поля не могут быть пустыми!" = "Fields can't be empty!";
+
