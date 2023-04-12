@@ -63,6 +63,7 @@ final class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initViewModel()
+        navigationItem.title = "Регистрация".localized()
         configureViewTappedHandling()
     }
     

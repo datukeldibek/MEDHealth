@@ -11,7 +11,7 @@
 "Пожалуйста, заполни все поля." = "Please fill in all fields.";
 "Информация ℹ️" = "Info ℹ️";
 "На почту пришло сообщение для восстановления пароля. Следуйте инструкции, чтоб восстановить пароль." = "The password recovery email has been sent. Follow the instructions to reset your password.";
-"Регистрация" = "Sign Up"
+"Регистрация" = "Sign Up";
 
 // Экраны обучения
 "Заголовок 1" = "Title 1";
