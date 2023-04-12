@@ -1,6 +1,6 @@
 
 /* Class = "UINavigationItem"; title = "Регистрация "; ObjectID = "08x-Rw-aSR"; */
-"08x-Rw-aSR.title" = "Регистрация ";
+"08x-Rw-aSR.title" = "Тизмелүү";
 
 /* Class = "UINavigationItem"; title = "История болезни 🩺"; ObjectID = "1E8-R6-0VU"; */
 "1E8-R6-0VU.title" = "История болезни 🩺";
@@ -212,4 +212,12 @@
 /* Class = "UINavigationItem"; title = "Чат с ИИ-доктором🤖"; ObjectID = "zyl-ge-vCJ"; */
 "zyl-ge-vCJ.title" = "Чат с ИИ-доктором🤖";
 
+/* Class = "UITextField"; placeholder = "*******"; ObjectID = "KQz-48-WnY"; */
+"KQz-48-WnY.placeholder" = "Name";
+
+/* Class = "UITextField"; placeholder = "*******"; ObjectID = "LPi-Nc-2fL"; */
+"LPi-Nc-2fL.placeholder" = "Last name";
+
+/* Class = "UITextField"; placeholder = "*******"; ObjectID = "VX9-OJ-ikK"; */
+"VX9-OJ-ikK.placeholder" = "Email";
 
