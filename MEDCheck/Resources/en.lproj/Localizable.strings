@@ -6,14 +6,14 @@
   
 */
 
-// Экраны входа, регистрации, восстановления пароля
+// MARK: - Экраны входа, регистрации, восстановления пароля
 "Ошибка ⚠️" = "Error ⚠️";
 "Пожалуйста, заполни все поля." = "Please fill in all fields.";
 "Информация ℹ️" = "Info ℹ️";
 "На почту пришло сообщение для восстановления пароля. Следуйте инструкции, чтоб восстановить пароль." = "The password recovery email has been sent. Follow the instructions to reset your password.";
 "Регистрация" = "Sign Up";
 
-// Экраны обучения
+// MARK: - Экраны обучения
 "Заголовок 1" = "Title 1";
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia libero ut metus convallis tempor. Vestibulum consequat, tortor mattis consequat" = "(EN) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia libero ut metus convallis tempor. Vestibulum consequat, tortor mattis consequat";
 "Заголовок 2" = "Title 2";
@@ -28,11 +28,19 @@
 "Отмена" = "Cancel";
 "Пропустить" = "Skip";
 
-// Локализация для "Нет интернета" странички
+// MARK: - Локализация для "Нет интернета" странички
 "Проверяем..." = "Checking...";
 "Интернет-соединение успешно восстановлено!" = "Internet connection successfully restored!";
 "Нет интернет-соединения :(" = "No internet connection :(";
 
+// MARK: - Главный экран
+"Привет, " = "Hello, ";
+"друг" = "friend";
 
+// CollectionView главного экрана
+"Прием лекарств" = "Medication taking";
+"История болезни" = "Medical history";
+"Результаты анализов" = "Test results";
+"Список аптек" = "Pharmacy list";
 
 

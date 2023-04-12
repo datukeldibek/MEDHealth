@@ -47,7 +47,9 @@ final class MainPageViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationItem.title = "Привет, \(viewModel.userName() ?? "друг")! 👋🏻"
+        let hello = "Привет, ".localized()
+        let friend = "друг".localized()
+        navigationItem.title = "\(hello)\(viewModel.userName() ?? friend)! 👋🏻"
     }
 }
 

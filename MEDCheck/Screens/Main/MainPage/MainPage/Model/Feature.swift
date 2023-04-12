@@ -17,25 +17,25 @@ extension Feature {
     static func instantiate() -> [Feature] {
         [
             Feature(
-                name: "Прием лекарств",
+                name: "Прием лекарств".localized(),
                 image: UIImage(named: "takingMedicationsImage"),
                 destinationVC: MedicationTakingViewController.self
             ),
             
             Feature(
-                name: "История болезни",
+                name: "История болезни".localized(),
                 image: UIImage(named: "diseaseHistoryImage"),
                 destinationVC: MedicalHistoryViewController.self
             ),
             
             Feature(
-                name: "Результаты анализов",
+                name: "Результаты анализов".localized(),
                 image: UIImage(named: "analysisResultsImage"),
                 destinationVC: TestResultsViewController.self
             ),
             
             Feature(
-                name: "Список аптек",
+                name: "Список аптек".localized(),
                 image: UIImage(named: "pharmaciesListImage"),
                 destinationVC: PharmacyListViewController.self
             )
