@@ -20,6 +20,7 @@ final class UserDefaultsManager {
         case isOnboarded = "isOnboarded"
         case chosenImage = "chosenImage"
         case authVerification = "authVerification"
+        case appLanguage = "appLanguage"
     }
     
     // MARK: - Public methods

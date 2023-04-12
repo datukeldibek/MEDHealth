@@ -15,18 +15,59 @@ final class LocalizationSettingViewController: UIViewController {
     @IBOutlet weak var languagesTableView: UITableView!
     
     // MARK: - Private methods
+    private func initViewModel() {
+        viewModel.showInfoAlert = { [weak self] (title, message, languageCode) in
+            DispatchQueue.main.async {
+                self?.showInformationAlert(
+                    title: title,
+                    message: message,
+                    languageCode: languageCode
+                )
+            }
+        }
+    }
+    
+    private func showInformationAlert(
+        title: String,
+        message: String,
+        languageCode: String
+    ) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        
+        alert.addAction(
+            UIAlertAction(
+                title: "Окей".localized(),
+                style: .default
+            ) { [weak self] action in
+                self?.viewModel.switchToLanguage(languageCode)
+            }
+        )
+        
+        present(alert, animated: true)
+    }
+    
+    
     private func configureLanguagesTableVeiw() {
         languagesTableView.dataSource = self
         languagesTableView.delegate = self
         
-        languagesTableView.register(UITableViewCell.self, forCellReuseIdentifier: "language_cell")
+        languagesTableView.register(
+            UITableViewCell.self,
+            forCellReuseIdentifier: "language_cell"
+        )
     }
     
     // MARK: - viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
+        initViewModel()
         configureLanguagesTableVeiw()
     }
+    
 }
 
 // MARK: - UITableViewDataSource

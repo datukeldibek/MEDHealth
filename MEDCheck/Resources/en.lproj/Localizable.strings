@@ -73,3 +73,5 @@
 "Пароли должны совпадать!" = "Passwords must match!";
 "Поля не могут быть пустыми!" = "Fields can't be empty!";
 
+// MARK: - Локализация
+"После смены языка приложение будет перезапущено." = "After changing the language, the application will be restarted.";
