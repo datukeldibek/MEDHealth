@@ -16,7 +16,7 @@ final class NoInternetConnectionViewController: UIViewController {
     private func showLoadingHUD(isConnected: Bool) {
         let hud = JGProgressHUD(style: .dark)
         hud.indicatorView = JGProgressHUDIndeterminateIndicatorView()
-        hud.textLabel.text = "Проверяем..."
+        hud.textLabel.text = "Проверяем...".localized()
         hud.show(in: view)
         hud.dismiss(afterDelay: 1, animated: true) { [weak self] in
             DispatchQueue.main.async {
@@ -28,7 +28,7 @@ final class NoInternetConnectionViewController: UIViewController {
     private func showConnectionRestoredHUD() {
         let hud = JGProgressHUD(style: .dark)
         hud.indicatorView = JGProgressHUDSuccessIndicatorView()
-        hud.textLabel.text = "Интернет-соединение успешно восстановлено!"
+        hud.textLabel.text = "Интернет-соединение успешно восстановлено!".localized()
         hud.show(in: view)
         hud.dismiss(afterDelay: 0.7, animated: true) { [weak self] in
             let vc = UINavigationController (
@@ -45,7 +45,7 @@ final class NoInternetConnectionViewController: UIViewController {
     private func showNoConnectionHUD() {
         let hud = JGProgressHUD(style: .dark)
         hud.indicatorView = JGProgressHUDErrorIndicatorView()
-        hud.textLabel.text = "Нет интернет-соединения :("
+        hud.textLabel.text = "Нет интернет-соединения :(".localized()
         hud.show(in: view)
         hud.dismiss(afterDelay: 0.7, animated: true)
     }

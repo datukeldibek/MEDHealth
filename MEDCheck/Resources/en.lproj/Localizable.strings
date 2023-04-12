@@ -11,6 +11,7 @@
 "Пожалуйста, заполни все поля." = "Please fill in all fields.";
 "Информация ℹ️" = "Info ℹ️";
 "На почту пришло сообщение для восстановления пароля. Следуйте инструкции, чтоб восстановить пароль." = "The password recovery email has been sent. Follow the instructions to reset your password.";
+"Регистрация" = "Sign Up"
 
 // Экраны обучения
 "Заголовок 1" = "Title 1";
@@ -26,6 +27,11 @@
 "Окей" = "OK";
 "Отмена" = "Cancel";
 "Пропустить" = "Skip";
+
+// Локализация для "Нет интернета" странички
+"Проверяем..." = "Checking...";
+"Интернет-соединение успешно восстановлено!" = "Internet connection successfully restored!";
+"Нет интернет-соединения :(" = "No internet connection :(";
 
 
 
