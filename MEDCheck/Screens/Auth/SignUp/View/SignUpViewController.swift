@@ -10,21 +10,18 @@ import UIKit
 final class SignUpViewController: UIViewController {
     // MARK: - Private properties
     private let viewModel = SignUpViewModel()
-    
     private var textFields: [UITextField] {
-        [
-            nameTextField,
-            surnameTextField,
-            mailTextField,
-            passwordTextField
-        ]
+        [nameTextField, surnameTextField, mailTextField, passwordTextField]
     }
     
     // MARK: - Private methods
     private func initViewModel() {
         viewModel.showAlert = { [weak self] error in
             DispatchQueue.main.async {
-                self?.showInfoAlert(title: "Ошибка", message: error)
+                self?.showInfoAlert(
+                    title: "Ошибка ⚠️".localized(),
+                    message: error
+                )
             }
         }
         
@@ -56,8 +53,8 @@ final class SignUpViewController: UIViewController {
             )
         } else {
             showInfoAlert(
-                title: "Ошибка!",
-                message: "Пожалуйста, заполни все поля."
+                title: "Ошибка ⚠️".localized(),
+                message: "Пожалуйста, заполни все поля.".localized()
             )
         }
     }

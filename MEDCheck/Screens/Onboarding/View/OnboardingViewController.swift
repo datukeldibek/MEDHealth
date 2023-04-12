@@ -16,16 +16,25 @@ final class OnboardingViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func pageControlTapped(_ sender: Any) {
-        let indexPath = IndexPath(item: onboardingPageControl.currentPage, section: 0)
+        let indexPath = IndexPath(
+            item: onboardingPageControl.currentPage,
+            section: 0
+        )
         currentPage = onboardingPageControl.currentPage
-        onboardingsCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        onboardingsCollectionView.scrollToItem(
+            at: indexPath,
+            at: .centeredHorizontally,
+            animated: true
+        )
     }
     
     @IBAction func skipOnboardingButtonTapped(_ sender: Any) {
         if viewModel.isOnboarded {
             self.navigationController?.popToRootViewController(animated: true)
         } else {
-            viewModel.skipButtonTapped(currentPage: onboardingPageControl.currentPage)
+            viewModel.skipButtonTapped(
+                currentPage: onboardingPageControl.currentPage
+            )
         }
     }
     
@@ -37,9 +46,15 @@ final class OnboardingViewController: UIViewController {
         didSet {
             onboardingPageControl.currentPage = currentPage
             if currentPage == slides.count - 1, !viewModel.isOnboarded {
-                skipOnboardingButton.titleLabel?.text = "Завершить обучение ✅"
+                skipOnboardingButton.setTitle(
+                    "Завершить обучение ✅".localized(),
+                    for: .normal
+                )
             } else {
-                skipOnboardingButton.titleLabel?.text = "Пропустить обучение ⏩"
+                skipOnboardingButton.setTitle(
+                    "Пропустить обучение ⏩".localized(),
+                    for: .normal
+                )
             }
         }
     }
@@ -65,21 +80,30 @@ final class OnboardingViewController: UIViewController {
         )
         
         if onboarded {
-            let okAction = UIAlertAction(title: "Окей", style: .default) { [weak self] _ in
+            let okAction = UIAlertAction(
+                title: "Окей".localized(),
+                style: .default
+            ) { [weak self] _ in
                 self?.viewModel.saveOnboarded()
                 self?.goToSignInVC()
             }
             alert.addAction(okAction)
         } else {
-            let cancelAction = UIAlertAction(title: "Отмена", style: .default)
-            let skipAction = UIAlertAction(title: "Пропустить", style: .destructive) { [weak self]_ in
+            let cancelAction = UIAlertAction(
+                title: "Отмена".localized(),
+                style: .default
+            )
+            let skipAction = UIAlertAction(
+                title: "Пропустить".localized(),
+                style: .destructive
+            ) { [weak self]_ in
                 self?.viewModel.saveOnboarded()
                 self?.goToSignInVC()
             }
-            
             alert.addAction(cancelAction)
             alert.addAction(skipAction)
         }
+        
         present(alert, animated: true)
     }
     

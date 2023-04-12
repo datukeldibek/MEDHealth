@@ -583,11 +583,11 @@
                                 </connections>
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a10-be-Nwp">
-                                <rect key="frame" x="86" y="838.33333333333337" width="258" height="31"/>
+                                <rect key="frame" x="16" y="838.33333333333337" width="398" height="33.333333333333371"/>
                                 <color key="tintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Пропустить обучение ⏩">
-                                    <fontDescription key="titleFontDescription" name="RalewayItalic-Medium" family="Raleway" pointSize="14"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="skipOnboardingButtonTapped:" destination="rwk-8g-GIp" eventType="touchUpInside" id="NgT-ni-Wf4"/>
@@ -598,14 +598,14 @@
                         <color key="backgroundColor" red="0.75686274509999996" green="0.91372549020000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="a10-be-Nwp" firstAttribute="top" secondItem="12U-U2-BhL" secondAttribute="bottom" constant="30" id="5gk-3f-OVc"/>
+                            <constraint firstItem="Zp9-42-d5k" firstAttribute="trailing" secondItem="a10-be-Nwp" secondAttribute="trailing" constant="16" id="7En-3W-7F6"/>
                             <constraint firstItem="b7L-ZX-VG3" firstAttribute="height" secondItem="JxW-SM-Edm" secondAttribute="height" multiplier="0.6" id="BmB-Qs-zHN"/>
                             <constraint firstItem="12U-U2-BhL" firstAttribute="centerX" secondItem="JxW-SM-Edm" secondAttribute="centerX" id="EPX-Ah-uHH"/>
                             <constraint firstItem="12U-U2-BhL" firstAttribute="top" secondItem="b7L-ZX-VG3" secondAttribute="bottom" constant="50" id="Igd-Ow-Qwr"/>
                             <constraint firstItem="b7L-ZX-VG3" firstAttribute="leading" secondItem="Zp9-42-d5k" secondAttribute="leading" id="aDl-X1-R1I"/>
-                            <constraint firstItem="a10-be-Nwp" firstAttribute="centerX" secondItem="Zp9-42-d5k" secondAttribute="centerX" id="jka-66-MOB"/>
-                            <constraint firstItem="a10-be-Nwp" firstAttribute="width" secondItem="JxW-SM-Edm" secondAttribute="width" multiplier="0.6" id="tTy-fE-B3Y"/>
                             <constraint firstItem="b7L-ZX-VG3" firstAttribute="trailing" secondItem="Zp9-42-d5k" secondAttribute="trailing" id="u6z-eV-vfw"/>
                             <constraint firstItem="b7L-ZX-VG3" firstAttribute="top" secondItem="Zp9-42-d5k" secondAttribute="top" constant="70" id="wvu-LR-r7F"/>
+                            <constraint firstItem="a10-be-Nwp" firstAttribute="leading" secondItem="Zp9-42-d5k" secondAttribute="leading" constant="16" id="yhz-rj-MzW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Обучение" id="jyG-5w-3Mf"/>

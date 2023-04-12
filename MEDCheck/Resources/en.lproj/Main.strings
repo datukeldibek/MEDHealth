@@ -132,7 +132,7 @@
 "VhX-iw-Dun.title" = "Medication taking 💊";
 
 /* Class = "UIButton"; configuration.title = "Пропустить обучение ⏩"; ObjectID = "a10-be-Nwp"; */
-"a10-be-Nwp.configuration.title" = "Skip tutorial ⏩";
+"a10-be-Nwp.configuration.title" = "Skip onboarding ⏩";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "a10-be-Nwp"; */
 "a10-be-Nwp.normalTitle" = "Button";
@@ -174,7 +174,7 @@
 "jx4-TA-5gJ.text" = "Label";
 
 /* Class = "UINavigationItem"; title = "Обучение"; ObjectID = "jyG-5w-3Mf"; */
-"jyG-5w-3Mf.title" = "Tutorial";
+"jyG-5w-3Mf.title" = "Onboarding";
 
 /* Class = "UISearchBar"; placeholder = "Поиск по названию аптеки"; ObjectID = "kHD-tU-tgi"; */
 "kHD-tU-tgi.placeholder" = "Search by pharmacy name";

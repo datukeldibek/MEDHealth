@@ -20,13 +20,13 @@ final class ResetPasswordViewModel {
             guard let self = self else { return }
             if let error = error {
                 self.showInfoAlert?(
-                    "Ошибка",
+                    "Ошибка ⚠️".localized(),
                     error.localizedDescription
                 )
             } else {
                 self.showInfoAlert?(
-                    "Успех",
-                    "На почту пришло сообщение для восстановления пароля. Следуйте инструкции, чтоб восстановить пароль."
+                    "Информация ℹ️".localized(),
+                    "На почту пришло сообщение для восстановления пароля. Следуйте инструкции, чтоб восстановить пароль.".localized()
                 )
             }
         }

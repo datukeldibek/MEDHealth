@@ -9,12 +9,16 @@ import UIKit
 
 final class MainPageViewModel {
     // MARK: - Private properties
-    private var defaults = UserDefaultsManager.shared
+    private let authManager = AuthManager.shared
     
     // MARK: - Public properties
     public let features = Feature.instantiate()
     
     // MARK: - Public methods
+    public func userName() -> String? {
+        authManager.currentUser()?.displayName?.components(separatedBy: " ").first
+    }
+    
     public func getVCForSelectedCell(
         at indexPath: IndexPath
     ) -> UIViewController {

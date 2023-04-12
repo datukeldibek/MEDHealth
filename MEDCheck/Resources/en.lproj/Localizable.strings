@@ -6,4 +6,27 @@
   
 */
 
-"Ошибка" = "Error";
+// Экраны входа, регистрации, восстановления пароля
+"Ошибка ⚠️" = "Error ⚠️";
+"Пожалуйста, заполни все поля." = "Please fill in all fields.";
+"Информация ℹ️" = "Info ℹ️";
+"На почту пришло сообщение для восстановления пароля. Следуйте инструкции, чтоб восстановить пароль." = "The password recovery email has been sent. Follow the instructions to reset your password.";
+
+// Экраны обучения
+"Заголовок 1" = "Title 1";
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia libero ut metus convallis tempor. Vestibulum consequat, tortor mattis consequat" = "(EN) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia libero ut metus convallis tempor. Vestibulum consequat, tortor mattis consequat";
+"Заголовок 2" = "Title 2";
+"Заголовок 3" = "Title 3";
+"Обучение завершено! 🎉" = "Congratulations! Onboarding is complete! 🎉";
+"Мы рады приветствовать вас в MEDCheck 😊" = "We are happy to welcome you to MEDCheck 😊";
+"Обучение не завершено! ❌" = "Onboarding incomplete! ❌";
+"Вы уверены, что хотите пропустить обучение? Это действия нельзя будет отменить." = "Are you sure you want to skip the onboarding? This action can not be undone.";
+"Завершить обучение ✅" = "Finish onboarding ✅";
+"Пропустить обучение ⏩" = "Skip onboarding ⏩";
+"Окей" = "OK";
+"Отмена" = "Cancel";
+"Пропустить" = "Skip";
+
+
+
+

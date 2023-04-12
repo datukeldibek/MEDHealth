@@ -19,7 +19,7 @@ class SignInViewController: UIViewController {
         viewModel.showAlert = { [weak self] error in
             DispatchQueue.main.async {
                 self?.showInfoAlert(
-                    title: "Ошибка".localized(),
+                    title: "Ошибка ⚠️".localized(),
                     message: error
                 )
             }
@@ -77,8 +77,8 @@ class SignInViewController: UIViewController {
             )
         } else {
             showInfoAlert(
-                title: "Ошибка".localized(),
-                message: "Пожалуйста, заполни все поля."
+                title: "Ошибка ⚠️".localized(),
+                message: "Пожалуйста, заполни все поля.".localized()
             )
         }
     }

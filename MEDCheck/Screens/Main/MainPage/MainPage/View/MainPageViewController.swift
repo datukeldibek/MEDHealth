@@ -35,6 +35,7 @@ final class MainPageViewController: UIViewController {
                 .font: UIFont.systemFont(ofSize: 30, weight: .bold)
             ]
         
+        navigationController?.navigationBar.topItem?.backButtonTitle = ""
     }
     
     // MARK: - viewDidLoad()
@@ -43,7 +44,10 @@ final class MainPageViewController: UIViewController {
         configureNavigationBarTitle()
         configureFeaturesCollectionView()
 //        observeNetworkStatusUpdates()
-        navigationController?.navigationBar.topItem?.backButtonTitle = ""
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.title = "Привет, \(viewModel.userName() ?? "друг")! 👋🏻"
     }
 }
 

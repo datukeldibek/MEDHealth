@@ -16,7 +16,8 @@ extension LocalizationOption {
     static func instantiate() -> [LocalizationOption] {
         [
             .init(language: "Русский язык 🇷🇺", isSelected: true),
-            .init(language: "Кыргыз тили 🇰🇬", isSelected: false)
+            .init(language: "Кыргыз тили 🇰🇬", isSelected: false),
+            .init(language: "English 🇺🇸", isSelected: false)
         ]
     }
 }
