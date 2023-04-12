@@ -15,41 +15,53 @@ extension TestResult {
     static func instantiate() -> [TestResult] {
         [
             TestResult(
-                title: "Сертификат вакцинации от COVID-2019",
-                description: "Lorem ipsum dolor sit amet"),
+                title: "Сертификат вакцинации от COVID-2019".localized(),
+                description: "Lorem ipsum dolor sit amet".localized()
+            ),
             TestResult(
-                title: "Результат ПЦР",
-                description: "Lorem ipsum dolor sit amet, conselectur Lorem ipsum"),
+                title: "Результат ПЦР".localized(),
+                description: "Lorem ipsum dolor sit amet, conselectur Lorem ipsum".localized()
+            ),
             TestResult(
-                title: "Анализ крови",
-                description: "Lorem ipsum dolor sit amet, conselectur Lorem ipsum dolor sit amet, conselectur Lorem ipsum Lorem ipsum dolor sit amet, conselectur Lorem ipsum"),
+                title: "Анализ крови".localized(),
+                description: "Lorem ipsum dolor sit amet, conselectur Lorem ipsum dolor sit amet, conselectur Lorem ipsum Lorem ipsum dolor sit amet, conselectur Lorem ipsum".localized()
+            ),
             TestResult(
-                title: "Анализ 2",
-                description: "Lorem ipsum dolor sit amet, conselectur Lorem ipsum"),
+                title: "Анализ 2".localized(),
+                description: "Lorem ipsum dolor sit amet, conselectur Lorem ipsum".localized()
+            ),
             TestResult(
-                title: "Сердцебиение",
-                description: "Lorem ipsum dolor sit amet, conselectur Lorem ipsum"),
+                title: "Сердцебиение".localized(),
+                description: "Lorem ipsum dolor sit amet, conselectur Lorem ipsum".localized()
+            ),
             TestResult(
-                title: "Анализ походки",
-                description: "Lorem ipsum dolor sit amet, conselectur Lorem ipsum"),
+                title: "Анализ походки".localized(),
+                description: "Lorem ipsum dolor sit amet, conselectur Lorem ipsum".localized()
+            ),
             TestResult(
-                title: "Сертификат вакцинации от COVID-2019",
-                description: "Lorem ipsum dolor sit amet"),
+                title: "Сертификат вакцинации от COVID-2019".localized(),
+                description: "Lorem ipsum dolor sit amet".localized()
+            ),
             TestResult(
-                title: "Результат ПЦР",
-                description: "Lorem ipsum dolor sit amet, conselectur Lorem ipsum"),
+                title: "Результат ПЦР".localized(),
+                description: "Lorem ipsum dolor sit amet, conselectur Lorem ipsum".localized()
+            ),
             TestResult(
-                title: "Анализ крови",
-                description: "Lorem ipsum dolor sit amet, conselectur Lorem ipsum"),
+                title: "Анализ крови".localized(),
+                description: "Lorem ipsum dolor sit amet, conselectur Lorem ipsum".localized()
+            ),
             TestResult(
-                title: "Анализ 2",
-                description: "Lorem ipsum dolor sit amet, conselectur Lorem ipsum"),
+                title: "Анализ 2".localized(),
+                description: "Lorem ipsum dolor sit amet, conselectur Lorem ipsum".localized()
+            ),
             TestResult(
-                title: "Сердцебиение",
-                description: "Lorem ipsum dolor sit amet, conselectur Lorem ipsum"),
+                title: "Сердцебиение".localized(),
+                description: "Lorem ipsum dolor sit amet, conselectur Lorem ipsum".localized()
+            ),
             TestResult(
-                title: "Анализ походки",
-                description: "Lorem ipsum dolor sit amet, conselectur Lorem ipsum")
+                title: "Анализ походки".localized(),
+                description: "Lorem ipsum dolor sit amet, conselectur Lorem ipsum".localized()
+            )
         ]
     }
 }

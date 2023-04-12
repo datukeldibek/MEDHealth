@@ -28,7 +28,7 @@
 "Отмена" = "Cancel";
 "Пропустить" = "Skip";
 
-// MARK: - Локализация для "Нет интернета" странички
+// MARK: - Нет интернета
 "Проверяем..." = "Checking...";
 "Интернет-соединение успешно восстановлено!" = "Internet connection successfully restored!";
 "Нет интернет-соединения :(" = "No internet connection :(";
@@ -42,5 +42,17 @@
 "История болезни" = "Medical history";
 "Результаты анализов" = "Test results";
 "Список аптек" = "Pharmacy list";
+
+// MARK: – Результаты анализов
+"Сертификат вакцинации от COVID-2019" = "COVID-19 Vaccination Certificate";
+"Lorem ipsum dolor sit amet" = "(EN) Lorem ipsum dolor sit amet";
+"Результат ПЦР" = "PCR test result";
+"Анализ крови" = "Blood test";
+"Lorem ipsum dolor sit amet, conselectur Lorem ipsum dolor sit amet, conselectur Lorem ipsum Lorem ipsum dolor sit amet, conselectur Lorem ipsum" = "(EN) Lorem ipsum dolor sit amet, conselectur Lorem ipsum dolor sit amet, conselectur Lorem ipsum Lorem ipsum dolor sit amet, conselectur Lorem ipsum";
+"Анализ 2" = "Test 2";
+"Lorem ipsum dolor sit amet, conselectur Lorem ipsum" = "(EN) Lorem ipsum dolor sit amet, conselectur Lorem ipsum";
+"Сердцебиение" = "Heartbeat";
+"Анализ походки" = "Gait analysis";
+
 
 
