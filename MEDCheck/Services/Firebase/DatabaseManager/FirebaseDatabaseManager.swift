@@ -66,27 +66,6 @@ final class FirebaseDatabaseManager {
         }
     }
     
-    public func getUserData(
-        uid: String,
-        forKey key: UserDataKeys,
-        completion: @escaping (Result<String, Error>) -> Void
-    ) {
-        let userRef = getUserReference(for: uid)
-        userRef.observeSingleEvent(of: .value) { snapshot, _ in
-            guard let userData = snapshot.value as? [String:Any] else {
-                completion(.failure(FirebaseDatabaseErrors.snapshotError))
-                return
-            }
-            
-            guard let value = userData[key.rawValue] as? String else {
-                completion(.failure(FirebaseDatabaseErrors.snapshotError))
-                return
-            }
-            
-            completion(.success(value))
-        }
-    }
-    
     public func updateUserData(
         uid: String,
         newData: String,
@@ -107,18 +86,74 @@ final class FirebaseDatabaseManager {
             }
         }
     }
-
-    public func updateUserData(
+    
+    public func saveNewMedicationTaking(
         uid: String,
-        newData: [String: Any],
+        new taking: MedicationTaking,
         completion: @escaping ((Error?) -> Void)
     ) {
-        let userRef = self.getUserReference(for: uid)
-        userRef.updateChildValues(newData) { error, _ in
-            completion(error)
+        let userRef = getUserReference(for: uid)
+        let newData: [String: Any] = [
+            MedicationTakingDataKeys.dayOfMonth.rawValue: taking.dayOfMonth,
+            MedicationTakingDataKeys.weekday.rawValue: taking.weekday,
+            MedicationTakingDataKeys.month.rawValue: taking.month,
+            MedicationTakingDataKeys.content.rawValue: taking.content
+        ]
+        
+        userRef
+            .child("medicationTakings")
+            .childByAutoId()
+            .setValue(newData) { error, _ in
+                completion(error)
+            }
+    }
+    
+    public func getMedicationTakings(
+        uid: String,
+        completion: @escaping (Result<[MedicationTaking], Error>) -> Void
+    ) {
+        let userRef = getUserReference(for: uid).child("medicationTakings")
+        
+        userRef.observe(.value) { snapshot, error in
+            guard let data = snapshot.value as? [String:Any] else {
+                completion(.success([]))
+                return
+            }
+            
+            var medicationTakings = [MedicationTaking]()
+            
+            for takingData in data.values {
+                if
+                    let takingData = takingData as? [String: Any],
+                   
+                    let weekday = takingData[
+                        MedicationTakingDataKeys.weekday.rawValue
+                    ] as? String,
+                   
+                    let dayOfMonth = takingData[
+                        MedicationTakingDataKeys.dayOfMonth.rawValue
+                    ] as? String,
+                   
+                    let month = takingData[
+                        MedicationTakingDataKeys.month.rawValue
+                    ] as? String,
+                   
+                    let content = takingData[
+                        MedicationTakingDataKeys.content.rawValue
+                    ] as? String {
+                    
+                    let medicationTaking = MedicationTaking(
+                        weekday: weekday,
+                        dayOfMonth: dayOfMonth,
+                        month: month, content: content
+                    )
+                    
+                    medicationTakings.append(medicationTaking)
+                }
+            }
+            
+            completion(.success(medicationTakings))
         }
     }
     
 }
-
-

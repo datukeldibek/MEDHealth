@@ -294,11 +294,67 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n24-uh-zlE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4805.5813953488368" y="696.56652360515022"/>
+            <point key="canvasLocation" x="6703.2558139534885" y="696.56652360515022"/>
+        </scene>
+        <!--Добавление-->
+        <scene sceneID="sWK-cE-LwH">
+            <objects>
+                <viewController storyboardIdentifier="AddMedicationTakingViewController" title="Добавление" id="ekb-DF-Tag" customClass="AddMedicationTakingViewController" customModule="MEDCheck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ov4-62-3RO">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Какие лекарства вы сегодня принимали? " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G66-eT-HYy">
+                                <rect key="frame" x="16" y="109" width="398" height="93.333333333333314"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="RalewayRoman-Medium" family="Raleway" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PM2-T8-VLm">
+                                <rect key="frame" x="16" y="232.33333333333337" width="398" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3Ap-pI-wIU"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Сохранить">
+                                    <fontDescription key="titleFontDescription" name="RalewayRoman-Bold" family="Raleway" pointSize="17"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="ekb-DF-Tag" eventType="touchUpInside" id="Txt-zA-HyY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="F1c-Gp-gxZ"/>
+                        <color key="backgroundColor" red="0.75686274509999996" green="0.91372549020000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PM2-T8-VLm" firstAttribute="leading" secondItem="F1c-Gp-gxZ" secondAttribute="leading" constant="16" id="0sn-Z4-a6G"/>
+                            <constraint firstItem="G66-eT-HYy" firstAttribute="top" secondItem="F1c-Gp-gxZ" secondAttribute="top" constant="50" id="8nG-lX-ipl"/>
+                            <constraint firstItem="F1c-Gp-gxZ" firstAttribute="trailing" secondItem="G66-eT-HYy" secondAttribute="trailing" constant="16" id="BDC-Xt-wOZ"/>
+                            <constraint firstItem="PM2-T8-VLm" firstAttribute="top" secondItem="G66-eT-HYy" secondAttribute="bottom" constant="30" id="jS7-tk-cma"/>
+                            <constraint firstItem="F1c-Gp-gxZ" firstAttribute="trailing" secondItem="PM2-T8-VLm" secondAttribute="trailing" constant="16" id="qlS-Q3-WoJ"/>
+                            <constraint firstItem="G66-eT-HYy" firstAttribute="height" secondItem="Ov4-62-3RO" secondAttribute="height" multiplier="0.1" id="x9F-wa-810"/>
+                            <constraint firstItem="G66-eT-HYy" firstAttribute="leading" secondItem="F1c-Gp-gxZ" secondAttribute="leading" constant="16" id="zA9-GH-10c"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Добавление" id="Eve-Sr-3dN"/>
+                    <connections>
+                        <outlet property="medicationTakingTextField" destination="G66-eT-HYy" id="5UY-qa-LpZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u3X-Lw-EWu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4143" y="749"/>
         </scene>
         <!--Прием лекарств 💊-->
         <scene sceneID="Ssj-tw-mze">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3WP-4x-c0Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="MedicationTakingViewController" id="wMO-hY-oN8" customClass="MedicationTakingViewController" customModule="MEDCheck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pw2-93-h4P">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
@@ -308,9 +364,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Прием лекарств 💊" id="VhX-iw-Dun"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3WP-4x-c0Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4143" y="1463"/>
+            <point key="canvasLocation" x="4142.7906976744189" y="1462.6609442060087"/>
         </scene>
         <!--Результаты анализов 🗒️-->
         <scene sceneID="IHH-ZA-DK1">
@@ -350,6 +405,21 @@
             </objects>
             <point key="canvasLocation" x="4142.7906976744189" y="2140.5579399141634"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="pAu-t1-0SL">
+            <objects>
+                <viewController id="dKW-9N-tqq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ykF-Og-Fx4">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="I9q-FL-ZnF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0hF-ei-Euz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4142" y="2805"/>
+        </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="b3G-xf-D4X">
             <objects>
@@ -361,7 +431,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="aKx-1o-WGp" kind="relationship" relationship="viewControllers" id="gjx-Dn-NvJ"/>
-                        <segue destination="7Hp-xJ-dXY" kind="relationship" relationship="viewControllers" id="T11-pN-Ibp"/>
                         <segue destination="Wb6-AZ-9Hx" kind="relationship" relationship="viewControllers" id="5Z6-NX-qxo"/>
                         <segue destination="UZH-ud-Wcf" kind="relationship" relationship="viewControllers" id="bf3-Tj-rLe"/>
                     </connections>
@@ -464,7 +533,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qyo-1v-7a3">
-                                <rect key="frame" x="30" y="515" width="370" height="35"/>
+                                <rect key="frame" x="30" y="515" width="370" height="35.333333333333371"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Зарегистрироваться">
@@ -637,22 +706,6 @@
             </objects>
             <point key="canvasLocation" x="1038" y="-35"/>
         </scene>
-        <!--Чат с ИИ-доктором🤖-->
-        <scene sceneID="PEz-Fa-bey">
-            <objects>
-                <viewController id="EI5-Cc-n16" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9Gk-c0-Pfn">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="unH-8H-dCI"/>
-                        <color key="backgroundColor" red="0.75686274509999996" green="0.91372549020000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Чат с ИИ-доктором🤖" id="zyl-ge-vCJ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ndi-L6-AAT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5805" y="697"/>
-        </scene>
         <!--О нас 📄 -->
         <scene sceneID="ppI-oR-IJd">
             <objects>
@@ -722,7 +775,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k9C-GD-eqI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6780" y="697"/>
+            <point key="canvasLocation" x="7678.604651162791" y="696.56652360515022"/>
         </scene>
         <!--Настройки ⚙️-->
         <scene sceneID="Ynb-dU-GvQ">
@@ -824,7 +877,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tpc-vy-TWq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7766.5116279069771" y="696.56652360515022"/>
+            <point key="canvasLocation" x="8665.1162790697672" y="696.56652360515022"/>
         </scene>
         <!--Главная-->
         <scene sceneID="y9h-L8-1TH">
@@ -843,7 +896,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfQ-wW-zhO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4805.5813953488368" y="-35.407725321888414"/>
+            <point key="canvasLocation" x="5805" y="-35"/>
         </scene>
         <!--Настройки-->
         <scene sceneID="fqX-nF-aKV">
@@ -884,25 +937,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AxC-Ep-gMN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6780" y="-35"/>
-        </scene>
-        <!--Чат-->
-        <scene sceneID="apO-90-jgs">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Hp-xJ-dXY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Чат" image="ellipsis.message" catalog="system" id="TGG-zw-hNd"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Vyf-TA-BIm">
-                        <rect key="frame" x="0.0" y="59" width="430" height="104.33333333333334"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="EI5-Cc-n16" kind="relationship" relationship="rootViewController" id="NJC-Np-leK"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6E1-7e-hmT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5806" y="-35"/>
         </scene>
         <!--История болезни 🩺-->
         <scene sceneID="To9-0J-f19">
@@ -1065,6 +1099,7 @@
         <!--Navigation Controller-->
         <scene sceneID="7aq-xo-fHd">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NJx-dn-hhp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xUE-jM-WbT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="gah-ch-653">
@@ -1076,7 +1111,6 @@
                         <segue destination="wMO-hY-oN8" kind="relationship" relationship="rootViewController" id="ujt-Je-x3R"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NJx-dn-hhp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3152" y="1463"/>
         </scene>
@@ -1167,7 +1201,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vci-i2-7RO">
-                                <rect key="frame" x="50" y="475" width="330" height="35.333333333333314"/>
+                                <rect key="frame" x="50" y="475" width="330" height="35"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title="Button"/>
@@ -1329,7 +1363,6 @@
     <resources>
         <image name="chatImage" width="806" height="904"/>
         <image name="checkmark.circle" catalog="system" width="128" height="123"/>
-        <image name="ellipsis.message" catalog="system" width="128" height="116"/>
         <image name="eye" catalog="system" width="128" height="79"/>
         <image name="gear" catalog="system" width="128" height="122"/>
         <image name="info.circle" catalog="system" width="128" height="123"/>

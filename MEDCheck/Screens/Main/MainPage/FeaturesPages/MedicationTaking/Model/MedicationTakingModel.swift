@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MedicationTakingModel {
-    var date: Date
+struct MedicationTaking {
+    var weekday, dayOfMonth, month: String
     var content: String
 }

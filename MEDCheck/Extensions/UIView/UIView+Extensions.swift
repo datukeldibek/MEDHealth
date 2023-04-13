@@ -30,4 +30,18 @@ extension UIView {
         let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: feedbackStyle)
         impactFeedbackgenerator.impactOccurred()
     }
+    
+    @IBInspectable var withShadow: Bool {
+        get { return self.layer.shadowOpacity != 0 }
+        set {
+            if newValue {
+                self.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+                self.layer.shadowOffset = CGSize(width: 0, height: 4)
+                self.layer.shadowOpacity = 1
+                self.layer.shadowRadius = 4
+            } else {
+                self.layer.shadowOpacity = 0
+            }
+        }
+    }
 }

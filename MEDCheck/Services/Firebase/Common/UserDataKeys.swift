@@ -15,3 +15,10 @@ public enum UserDataKeys: String {
     case password = "password"
     case profilePictureURL = "profilePictureURL"
 }
+
+public enum MedicationTakingDataKeys: String {
+    case dayOfMonth = "dayOfMonth"
+    case weekday = "weekday"
+    case month = "month"
+    case content = "content"
+}

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		00F4A8F31DD61B981BC07AF7 /* Pods_MEDCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7277A9C7F67F6E7587010E /* Pods_MEDCheck.framework */; };
+		8C1F61A829E7A3EE007DE82B /* AddMedicationTakingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1F61A729E7A3EE007DE82B /* AddMedicationTakingViewController.swift */; };
+		8C1F61AD29E7B086007DE82B /* AddMedicationTakingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1F61AC29E7B086007DE82B /* AddMedicationTakingViewModel.swift */; };
+		8C1F61B229E83DC4007DE82B /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1F61B129E83DC4007DE82B /* DateManager.swift */; };
+		8C1F61B629E87192007DE82B /* NoDataContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1F61B529E87192007DE82B /* NoDataContainerView.swift */; };
 		8C3118D029D866AF00C53B46 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3118CF29D866AF00C53B46 /* SignUpViewController.swift */; };
 		8C3118D329D87E1D00C53B46 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3118D229D87E1D00C53B46 /* ResetPasswordViewController.swift */; };
 		8C32E37229DF57C20047A6BB /* TestResultDetailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E37129DF57C20047A6BB /* TestResultDetailedVC.swift */; };
@@ -85,13 +89,16 @@
 		8CEE873D29D8A90100275CCE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE873C29D8A90100275CCE /* MainTabBarController.swift */; };
 		8CEE874329D8A93A00275CCE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE874229D8A93A00275CCE /* SettingsViewController.swift */; };
 		8CEE874529D8A96100275CCE /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE874429D8A96100275CCE /* InfoViewController.swift */; };
-		8CEE874729D8A97400275CCE /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE874629D8A97400275CCE /* ChatViewController.swift */; };
 		8CEE874929D8A98800275CCE /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE874829D8A98800275CCE /* MainPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1803196C357C2224D0A86DBE /* Pods-MEDCheck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MEDCheck.debug.xcconfig"; path = "Target Support Files/Pods-MEDCheck/Pods-MEDCheck.debug.xcconfig"; sourceTree = "<group>"; };
 		5D7277A9C7F67F6E7587010E /* Pods_MEDCheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MEDCheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C1F61A729E7A3EE007DE82B /* AddMedicationTakingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMedicationTakingViewController.swift; sourceTree = "<group>"; };
+		8C1F61AC29E7B086007DE82B /* AddMedicationTakingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMedicationTakingViewModel.swift; sourceTree = "<group>"; };
+		8C1F61B129E83DC4007DE82B /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
+		8C1F61B529E87192007DE82B /* NoDataContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataContainerView.swift; sourceTree = "<group>"; };
 		8C3118CF29D866AF00C53B46 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8C3118D229D87E1D00C53B46 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		8C32E37129DF57C20047A6BB /* TestResultDetailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultDetailedVC.swift; sourceTree = "<group>"; };
@@ -176,7 +183,6 @@
 		8CEE873C29D8A90100275CCE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		8CEE874229D8A93A00275CCE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8CEE874429D8A96100275CCE /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		8CEE874629D8A97400275CCE /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		8CEE874829D8A98800275CCE /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		C6A3E2E1DFC65CE411CD9552 /* Pods-MEDCheck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MEDCheck.release.xcconfig"; path = "Target Support Files/Pods-MEDCheck/Pods-MEDCheck.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,6 +199,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C1F61A629E7A3DC007DE82B /* AddMedicationTaking */ = {
+			isa = PBXGroup;
+			children = (
+				8C1F61AB29E7B072007DE82B /* View */,
+				8C1F61AA29E7B06E007DE82B /* ViewModel */,
+			);
+			path = AddMedicationTaking;
+			sourceTree = "<group>";
+		};
+		8C1F61A929E7A5D4007DE82B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8C1F61B429E87188007DE82B /* Views */,
+				8C1F61A629E7A3DC007DE82B /* AddMedicationTaking */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		8C1F61AA29E7B06E007DE82B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8C1F61AC29E7B086007DE82B /* AddMedicationTakingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8C1F61AB29E7B072007DE82B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8C1F61A729E7A3EE007DE82B /* AddMedicationTakingViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8C1F61B429E87188007DE82B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8C1F61B529E87192007DE82B /* NoDataContainerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		8C3118CD29D8668F00C53B46 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				8C32E38C29DF84830047A6BB /* SafariOpener.swift */,
+				8C1F61B129E83DC4007DE82B /* DateManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -509,7 +558,6 @@
 		8C5B49EB29D1616500915A6C /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				8CEE873F29D8A92200275CCE /* ChatPage */,
 				8CEE874029D8A92D00275CCE /* InfoPage */,
 				8CEE873E29D8A91800275CCE /* MainPage */,
 				8CEE874129D8A93100275CCE /* SettingsPage */,
@@ -774,6 +822,7 @@
 		8CDC6C5A29DE1BF3006493F4 /* MedicationTaking */ = {
 			isa = PBXGroup;
 			children = (
+				8C1F61A929E7A5D4007DE82B /* Components */,
 				8CDC6C7F29DE3269006493F4 /* Model */,
 				8CDC6C7E29DE3266006493F4 /* ViewModel */,
 				8CDC6C7D29DE3265006493F4 /* View */,
@@ -981,14 +1030,6 @@
 			path = MainPage;
 			sourceTree = "<group>";
 		};
-		8CEE873F29D8A92200275CCE /* ChatPage */ = {
-			isa = PBXGroup;
-			children = (
-				8CEE874629D8A97400275CCE /* ChatViewController.swift */,
-			);
-			path = ChatPage;
-			sourceTree = "<group>";
-		};
 		8CEE874029D8A92D00275CCE /* InfoPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -1173,10 +1214,12 @@
 				8CDC6C6529DE1FB5006493F4 /* PharmacyListViewController.swift in Sources */,
 				8C32E39529DF922D0047A6BB /* AboutAppViewController.swift in Sources */,
 				8CDC6C6C29DE2A65006493F4 /* UIViewController+showWarningAlertMethod.swift in Sources */,
+				8C1F61B229E83DC4007DE82B /* DateManager.swift in Sources */,
 				8CDC6C7129DE2C01006493F4 /* UIViewController+TextFieldsHandling.swift in Sources */,
 				8C87BBE729D4D096008A742D /* NetworkStatusViewModel.swift in Sources */,
 				8CEE874329D8A93A00275CCE /* SettingsViewController.swift in Sources */,
 				8CDC6C5F29DE1F63006493F4 /* MedicationTakingViewController.swift in Sources */,
+				8C1F61AD29E7B086007DE82B /* AddMedicationTakingViewModel.swift in Sources */,
 				8C3118D329D87E1D00C53B46 /* ResetPasswordViewController.swift in Sources */,
 				8C87BBFF29D774E4008A742D /* OnboardingSlide.swift in Sources */,
 				8C32E42A29E482260047A6BB /* UIViewController+GoToMainVC.swift in Sources */,
@@ -1202,14 +1245,15 @@
 				8C87BBEA29D4DA12008A742D /* NoInternetConnectionViewModel.swift in Sources */,
 				8CDC6C6329DE1F9E006493F4 /* TestResultsViewController.swift in Sources */,
 				8CDC6C6929DE29DA006493F4 /* UIViewController+OTPTextFieldHandling.swift in Sources */,
+				8C1F61B629E87192007DE82B /* NoDataContainerView.swift in Sources */,
 				8C5B49C929D0F63600915A6C /* AppDelegate.swift in Sources */,
 				8CDC6C8529DE3306006493F4 /* MedicationTakingModel.swift in Sources */,
-				8CEE874729D8A97400275CCE /* ChatViewController.swift in Sources */,
 				8C87BC0729D78EB0008A742D /* OnboardingViewModel.swift in Sources */,
 				8C32E37E29DF6F580047A6BB /* SocialMediaLinksTableViewCell.swift in Sources */,
 				8CB37BCB29E61898002DAB59 /* LocalizationOptions.swift in Sources */,
 				8CEE874929D8A98800275CCE /* MainPageViewController.swift in Sources */,
 				8CDC6C5529DE0D43006493F4 /* Feature.swift in Sources */,
+				8C1F61A829E7A3EE007DE82B /* AddMedicationTakingViewController.swift in Sources */,
 				8C87BBCF29D49046008A742D /* UIViewController+InstantiateMethod.swift in Sources */,
 				8CDC6C8729DE3325006493F4 /* MedicationTakingViewModel.swift in Sources */,
 				8CB37BD129E628BB002DAB59 /* String + Localized.swift in Sources */,
