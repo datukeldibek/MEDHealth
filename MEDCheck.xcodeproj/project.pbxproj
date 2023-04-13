@@ -86,6 +86,8 @@
 		8CDC6C8D29DE3A19006493F4 /* TestResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDC6C8C29DE3A19006493F4 /* TestResultsViewModel.swift */; };
 		8CDC6CB729DF50DC006493F4 /* TestResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDC6CB529DF50DC006493F4 /* TestResultCollectionViewCell.swift */; };
 		8CDC6CB829DF50DC006493F4 /* TestResultCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CDC6CB629DF50DC006493F4 /* TestResultCollectionViewCell.xib */; };
+		8CE7E4DD29E8947A004A8312 /* MedicationTakingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE7E4DB29E8947A004A8312 /* MedicationTakingCell.swift */; };
+		8CE7E4DE29E8947A004A8312 /* MedicationTakingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CE7E4DC29E8947A004A8312 /* MedicationTakingCell.xib */; };
 		8CEE873D29D8A90100275CCE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE873C29D8A90100275CCE /* MainTabBarController.swift */; };
 		8CEE874329D8A93A00275CCE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE874229D8A93A00275CCE /* SettingsViewController.swift */; };
 		8CEE874529D8A96100275CCE /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE874429D8A96100275CCE /* InfoViewController.swift */; };
@@ -180,6 +182,8 @@
 		8CDC6C8C29DE3A19006493F4 /* TestResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultsViewModel.swift; sourceTree = "<group>"; };
 		8CDC6CB529DF50DC006493F4 /* TestResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultCollectionViewCell.swift; sourceTree = "<group>"; };
 		8CDC6CB629DF50DC006493F4 /* TestResultCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestResultCollectionViewCell.xib; sourceTree = "<group>"; };
+		8CE7E4DB29E8947A004A8312 /* MedicationTakingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationTakingCell.swift; sourceTree = "<group>"; };
+		8CE7E4DC29E8947A004A8312 /* MedicationTakingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedicationTakingCell.xib; sourceTree = "<group>"; };
 		8CEE873C29D8A90100275CCE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		8CEE874229D8A93A00275CCE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8CEE874429D8A96100275CCE /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -211,8 +215,8 @@
 		8C1F61A929E7A5D4007DE82B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				8CE7E4DA29E8945F004A8312 /* Cell */,
 				8C1F61B429E87188007DE82B /* Views */,
-				8C1F61A629E7A3DC007DE82B /* AddMedicationTaking */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -822,6 +826,7 @@
 		8CDC6C5A29DE1BF3006493F4 /* MedicationTaking */ = {
 			isa = PBXGroup;
 			children = (
+				8CE7E4D929E89457004A8312 /* Subscreen */,
 				8C1F61A929E7A5D4007DE82B /* Components */,
 				8CDC6C7F29DE3269006493F4 /* Model */,
 				8CDC6C7E29DE3266006493F4 /* ViewModel */,
@@ -1005,6 +1010,23 @@
 			path = TestResultCell;
 			sourceTree = "<group>";
 		};
+		8CE7E4D929E89457004A8312 /* Subscreen */ = {
+			isa = PBXGroup;
+			children = (
+				8C1F61A629E7A3DC007DE82B /* AddMedicationTaking */,
+			);
+			path = Subscreen;
+			sourceTree = "<group>";
+		};
+		8CE7E4DA29E8945F004A8312 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8CE7E4DB29E8947A004A8312 /* MedicationTakingCell.swift */,
+				8CE7E4DC29E8947A004A8312 /* MedicationTakingCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		8CEE873129D88C1A00275CCE /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -1134,6 +1156,7 @@
 				8C87BC0429D77BBD008A742D /* OnboardingCollectionViewCell.xib in Resources */,
 				8CB37BD429E6296D002DAB59 /* Localizable.strings in Resources */,
 				8CDC6C4C29DE081C006493F4 /* FeatureCollectionViewCell.xib in Resources */,
+				8CE7E4DE29E8947A004A8312 /* MedicationTakingCell.xib in Resources */,
 				8C5B49E129D1099600915A6C /* Raleway-VariableFont_wght.ttf in Resources */,
 				8C5B49D529D0F63800915A6C /* LaunchScreen.storyboard in Resources */,
 				8C32E37F29DF6F590047A6BB /* SocialMediaLinksTableViewCell.xib in Resources */,
@@ -1241,6 +1264,7 @@
 				8C8A16EF29E4D78300ED7FDC /* ProfilePageViewController.swift in Sources */,
 				8C32E3F729E230620047A6BB /* SignInViewModel.swift in Sources */,
 				8C87BBF129D51AB3008A742D /* UIViewController+NetworkStatusAware.swift in Sources */,
+				8CE7E4DD29E8947A004A8312 /* MedicationTakingCell.swift in Sources */,
 				8C87BBE329D4D01E008A742D /* NetworkManager.swift in Sources */,
 				8C87BBEA29D4DA12008A742D /* NoInternetConnectionViewModel.swift in Sources */,
 				8CDC6C6329DE1F9E006493F4 /* TestResultsViewController.swift in Sources */,

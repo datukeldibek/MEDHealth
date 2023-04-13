@@ -25,6 +25,9 @@ final class AddMedicationTakingViewModel {
                 weekday: dateManager.getDayOfWeek(),
                 dayOfMonth: dateManager.getToday(),
                 month: dateManager.getMonth(),
+                minutes: dateManager.getMinutes(),
+                seconds: dateManager.getSeconds(),
+                hour: dateManager.getHours(),
                 content: content
             )
         ) { [weak self] error in

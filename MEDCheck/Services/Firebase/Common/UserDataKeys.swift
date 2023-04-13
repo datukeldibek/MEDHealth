@@ -21,4 +21,7 @@ public enum MedicationTakingDataKeys: String {
     case weekday = "weekday"
     case month = "month"
     case content = "content"
+    case seconds = "seconds"
+    case minutes = "minutes"
+    case hour = "hour"
 }

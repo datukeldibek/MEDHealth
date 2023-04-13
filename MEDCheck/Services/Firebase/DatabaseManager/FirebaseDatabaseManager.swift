@@ -97,7 +97,10 @@ final class FirebaseDatabaseManager {
             MedicationTakingDataKeys.dayOfMonth.rawValue: taking.dayOfMonth,
             MedicationTakingDataKeys.weekday.rawValue: taking.weekday,
             MedicationTakingDataKeys.month.rawValue: taking.month,
-            MedicationTakingDataKeys.content.rawValue: taking.content
+            MedicationTakingDataKeys.content.rawValue: taking.content,
+            MedicationTakingDataKeys.seconds.rawValue: taking.seconds,
+            MedicationTakingDataKeys.minutes.rawValue: taking.minutes,
+            MedicationTakingDataKeys.hour.rawValue: taking.hour
         ]
         
         userRef
@@ -113,8 +116,8 @@ final class FirebaseDatabaseManager {
         completion: @escaping (Result<[MedicationTaking], Error>) -> Void
     ) {
         let userRef = getUserReference(for: uid).child("medicationTakings")
-        
-        userRef.observe(.value) { snapshot, error in
+
+        userRef.observe(.value) { snapshot, _ in
             guard let data = snapshot.value as? [String:Any] else {
                 completion(.success([]))
                 return
@@ -123,9 +126,8 @@ final class FirebaseDatabaseManager {
             var medicationTakings = [MedicationTaking]()
             
             for takingData in data.values {
-                if
-                    let takingData = takingData as? [String: Any],
-                   
+                if let takingData = takingData as? [String: Any],
+
                     let weekday = takingData[
                         MedicationTakingDataKeys.weekday.rawValue
                     ] as? String,
@@ -140,12 +142,28 @@ final class FirebaseDatabaseManager {
                    
                     let content = takingData[
                         MedicationTakingDataKeys.content.rawValue
+                    ] as? String,
+                   
+                    let seconds = takingData[
+                        MedicationTakingDataKeys.seconds.rawValue
+                    ] as? String,
+                   
+                    let minutes = takingData[
+                        MedicationTakingDataKeys.minutes.rawValue
+                    ] as? String,
+                   
+                    let hour = takingData[
+                        MedicationTakingDataKeys.hour.rawValue
                     ] as? String {
                     
                     let medicationTaking = MedicationTaking(
                         weekday: weekday,
                         dayOfMonth: dayOfMonth,
-                        month: month, content: content
+                        month: month,
+                        minutes: minutes,
+                        seconds: seconds,
+                        hour: hour,
+                        content: content
                     )
                     
                     medicationTakings.append(medicationTaking)

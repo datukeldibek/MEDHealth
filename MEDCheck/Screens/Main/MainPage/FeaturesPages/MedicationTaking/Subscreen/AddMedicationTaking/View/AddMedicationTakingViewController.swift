@@ -41,7 +41,7 @@ final class AddMedicationTakingViewController: UIViewController {
         return true
     }
     
-    // MARK: - viewDidLoad() 
+    // MARK: - viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
         initViewModel()

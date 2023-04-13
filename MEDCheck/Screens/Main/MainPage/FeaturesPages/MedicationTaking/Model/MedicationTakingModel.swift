@@ -8,6 +8,6 @@
 import Foundation
 
 struct MedicationTaking {
-    var weekday, dayOfMonth, month: String
+    var weekday, dayOfMonth, month, minutes, seconds, hour: String
     var content: String
 }
