@@ -19,7 +19,7 @@ final class NoDataContainerView: UIView {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "У вас нет записей"
-        label.font = .systemFont(ofSize: 20)
+        label.font = UIFont(name: "RalewayRoman-Bold", size: 18)
         label.textAlignment = .center
         return label
     }()
@@ -27,7 +27,7 @@ final class NoDataContainerView: UIView {
     private lazy var hintLabel: UILabel = {
         let label = UILabel()
         label.text = "Нажмите на плюсик, чтобы добавить запись"
-        label.font = .systemFont(ofSize: 16)
+        label.font = UIFont(name: "RalewayRoman-Medium", size: 14)
         label.textAlignment = .center
         return label
     }()

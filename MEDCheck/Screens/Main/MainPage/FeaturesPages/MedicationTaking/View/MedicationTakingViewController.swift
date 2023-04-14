@@ -176,14 +176,30 @@ extension MedicationTakingViewController: UICollectionViewDataSource {
         return cell
     }
     
-    
 }
 
 extension MedicationTakingViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath
+    ) -> CGSize {
         CGSize(
             width: collectionView.bounds.width - 30,
             height: collectionView.bounds.height / 5
         )
+    }
+}
+
+extension MedicationTakingViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = MedicationTakingDetailedViewController()
+        vc.setup(with: viewModel.medicationTaking(at: indexPath))
+        
+        if let bottomSheet = vc.sheetPresentationController {
+            bottomSheet.detents = [.medium()]
+        }
+        
+        present(vc, animated: true)
     }
 }

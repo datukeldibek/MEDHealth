@@ -306,7 +306,6 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Какие лекарства вы сегодня принимали? " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G66-eT-HYy">
                                 <rect key="frame" x="16" y="109" width="398" height="93.333333333333314"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="RalewayRoman-Medium" family="Raleway" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -354,7 +353,6 @@
         <!--Прием лекарств 💊-->
         <scene sceneID="Ssj-tw-mze">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3WP-4x-c0Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="MedicationTakingViewController" id="wMO-hY-oN8" customClass="MedicationTakingViewController" customModule="MEDCheck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pw2-93-h4P">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
@@ -364,6 +362,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Прием лекарств 💊" id="VhX-iw-Dun"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3WP-4x-c0Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4142.7906976744189" y="1462.6609442060087"/>
         </scene>
@@ -1099,7 +1098,6 @@
         <!--Navigation Controller-->
         <scene sceneID="7aq-xo-fHd">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NJx-dn-hhp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xUE-jM-WbT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="gah-ch-653">
@@ -1111,6 +1109,7 @@
                         <segue destination="wMO-hY-oN8" kind="relationship" relationship="rootViewController" id="ujt-Je-x3R"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NJx-dn-hhp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3152" y="1463"/>
         </scene>
@@ -1358,6 +1357,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EbA-gW-vuB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8616" y="1463"/>
+        </scene>
+        <!--Добавление-->
+        <scene sceneID="gQF-s1-wfu">
+            <objects>
+                <viewController storyboardIdentifier="AddMedicalHistoryNoteViewController" title="Добавление" id="DT2-2u-P6G" customClass="AddMedicalHistoryNoteViewController" customModule="MEDCheck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f1s-sr-9an">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Напишите, что вас беспокоило?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="18K-yl-nG8">
+                                <rect key="frame" x="16" y="109" width="398" height="93.333333333333314"/>
+                                <fontDescription key="fontDescription" name="RalewayRoman-Medium" family="Raleway" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Wr-sf-53s">
+                                <rect key="frame" x="16" y="232.33333333333337" width="398" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xvq-Wr-Qiy"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Сохранить">
+                                    <fontDescription key="titleFontDescription" name="RalewayRoman-Bold" family="Raleway" pointSize="17"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="DT2-2u-P6G" eventType="touchUpInside" id="j0h-pV-IgW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JbW-tS-fU8"/>
+                        <color key="backgroundColor" red="0.75686274509999996" green="0.91372549020000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="18K-yl-nG8" firstAttribute="leading" secondItem="JbW-tS-fU8" secondAttribute="leading" constant="16" id="5Qd-Nq-zm2"/>
+                            <constraint firstItem="18K-yl-nG8" firstAttribute="height" secondItem="f1s-sr-9an" secondAttribute="height" multiplier="0.1" id="Jsa-oc-g6a"/>
+                            <constraint firstItem="JbW-tS-fU8" firstAttribute="trailing" secondItem="18K-yl-nG8" secondAttribute="trailing" constant="16" id="ZQd-Pg-iIn"/>
+                            <constraint firstItem="JbW-tS-fU8" firstAttribute="trailing" secondItem="4Wr-sf-53s" secondAttribute="trailing" constant="16" id="ehQ-av-viJ"/>
+                            <constraint firstItem="4Wr-sf-53s" firstAttribute="leading" secondItem="JbW-tS-fU8" secondAttribute="leading" constant="16" id="hkQ-Fd-4z2"/>
+                            <constraint firstItem="4Wr-sf-53s" firstAttribute="top" secondItem="18K-yl-nG8" secondAttribute="bottom" constant="30" id="vIZ-sm-i69"/>
+                            <constraint firstItem="18K-yl-nG8" firstAttribute="top" secondItem="JbW-tS-fU8" secondAttribute="top" constant="50" id="vkD-Fo-JE6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Добавление" id="uOh-LH-FiK"/>
+                    <connections>
+                        <outlet property="medicalHistoryNoteTF" destination="18K-yl-nG8" id="J02-94-8nU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="phu-ba-LdY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4962" y="749"/>
         </scene>
     </scenes>
     <resources>

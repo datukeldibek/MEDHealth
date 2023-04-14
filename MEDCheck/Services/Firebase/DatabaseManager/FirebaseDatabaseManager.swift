@@ -174,4 +174,93 @@ final class FirebaseDatabaseManager {
         }
     }
     
+    
+    public func saveNewMedicalHistoryNote(
+        uid: String,
+        new note: MedicalHistory,
+        completion: @escaping ((Error?) -> Void)
+    ) {
+        let userRef = getUserReference(for: uid)
+        let newData: [String: Any] = [
+            MedicationTakingDataKeys.dayOfMonth.rawValue: note.dayOfMonth,
+            MedicationTakingDataKeys.weekday.rawValue: note.weekday,
+            MedicationTakingDataKeys.month.rawValue: note.month,
+            MedicationTakingDataKeys.content.rawValue: note.content,
+            MedicationTakingDataKeys.seconds.rawValue: note.seconds,
+            MedicationTakingDataKeys.minutes.rawValue: note.minutes,
+            MedicationTakingDataKeys.hour.rawValue: note.hour
+        ]
+        
+        userRef
+            .child("medicalHistories")
+            .childByAutoId()
+            .setValue(newData) { error, _ in
+                completion(error)
+            }
+    }
+    
+    public func getMedicalHistoryNotes(
+        uid: String,
+        completion: @escaping (Result<[MedicalHistory], Error>) -> Void
+    ) {
+        let userRef = getUserReference(for: uid).child("medicalHistories")
+
+        userRef.observe(.value) { snapshot, _ in
+            guard let data = snapshot.value as? [String:Any] else {
+                completion(.success([]))
+                return
+            }
+            
+            var histories = [MedicalHistory]()
+            
+            for takingData in data.values {
+                if let takingData = takingData as? [String: Any],
+
+                    let weekday = takingData[
+                        MedicationTakingDataKeys.weekday.rawValue
+                    ] as? String,
+                   
+                    let dayOfMonth = takingData[
+                        MedicationTakingDataKeys.dayOfMonth.rawValue
+                    ] as? String,
+                   
+                    let month = takingData[
+                        MedicationTakingDataKeys.month.rawValue
+                    ] as? String,
+                   
+                    let content = takingData[
+                        MedicationTakingDataKeys.content.rawValue
+                    ] as? String,
+                   
+                    let seconds = takingData[
+                        MedicationTakingDataKeys.seconds.rawValue
+                    ] as? String,
+                   
+                    let minutes = takingData[
+                        MedicationTakingDataKeys.minutes.rawValue
+                    ] as? String,
+                   
+                    let hour = takingData[
+                        MedicationTakingDataKeys.hour.rawValue
+                    ] as? String {
+                    
+                    let note = MedicalHistory(
+                        weekday: weekday,
+                        dayOfMonth: dayOfMonth,
+                        month: month,
+                        minutes: minutes,
+                        seconds: seconds,
+                        hour: hour,
+                        content: content
+                    )
+                    
+                    histories.append(note)
+                }
+            }
+            
+            completion(.success(histories))
+        }
+    }
+    
+    
 }

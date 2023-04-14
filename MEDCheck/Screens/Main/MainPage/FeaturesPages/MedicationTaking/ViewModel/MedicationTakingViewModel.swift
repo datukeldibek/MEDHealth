@@ -71,6 +71,10 @@ final class MedicationTakingViewModel {
     }
     
     public func date(at indexPath: IndexPath) -> String {
-        medicationTakings[indexPath.row].weekday
+        medicationTakings[indexPath.row].date
+    }
+    
+    public func medicationTaking(at indexPath: IndexPath) -> MedicationTaking {
+        medicationTakings[indexPath.row]
     }
 }

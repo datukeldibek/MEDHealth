@@ -8,7 +8,11 @@
 import Foundation
 
 // История болезни
-struct MedicalHistoryModel {
-    var date: Date
+struct MedicalHistory {
+    var weekday, dayOfMonth, month, minutes, seconds, hour: String
     var content: String
+    
+    var date: String {
+        "\(month) \(dayOfMonth), \(weekday)"
+    }
 }
