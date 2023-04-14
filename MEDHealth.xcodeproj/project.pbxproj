@@ -1217,7 +1217,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8C5B49C029D0F63600915A6C /* Build configuration list for PBXProject "MEDCheck" */;
+			buildConfigurationList = 8C5B49C029D0F63600915A6C /* Build configuration list for PBXProject "MEDHealth" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = ru;
 			hasScannedForEncodings = 0;
@@ -1613,7 +1613,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8C5B49C029D0F63600915A6C /* Build configuration list for PBXProject "MEDCheck" */ = {
+		8C5B49C029D0F63600915A6C /* Build configuration list for PBXProject "MEDHealth" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8C5B49D729D0F63800915A6C /* Debug */,

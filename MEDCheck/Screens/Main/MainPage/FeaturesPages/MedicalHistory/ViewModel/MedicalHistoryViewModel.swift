@@ -20,7 +20,7 @@ final class MedicalHistoryViewModel {
     }
     
     // MARK: - Private methods
-    private func getMedicationTakings() {
+    private func getMedicalHistoryNotes() {
         guard let uid = auth.currentUser()?.uid else {
             showInfoAlert? (
                 "Ошибка ⚠️".localized(),
@@ -59,7 +59,7 @@ final class MedicalHistoryViewModel {
             return
         }
         
-        getMedicationTakings()
+        getMedicalHistoryNotes()
     }
     
     
