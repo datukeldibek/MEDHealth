@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Raleway-Italic-VariableFont_wght.ttf">
+            <string>RalewayItalic-Light</string>
+        </array>
+        <array key="Raleway-VariableFont_wght.ttf">
+            <string>RalewayRoman-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MedicalHistoryCollectionViewCell" customModule="MEDHealth" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="422" height="236"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="422" height="236"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cr3-tc-U5u">
+                        <rect key="frame" x="16" y="6" width="390" height="16.666666666666668"/>
+                        <fontDescription key="fontDescription" name="RalewayItalic-Light" family="Raleway" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBn-dz-LwL">
+                        <rect key="frame" x="16" y="42.666666666666671" width="390" height="173.33333333333331"/>
+                        <fontDescription key="fontDescription" name="RalewayRoman-Medium" family="Raleway" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="yBn-dz-LwL" secondAttribute="bottom" constant="20" id="10f-1C-hgg"/>
+                <constraint firstItem="yBn-dz-LwL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="1Vb-ZB-UKv"/>
+                <constraint firstItem="yBn-dz-LwL" firstAttribute="top" secondItem="cr3-tc-U5u" secondAttribute="bottom" constant="20" id="2Ot-3e-YfG"/>
+                <constraint firstItem="cr3-tc-U5u" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="Izf-XI-mh8"/>
+                <constraint firstAttribute="trailing" secondItem="yBn-dz-LwL" secondAttribute="trailing" constant="16" id="jDh-aM-T7N"/>
+                <constraint firstItem="cr3-tc-U5u" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="6" id="vYa-0B-1W7"/>
+                <constraint firstAttribute="trailing" secondItem="cr3-tc-U5u" secondAttribute="trailing" constant="16" id="xtT-LL-VJM"/>
+            </constraints>
+            <size key="customSize" width="422" height="236"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="12"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="contentLabel" destination="yBn-dz-LwL" id="JHh-ye-i35"/>
+                <outlet property="dateLabel" destination="cr3-tc-U5u" id="Ahy-5p-6SP"/>
+            </connections>
+            <point key="canvasLocation" x="222.90076335877862" y="50"/>
+        </collectionViewCell>
+    </objects>
+</document>

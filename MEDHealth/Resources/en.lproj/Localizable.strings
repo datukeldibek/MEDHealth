@@ -1,0 +1,98 @@
+/* 
+  Localizable.strings
+  MEDCheck
+
+  Created by ibaikaa on 12/4/23.
+  
+*/
+
+// MARK: - Экраны входа, регистрации, восстановления пароля
+"Ошибка ⚠️" = "Error ⚠️";
+"Пожалуйста, заполни все поля." = "Please fill in all fields.";
+"Информация ℹ️" = "Info ℹ️";
+"На почту пришло сообщение для восстановления пароля. Следуйте инструкции, чтоб восстановить пароль." = "The password recovery email has been sent. Follow the instructions to reset your password.";
+"Регистрация" = "Sign Up";
+
+// MARK: - Экраны обучения
+"Заголовок 1" = "Title 1";
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia libero ut metus convallis tempor. Vestibulum consequat, tortor mattis consequat" = "(EN) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia libero ut metus convallis tempor. Vestibulum consequat, tortor mattis consequat";
+"Заголовок 2" = "Title 2";
+"Заголовок 3" = "Title 3";
+"Обучение завершено! 🎉" = "Congratulations! Onboarding is complete! 🎉";
+"Мы рады приветствовать вас в MEDCheck 😊" = "We are happy to welcome you to MEDCheck 😊";
+"Обучение не завершено! ❌" = "Onboarding incomplete! ❌";
+"Вы уверены, что хотите пропустить обучение? Это действия нельзя будет отменить." = "Are you sure you want to skip the onboarding? This action can not be undone.";
+"Завершить обучение ✅" = "Finish onboarding ✅";
+"Пропустить обучение ⏩" = "Skip onboarding ⏩";
+"Окей" = "OK";
+"Отмена" = "Cancel";
+"Пропустить" = "Skip";
+
+// MARK: - Нет интернета
+"Проверяем..." = "Checking...";
+"Интернет-соединение успешно восстановлено!" = "Internet connection successfully restored!";
+"Нет интернет-соединения :(" = "No internet connection :(";
+
+// MARK: - Главный экран
+"Привет, " = "Hello, ";
+"друг" = "friend";
+
+// CollectionView главного экрана
+"Прием лекарств" = "Medication taking";
+"История болезни" = "Medical history";
+"Результаты анализов" = "Test results";
+"Список аптек" = "Pharmacy list";
+
+// MARK: – Результаты анализов
+"Сертификат вакцинации от COVID-2019" = "COVID-19 Vaccination Certificate";
+"Lorem ipsum dolor sit amet" = "(EN) Lorem ipsum dolor sit amet";
+"Результат ПЦР" = "PCR test result";
+"Анализ крови" = "Blood test";
+"Lorem ipsum dolor sit amet, conselectur Lorem ipsum dolor sit amet, conselectur Lorem ipsum Lorem ipsum dolor sit amet, conselectur Lorem ipsum" = "(EN) Lorem ipsum dolor sit amet, conselectur Lorem ipsum dolor sit amet, conselectur Lorem ipsum Lorem ipsum dolor sit amet, conselectur Lorem ipsum";
+"Анализ 2" = "Test 2";
+"Lorem ipsum dolor sit amet, conselectur Lorem ipsum" = "(EN) Lorem ipsum dolor sit amet, conselectur Lorem ipsum";
+"Сердцебиение" = "Heartbeat";
+"Анализ походки" = "Gait analysis";
+
+// MARK: - О нас
+"О нас 📄" = "About us 📄";
+"Попробуй чуть позже." = "Try again later.";
+"О нас" = "About us";
+"Пользовательское соглашение" = "User Agreement";
+"О приложении" = "About app";
+
+// MARK: - Настройки
+"Аккаунт" = "Account";
+"Не удалось сохранить картинку. Попробуй еще раз." = "Failed to save the image. Please try again.";
+"Язык" = "Language"; 
+
+
+// MARK: - Аккаунт
+"Успех" = "Success";
+"Данные успешно изменены ✅" = "Changes saved successfully ✅";
+"Пароли должны совпадать!" = "Passwords must match!";
+"Поля не могут быть пустыми!" = "Fields can't be empty!";
+
+// MARK: - Выбрать язык
+"После смены языка приложение будет перезапущено." = "After changing the language, the application will be restarted.";
+
+// MARK: - Добавление приема лекарств, истории болезней
+"Добавление" = "Add";
+"У вас нет записей" = "You have no notes";
+"Нажмите на плюсик, чтобы добавить запись" = "Tap on the + to add a note";
+
+"Успех ✅" = "Success ✅";
+"Успешно добавлено." = "Succesfully saved.";
+"Поле не может быть пустым!" = "The field can not be empty!";
+
+// MARK: - Локализованные дни недели
+"Monday" = "Monday";
+"Tuesday" = "Tuesday";
+"Wednesday" = "Wednesday";
+"Thursday" = "Thursday";
+"Friday" = "Friday";
+"Saturday" = "Saturday";
+"Sunday" = "Sunday";
+
+// MARK: - Клавиатура
+"Скрыть клавиатуру" = "Hide keyboard";

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00F4A8F31DD61B981BC07AF7 /* Pods_MEDCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7277A9C7F67F6E7587010E /* Pods_MEDCheck.framework */; };
+		528FAAA720C6FBF8ED7808B9 /* Pods_MEDHealth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BFBDBDC616430B9366C65F /* Pods_MEDHealth.framework */; };
 		8C1F61A829E7A3EE007DE82B /* AddMedicationTakingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1F61A729E7A3EE007DE82B /* AddMedicationTakingViewController.swift */; };
 		8C1F61AD29E7B086007DE82B /* AddMedicationTakingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1F61AC29E7B086007DE82B /* AddMedicationTakingViewModel.swift */; };
 		8C1F61B229E83DC4007DE82B /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1F61B129E83DC4007DE82B /* DateManager.swift */; };
@@ -101,8 +101,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1803196C357C2224D0A86DBE /* Pods-MEDCheck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MEDCheck.debug.xcconfig"; path = "Target Support Files/Pods-MEDCheck/Pods-MEDCheck.debug.xcconfig"; sourceTree = "<group>"; };
-		5D7277A9C7F67F6E7587010E /* Pods_MEDCheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MEDCheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		499707BF9C1392B38F493554 /* Pods-MEDHealth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MEDHealth.debug.xcconfig"; path = "Target Support Files/Pods-MEDHealth/Pods-MEDHealth.debug.xcconfig"; sourceTree = "<group>"; };
 		8C1F61A729E7A3EE007DE82B /* AddMedicationTakingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMedicationTakingViewController.swift; sourceTree = "<group>"; };
 		8C1F61AC29E7B086007DE82B /* AddMedicationTakingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMedicationTakingViewModel.swift; sourceTree = "<group>"; };
 		8C1F61B129E83DC4007DE82B /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
@@ -126,7 +125,7 @@
 		8C32E40429E24DC90047A6BB /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		8C32E42929E482260047A6BB /* UIViewController+GoToMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+GoToMainVC.swift"; sourceTree = "<group>"; };
 		8C32E42F29E49EE50047A6BB /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
-		8C5B49C529D0F63600915A6C /* MEDCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEDCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C5B49C529D0F63600915A6C /* MEDHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEDHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5B49C829D0F63600915A6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C5B49CA29D0F63600915A6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8C5B49CC29D0F63600915A6C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -200,7 +199,8 @@
 		8CEE874229D8A93A00275CCE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8CEE874429D8A96100275CCE /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		8CEE874829D8A98800275CCE /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
-		C6A3E2E1DFC65CE411CD9552 /* Pods-MEDCheck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MEDCheck.release.xcconfig"; path = "Target Support Files/Pods-MEDCheck/Pods-MEDCheck.release.xcconfig"; sourceTree = "<group>"; };
+		97AFC030A5DB320B2F819D06 /* Pods-MEDHealth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MEDHealth.release.xcconfig"; path = "Target Support Files/Pods-MEDHealth/Pods-MEDHealth.release.xcconfig"; sourceTree = "<group>"; };
+		C2BFBDBDC616430B9366C65F /* Pods_MEDHealth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MEDHealth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,7 +208,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00F4A8F31DD61B981BC07AF7 /* Pods_MEDCheck.framework in Frameworks */,
+				528FAAA720C6FBF8ED7808B9 /* Pods_MEDHealth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,22 +462,22 @@
 		8C5B49BC29D0F63600915A6C = {
 			isa = PBXGroup;
 			children = (
-				8C5B49C729D0F63600915A6C /* MEDCheck */,
+				8C5B49C729D0F63600915A6C /* MEDHealth */,
 				8C5B49C629D0F63600915A6C /* Products */,
 				EC1EE525441F4BB44AEB7C16 /* Pods */,
-				F85E46012656EB8069232F53 /* Frameworks */,
+				F9C771C8E541C1E72B183CE6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		8C5B49C629D0F63600915A6C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8C5B49C529D0F63600915A6C /* MEDCheck.app */,
+				8C5B49C529D0F63600915A6C /* MEDHealth.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8C5B49C729D0F63600915A6C /* MEDCheck */ = {
+		8C5B49C729D0F63600915A6C /* MEDHealth */ = {
 			isa = PBXGroup;
 			children = (
 				8C5B49E229D10AD900915A6C /* App */,
@@ -489,7 +489,7 @@
 				8C5B49E729D1614B00915A6C /* Screens */,
 				8C5B49E429D1611900915A6C /* Services */,
 			);
-			path = MEDCheck;
+			path = MEDHealth;
 			sourceTree = "<group>";
 		};
 		8C5B49E229D10AD900915A6C /* App */ = {
@@ -556,8 +556,8 @@
 		8C5B49E829D1614F00915A6C /* NoInternetConnection */ = {
 			isa = PBXGroup;
 			children = (
-				8C87BBE829D4DA06008A742D /* ViewModel */,
 				8C87BBD929D4A200008A742D /* View */,
+				8C87BBE829D4DA06008A742D /* ViewModel */,
 			);
 			path = NoInternetConnection;
 			sourceTree = "<group>";
@@ -1166,16 +1166,16 @@
 		EC1EE525441F4BB44AEB7C16 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1803196C357C2224D0A86DBE /* Pods-MEDCheck.debug.xcconfig */,
-				C6A3E2E1DFC65CE411CD9552 /* Pods-MEDCheck.release.xcconfig */,
+				499707BF9C1392B38F493554 /* Pods-MEDHealth.debug.xcconfig */,
+				97AFC030A5DB320B2F819D06 /* Pods-MEDHealth.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		F85E46012656EB8069232F53 /* Frameworks */ = {
+		F9C771C8E541C1E72B183CE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5D7277A9C7F67F6E7587010E /* Pods_MEDCheck.framework */,
+				C2BFBDBDC616430B9366C65F /* Pods_MEDHealth.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1183,23 +1183,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8C5B49C429D0F63600915A6C /* MEDCheck */ = {
+		8C5B49C429D0F63600915A6C /* MEDHealth */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8C5B49D929D0F63800915A6C /* Build configuration list for PBXNativeTarget "MEDCheck" */;
+			buildConfigurationList = 8C5B49D929D0F63800915A6C /* Build configuration list for PBXNativeTarget "MEDHealth" */;
 			buildPhases = (
-				C6A6F0D26D7F00640E43A8C3 /* [CP] Check Pods Manifest.lock */,
+				AFDF29A79984AA61F821BA3A /* [CP] Check Pods Manifest.lock */,
 				8C5B49C129D0F63600915A6C /* Sources */,
 				8C5B49C329D0F63600915A6C /* Resources */,
 				4947F9F0AC3C11940AC8A302 /* Frameworks */,
-				162334A1F6303FCC52964E01 /* [CP] Embed Pods Frameworks */,
+				C00CC1DB37E7C512F0628E05 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MEDCheck;
+			name = MEDHealth;
 			productName = MEDCheck;
-			productReference = 8C5B49C529D0F63600915A6C /* MEDCheck.app */;
+			productReference = 8C5B49C529D0F63600915A6C /* MEDHealth.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1232,7 +1232,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8C5B49C429D0F63600915A6C /* MEDCheck */,
+				8C5B49C429D0F63600915A6C /* MEDHealth */,
 			);
 		};
 /* End PBXProject section */
@@ -1261,24 +1261,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		162334A1F6303FCC52964E01 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MEDCheck/Pods-MEDCheck-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MEDCheck/Pods-MEDCheck-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MEDCheck/Pods-MEDCheck-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C6A6F0D26D7F00640E43A8C3 /* [CP] Check Pods Manifest.lock */ = {
+		AFDF29A79984AA61F821BA3A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1293,11 +1276,28 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MEDCheck-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MEDHealth-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C00CC1DB37E7C512F0628E05 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MEDHealth/Pods-MEDHealth-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MEDHealth/Pods-MEDHealth-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MEDHealth/Pods-MEDHealth-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1544,7 +1544,7 @@
 		};
 		8C5B49DA29D0F63800915A6C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1803196C357C2224D0A86DBE /* Pods-MEDCheck.debug.xcconfig */;
+			baseConfigurationReference = 499707BF9C1392B38F493554 /* Pods-MEDHealth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1552,7 +1552,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2NHD6297F2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MEDCheck/Resources/Info.plist;
+				INFOPLIST_FILE = MEDHealth/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1565,7 +1565,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ibaika.MEDCheck;
+				PRODUCT_BUNDLE_IDENTIFIER = ibaika.MEDHealth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -1578,7 +1578,7 @@
 		};
 		8C5B49DB29D0F63800915A6C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6A3E2E1DFC65CE411CD9552 /* Pods-MEDCheck.release.xcconfig */;
+			baseConfigurationReference = 97AFC030A5DB320B2F819D06 /* Pods-MEDHealth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1586,7 +1586,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2NHD6297F2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MEDCheck/Resources/Info.plist;
+				INFOPLIST_FILE = MEDHealth/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1599,7 +1599,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ibaika.MEDCheck;
+				PRODUCT_BUNDLE_IDENTIFIER = ibaika.MEDHealth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -1622,7 +1622,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8C5B49D929D0F63800915A6C /* Build configuration list for PBXNativeTarget "MEDCheck" */ = {
+		8C5B49D929D0F63800915A6C /* Build configuration list for PBXNativeTarget "MEDHealth" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8C5B49DA29D0F63800915A6C /* Debug */,
